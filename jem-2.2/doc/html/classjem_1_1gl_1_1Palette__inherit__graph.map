@@ -1,0 +1,7 @@
+<map id="jem::gl::Palette" name="jem::gl::Palette">
+<area shape="rect" id="node4" href="$classjem_1_1gl_1_1CustomPalette.html" title="jem::gl::CustomPalette" alt="" coords="5,229,172,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1gl_1_1LinearPalette.html" title="jem::gl::LinearPalette" alt="" coords="196,229,352,256"/>
+<area shape="rect" id="node6" href="$classjem_1_1gl_1_1RainbowPalette.html" title="jem::gl::RainbowPalette" alt="" coords="376,229,545,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="227,80,321,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="212,5,336,32"/>
+</map>

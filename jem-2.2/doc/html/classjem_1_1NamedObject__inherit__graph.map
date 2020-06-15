@@ -1,0 +1,12 @@
+<map id="jem::NamedObject" name="jem::NamedObject">
+<area shape="rect" id="node4" href="$classjem_1_1gl_1_1GfxNode.html" title="jem::gl::GfxNode" alt="" coords="511,132,639,159"/>
+<area shape="rect" id="node11" href="$classjem_1_1Member.html" title="jem::Member" alt="" coords="521,183,628,209"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,157,272,184"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,157,129,184"/>
+<area shape="rect" id="node5" href="$classjem_1_1gl_1_1Camera.html" title="jem::gl::Camera" alt="" coords="704,5,828,32"/>
+<area shape="rect" id="node6" href="$classjem_1_1gl_1_1DummyNode.html" title="jem::gl::DummyNode" alt="" coords="687,56,845,83"/>
+<area shape="rect" id="node7" href="$classjem_1_1gl_1_1GeomNode.html" title="jem::gl::GeomNode" alt="" coords="693,107,839,133"/>
+<area shape="rect" id="node8" href="$classjem_1_1gl_1_1LeafNode.html" title="jem::gl::LeafNode" alt="" coords="699,157,833,184"/>
+<area shape="rect" id="node9" href="$classjem_1_1gl_1_1Lights.html" title="jem::gl::Lights" alt="" coords="711,208,821,235"/>
+<area shape="rect" id="node10" href="$classjem_1_1gl_1_1MultiNode.html" title="jem::gl::MultiNode" alt="" coords="697,259,835,285"/>
+</map>

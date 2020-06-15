@@ -1,0 +1,6 @@
+<map id="jive::gl::GraphModule" name="jive::gl::GraphModule">
+<area shape="rect" id="node2" href="$classjive_1_1app_1_1Module.html" title="jive::app::Module" alt="" coords="18,229,147,256"/>
+<area shape="rect" id="node3" href="$classjem_1_1NamedObject.html" title="jem::NamedObject" alt="" coords="11,155,154,181"/>
+<area shape="rect" id="node4" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="35,80,130,107"/>
+<area shape="rect" id="node5" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="21,5,145,32"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="jive::geom::ParametricBoundary" name="jive::geom::ParametricBoundary">
+<area shape="rect" id="node8" href="$classjive_1_1geom_1_1Parametric4DSurf.html" title="jive::geom::Parametric4DSurf" alt="" coords="1029,5,1239,32"/>
+<area shape="rect" id="node9" href="$classjive_1_1geom_1_1ParametricEdge.html" title="jive::geom::ParametricEdge" alt="" coords="1035,56,1233,83"/>
+<area shape="rect" id="node10" href="$classjive_1_1geom_1_1ParametricSurface.html" title="jive::geom::ParametricSurface" alt="" coords="1027,107,1241,133"/>
+<area shape="rect" id="node2" href="$classjive_1_1geom_1_1BoundaryShape.html" title="Encapsulates the geometrical properties of a boundary of a finite element. " alt="" coords="505,31,704,57"/>
+<area shape="rect" id="node3" href="$classjive_1_1geom_1_1Shape.html" title="Encapsulates the geometrical properties of a finite element. " alt="" coords="320,31,457,57"/>
+<area shape="rect" id="node4" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,31,272,57"/>
+<area shape="rect" id="node5" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,31,129,57"/>
+<area shape="rect" id="node6" href="$classjem_1_1io_1_1Serializable.html" title="jem::io::Serializable" alt="" coords="531,81,678,108"/>
+<area shape="rect" id="node7" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="333,81,444,108"/>
+</map>

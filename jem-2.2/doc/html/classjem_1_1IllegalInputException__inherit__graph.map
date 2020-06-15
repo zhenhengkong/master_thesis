@@ -1,0 +1,6 @@
+<map id="jem::IllegalInputException" name="jem::IllegalInputException">
+<area shape="rect" id="node4" href="$classjem_1_1ParseException.html" title="Signals a parse error. " alt="" coords="5,229,156,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1xml_1_1ParserException.html" title="jem::xml::ParserException" alt="" coords="181,229,367,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Exception.html" title="Provides a single superclass for all exceptions that a program should catch. " alt="" coords="119,80,235,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Throwable.html" title="Provides a single superclass for all exceptions in Jem. " alt="" coords="117,5,236,32"/>
+</map>

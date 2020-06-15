@@ -1,0 +1,6 @@
+<map id="jive::geom::StdLine4B" name="jive::geom::StdLine4B">
+<area shape="rect" id="node2" href="$classjive_1_1geom_1_1StdLine.html" title="jive::geom::StdLine" alt="" coords="13,80,157,107"/>
+<area shape="rect" id="node3" href="$classjive_1_1geom_1_1StdShape.html" title="Encapsulates the geometrical properties of a finite element in its local coordinate system..." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node4" href="$classjem_1_1io_1_1Serializable.html" title="jem::io::Serializable" alt="" coords="181,80,327,107"/>
+<area shape="rect" id="node5" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="199,5,309,32"/>
+</map>

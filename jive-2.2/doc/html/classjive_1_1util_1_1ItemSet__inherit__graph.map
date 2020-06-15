@@ -1,0 +1,12 @@
+<map id="jive::util::ItemSet" name="jive::util::ItemSet">
+<area shape="rect" id="node4" href="$classjive_1_1util_1_1DummyItemSet.html" title="jive::util::DummyItemSet" alt="" coords="497,5,677,32"/>
+<area shape="rect" id="node5" href="$classjive_1_1util_1_1GroupSet.html" title="jive::util::GroupSet" alt="" coords="518,56,657,83"/>
+<area shape="rect" id="node8" href="$classjive_1_1util_1_1MemberSet.html" title="jive::util::MemberSet" alt="" coords="511,107,664,133"/>
+<area shape="rect" id="node10" href="$classjive_1_1util_1_1PointSet.html" title="jive::util::PointSet" alt="" coords="521,157,653,184"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,81,272,108"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,81,129,108"/>
+<area shape="rect" id="node6" href="$classjive_1_1util_1_1XGroupSet.html" title="jive::util::XGroupSet" alt="" coords="733,56,879,83"/>
+<area shape="rect" id="node7" href="$classjive_1_1util_1_1StdGroupSet.html" title="jive::util::StdGroupSet" alt="" coords="935,56,1096,83"/>
+<area shape="rect" id="node9" href="$classjive_1_1util_1_1XMemberSet.html" title="jive::util::XMemberSet" alt="" coords="725,107,887,133"/>
+<area shape="rect" id="node11" href="$classjive_1_1util_1_1XPointSet.html" title="jive::util::XPointSet" alt="" coords="736,157,876,184"/>
+</map>

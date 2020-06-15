@@ -1,0 +1,512 @@
+Log file created on Thu Dec 03 22:55:52 CET 2015.
+
+Generating mesh with element size 0.006000 ...
+
+Reading data from `test.data' ...
+
+  test.data, line 2: reading tag `NodeConstraints' ...
+  test.data, line 7: done reading tag `NodeConstraints'
+  test.data, line 10: reading tag `NodeTable' ...
+  test.data, line 12: reading tag `Section' ...
+  test.data, line 16: done reading tag `Section'
+  test.data, line 18: done reading tag `NodeTable'
+  test.data, line 21: reading tag `NodeTable' ...
+  test.data, line 23: reading tag `Section' ...
+  test.data, line 27: done reading tag `Section'
+  test.data, line 29: done reading tag `NodeTable'
+  test.data, line 31: reading tag `Function' ...
+  test.data, line 39: done reading tag `Function'
+
+shapeTable : updating shape table ...
+
+  creating 5 shapes of type `Triangle3' ...
+
+    precision 0:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "1", "1", "1", "1" ];
+
+    precision 1:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "4", "2", "2", "2" ];
+
+    precision 2:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "13", "3", "3", "3" ];
+
+    precision 3:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "19", "4", "4", "4" ];
+
+    precision 4:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "25", "5", "5", "5" ];
+
+Created a new model named `model'.
+jive::util::FlexDofSpace(nodes) : switching to dense storage mode ...
+
+jive::util::Constraints(nodes) : reallocating constraints, kind = COMPRESSED
+
+Initializing (state) vectors ...
+
+  oldStateii = iniState
+
+Data summary:
+
+  nodes ......................................... 85408
+  node dofs ..................................... 85408
+  node constraints .............................. 804
+  node groups ................................... 4
+  node tables ................................... 2
+  node data bases ............................... 0
+  elements ...................................... 170012
+  element groups ................................ 2
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 1
+
+park3 : restarting
+
+view.mesh : building graphics mesh ...
+view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 85408
+  faces     ...... 170012
+  triangles ...... 170012
+  lines     ...... 0
+  edges     ...... 255420
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-test.log";
+    rank	= 0;
+    pattern	= "*.info|*.debug";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "-";
+    fgMode	= false;
+    pause	= 0.100000;
+    runWhile	= "i < 200";
+  };
+  view	=
+  {
+    snapFile	= "test%2i.png";
+    configFile	= "view.conf";
+    updateWhen	= "(view.updateLoad < 0.1) && (view.renderLoad < 0.5)";
+    snapWhen	= false;
+    offScreen	= false;
+    camera	=
+    {
+      type	= "Perspective";
+      farClip	= 10.0000;
+      nearClip	= 0.500000;
+      viewAngle	= 40.0000;
+      position	= [ -0.00000, -0.00000, 3.00000 ];
+      zoom	= 0.00000;
+      quality	= 1;
+      autoQuality	= false;
+    };
+    state	=
+    {
+      type	= "Vector";
+      vector	= "state";
+      nullValue	= 0.00000;
+    };
+    flux	=
+    {
+      type	= "Table";
+      table	= "flux";
+      tableType	= "Dense";
+      nullValue	= 0.00000;
+    };
+    dataSets	= [ "state", "flux" ];
+    window	=
+    {
+      bgColor	= "steel";
+      title	= "park3-opt.view";
+      width	= 400;
+      height	= 400;
+    };
+    world	=
+    {
+      scale	= 1.00000;
+      rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+      translation	= [ 0.00000, 0.00000, 0.00000 ];
+    };
+    lights	=
+    {
+      light0	=
+      {
+        color	= "white20";
+        direction	= [ -1.00000, -0.00000, -0.00000 ];
+        enable	= true;
+      };
+      light1	=
+      {
+        color	= "white20";
+        direction	= [ -0.00000, -1.00000, -0.00000 ];
+        enable	= true;
+      };
+      light2	=
+      {
+        color	= "white";
+        direction	= [ -0.00000, -0.00000, -1.00000 ];
+        enable	= true;
+      };
+      light3	=
+      {
+        color	= "white20";
+        direction	= [ 1.00000, 1.00000, -0.00000 ];
+        enable	= false;
+      };
+      specular	= false;
+      ambient	= "white20";
+    };
+    markerStyles	=
+    {
+      points	=
+      {
+        size	= 3.00000;
+        color	= "black";
+      };
+      orbs	=
+      {
+        size	= -0.0100000;
+        quality	= 1;
+        color	= "gold";
+      };
+      numbers	=
+      {
+        font	= "proportional medium";
+        color	= "black";
+      };
+      circles	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      diamonds	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      discs	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      squares	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      styles	= [];
+    };
+    palettes	=
+    {
+      linear	=
+      {
+        minValue	= 0.00000;
+        maxValue	= 1.00000;
+        minColor	= [ 0.00000, 0.00000, 1.00000, 0.200000 ];
+        maxColor	= [ 1.00000, 0.00000, 0.00000, 0.900000 ];
+      };
+      rainbow	=
+      {
+        minValue	= 0.00000;
+        maxValue	= 1.00000;
+      };
+      custom	=
+      {
+        colors	= [ "blue", "green", "yellow", "orange", "red" ];
+        ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+        hideMinMax	= false;
+      };
+      palettes	= [];
+    };
+    mesh	=
+    {
+      elements	= "all";
+      scale	= 1.00000;
+      rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+      translation	= [ 0.00000, 0.00000, 0.00000 ];
+      pointSize	= 1.00000;
+      lineWidth	= 0.800000;
+      shadeModel	= "Smooth";
+      color	= "gold";
+      material	=
+      {
+        specular	= "black";
+        shininess	= 0.00000;
+      };
+      edgeColor	= "black";
+      nodeColor	= "black";
+      showEdges	= true;
+      showLines	= true;
+      showFaces	= true;
+      hidden	= false;
+      deformation	=
+      {
+        scale	= 1.00000;
+        autoScale	= false;
+        scaleStep	= 0.100000;
+        dx	= "0.000";
+        dy	= "0.000";
+        dz	= "state{ $$u * ($$u >= 0.2) + 0.2 * ($$u < 0.2) }";
+      };
+      colors	=
+      {
+        palette	= "rainbow";
+        title	= "";
+        data	= "flux{ sqrt( $$x^2 + $$y^2 ) }";
+        autoScale	= true;
+        scaleStep	= 0.200000;
+      };
+    };
+  };
+  output	=
+  {
+    file	= "test.out.gz";
+    append	= false;
+    precision	= 6;
+    pageWidth	= 200;
+    bufsize	= -1;
+    vectors	= [ "nodes/state = state" ];
+    tables	= [];
+    saveWhen	= true;
+  };
+  meshgen	=
+  {
+    storageMode	= "Compact";
+    elemSize	= 0.00600000;
+    geometry	=
+    {
+      type	= "Ring";
+      groupNames	=
+      {
+        innerEdge	= "innerEdge";
+        outerEdge	= "outerEdge";
+      };
+      elemType	= "Triangle3";
+      innerNodes	= 32;
+      innerRadius	= 0.100000;
+      outerRadius	= 1.00000;
+    };
+    output	= none;
+  };
+  storageMode	= "Compact";
+  input	=
+  {
+    storageMode	= "Compact";
+    file	= "test.data";
+    maxParts	= 0;
+    tableFilter	= "*";
+    dbaseFilter	= "*";
+    funcFilter	= "*";
+  };
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 4;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Multi";
+      models	= [ "transport", "load", "source" ];
+      transport	=
+      {
+        type	= "Transport";
+        elements	= "all";
+        dofName	= "u";
+        precision	= 2;
+        flowTable	= "";
+        diffusion	= [ 1.00000, 1.00000 ];
+      };
+      load	=
+      {
+        type	= "LoadScale";
+        model	=
+        {
+          type	= "Constraints";
+          conTable	= "Prescribed";
+        };
+        loadCase	= "load";
+        loadScale	= 1.00000;
+        scaleFunc	= "sin(time)";
+      };
+      source	=
+      {
+        type	= "Source";
+        elements	= "all";
+        dofName	= "u";
+        sourceTable	= "";
+        precision	= 0;
+        sourceFunc	= "10 * exp( -2 * sqrt( (x - 0.5 * cos(time))^2 +
+        (y - 0.5 * sin(time))^2 ) )";
+      };
+    };
+    debug	= 0;
+    linear	= true;
+    matrix0	=
+    {
+      type	= "FEM";
+      symmetric	= true;
+      optimize	= "Runtime";
+    };
+    matrix1	=
+    {
+      type	= "FEM";
+      symmetric	= true;
+      optimize	= "Runtime";
+    };
+    matrix2	=
+    {
+      type	= "FEM";
+      symmetric	= true;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [ "oldStateii = iniState" ];
+  };
+  park3	=
+  {
+    deltaTime	= 0.100000;
+    rayleigh1	= 0.00000;
+    rayleigh2	= 0.00000;
+  };
+  linsolve	=
+  {
+    solver	=
+    {
+      type	= "SparseLU";
+      printInterval	= 2.00000;
+      noiseLevel	= 1;
+      lenient	= false;
+      precision	= 0.100000;
+      zeroThreshold	= 1.49012e-08;
+      maxZeroPivots	= 0;
+      pivotThreshold	= 0.100000;
+      reorder	= "Matrix";
+      printPivots	= false;
+    };
+  };
+
+*** WARNING: Unknown properties:
+
+*** WARNING:   linsolve.solver.maxVectors
+*** WARNING:   linsolve.solver.precon
+*** WARNING:   linsolve.solver.precon.type
+*** WARNING:   output.interval
+*** WARNING:   view.flux.items
+*** WARNING:   view.state.items
+
+*** WARNING: Initialization phase completed with warnings.
+
+  Elapsed CPU  time : 0.2100 seconds.
+  Elapsed real time : 0.2318 seconds.
+
+Time step       : 0
+Simulation time : 0.000
+Elapsed runtime : 0.2321 seconds
+
+model.matrix2 : updating matrix structure ...
+model.matrix2 : matrix structure updated.
+model.matrix2 : updating sparse matrix structure ...
+model.matrix2 : scanning matrix for super rows ...
+model.matrix2 : done; found 85408 super rows in 85408 matrix rows.
+model.matrix2 : not enough super rows to enable blocking mode.
+
+park3 : restarting
+
+model.matrix0 : updating matrix structure ...
+model.matrix0 : matrix structure updated.
+model.matrix0 : updating sparse matrix structure ...
+model.matrix0 : scanning matrix for super rows ...
+model.matrix0 : done; found 85408 super rows in 85408 matrix rows.
+model.matrix0 : not enough super rows to enable blocking mode.
+model.matrix1 : updating matrix structure ...
+model.matrix1 : matrix structure updated.
+model.matrix1 : updating sparse matrix structure ...
+model.matrix1 : scanning matrix for super rows ...
+model.matrix1 : done; found 85408 super rows in 85408 matrix rows.
+model.matrix1 : not enough super rows to enable blocking mode.
+Assembling the global system of equations ...
+Solving the global system of equations ...
+
+Starting solver `linsolve.solver' ...
+
+linsolve.solver : zero threshold =  1.490e-08
+
+linsolve.solver.constrainer : updating matrix structure ...
+linsolve.solver : re-ordering matrix ...
+
+ND
+
+linsolve.solver : factoring matrix ...
+linsolve.solver : factoring matrix ...
+linsolve.solver :  22% done
+linsolve.solver :  35% done
+linsolve.solver :  48% done
+linsolve.solver :  64% done
+linsolve.solver :  81% done
+linsolve.solver : factorization complete
+linsolve.solver : residual =  6.078e-13
+
+Solution obtained in  1.095e+01 seconds
+
+Time step       : 1
+Simulation time : 0.1000
+Elapsed runtime : 12.03 seconds
+
+Assembling the global system of equations ...
+model.matrix0 : updating sparse matrix values ...
+Solving the global system of equations ...
+
+Starting solver `linsolve.solver' ...
+
+linsolve.solver : zero threshold =  1.490e-08
+
+linsolve.solver.constrainer : updating matrix values ...
+linsolve.solver : factoring matrix ...
+linsolve.solver : factoring matrix ...
+linsolve.solver :  23% done
+linsolve.solver :  36% done

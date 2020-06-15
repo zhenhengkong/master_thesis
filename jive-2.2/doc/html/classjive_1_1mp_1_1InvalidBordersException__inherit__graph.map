@@ -1,0 +1,4 @@
+<map id="jive::mp::InvalidBordersException" name="jive::mp::InvalidBordersException">
+<area shape="rect" id="node2" href="$classjem_1_1RuntimeException.html" title="Signals a runtime exception. " alt="" coords="7,80,175,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Throwable.html" title="Provides a single superclass for all exceptions in Jem. " alt="" coords="31,5,150,32"/>
+</map>

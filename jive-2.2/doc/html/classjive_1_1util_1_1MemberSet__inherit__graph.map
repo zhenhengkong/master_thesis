@@ -1,0 +1,7 @@
+<map id="jive::util::MemberSet" name="jive::util::MemberSet">
+<area shape="rect" id="node5" href="$classjive_1_1util_1_1XMemberSet.html" title="jive::util::XMemberSet" alt="" coords="12,304,173,331"/>
+<area shape="rect" id="node2" href="$classjive_1_1util_1_1ItemSet.html" title="Stores a (large) homogeneous set of objects. " alt="" coords="28,155,157,181"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="45,80,140,107"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="31,5,155,32"/>
+<area shape="rect" id="node6" href="$classjive_1_1util_1_1StdMemberSet.html" title="jive::util::StdMemberSet" alt="" coords="5,379,180,405"/>
+</map>

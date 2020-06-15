@@ -1,0 +1,333 @@
+
+Generating mesh with element size 0.5000 ...
+
+Reading data from `example.dat' ...
+
+  example.dat, line 1: reading tag `NodeConstraints' ...
+  example.dat, line 4: done reading tag `NodeConstraints'
+
+Created a new model named `model'.
+
+Data summary:
+
+  nodes ......................................... 968
+  node dofs ..................................... 968
+  node constraints .............................. 112
+  node groups ................................... 4
+  node tables ................................... 0
+  node data bases ............................... 0
+  elements ...................................... 456
+  element groups ................................ 2
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 0
+
+view : loaded configuration data from `view.conf'
+view.mesh : building graphics mesh ...
+view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 968
+  faces     ...... 456
+  triangles ...... 1824
+  lines     ...... 0
+  edges     ...... 712
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-example.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  view	=
+  {
+    snapFile	= "snapshot%2i.png";
+    configFile	= "view.conf";
+    updateWhen	= "(view.updateLoad < 0.1) && (view.renderLoad < 0.5)";
+    snapWhen	= false;
+    offScreen	= false;
+    camera	=
+    {
+      type	= "Perspective";
+      farClip	= 32.9659;
+      nearClip	= 0.882584;
+      viewAngle	= 40.0000;
+      position	= [ -0.00000, -0.00000, 19.4243 ];
+      zoom	= 0.00000;
+      quality	= 5;
+      autoQuality	= false;
+    };
+    state	=
+    {
+      type	= "Vector";
+      vector	= "state";
+      nullValue	= 0.00000;
+    };
+    flux	=
+    {
+      type	= "Table";
+      table	= "nodes/flux";
+      tableType	= "Dense";
+      nullValue	= 0.00000;
+    };
+    dataSets	= [ "state", "flux" ];
+    window	=
+    {
+      bgColor	= "white";
+      title	= "FemView";
+      width	= 974;
+      height	= 757;
+    };
+    world	=
+    {
+      scale	= 1.00000;
+      rotmat	= [ 0.999922, -0.000203808, 0.0125069, 0.00736405, 0.817820, -0.575428, -0.0101111, 0.575475,
+      0.817757 ];
+      translation	= [ 0.419072, -0.0164682, 0.455607 ];
+    };
+    lights	=
+    {
+      light0	=
+      {
+        color	= "white20";
+        direction	= [ -1.00000, -0.00000, -0.00000 ];
+        enable	= true;
+      };
+      light1	=
+      {
+        color	= "white20";
+        direction	= [ -0.00000, -1.00000, -0.00000 ];
+        enable	= true;
+      };
+      light2	=
+      {
+        color	= "white";
+        direction	= [ -0.00000, -0.00000, -1.00000 ];
+        enable	= true;
+      };
+      light3	=
+      {
+        color	= "white20";
+        direction	= [ 1.00000, 1.00000, -0.00000 ];
+        enable	= false;
+      };
+      specular	= false;
+      ambient	= "white20";
+    };
+    markerStyles	=
+    {
+      points	=
+      {
+        size	= 3.00000;
+        color	= "black";
+      };
+      orbs	=
+      {
+        size	= -0.0100000;
+        quality	= 1;
+        color	= "gold";
+      };
+      numbers	=
+      {
+        font	= "proportional medium";
+        color	= "black";
+      };
+      circles	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      diamonds	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      discs	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      squares	=
+      {
+        size	= "medium";
+        color	= "black";
+      };
+      styles	= [];
+    };
+    palettes	=
+    {
+      linear	=
+      {
+        minValue	= 0.00000;
+        maxValue	= 1.00000;
+        minColor	= "blue";
+        maxColor	= "red";
+      };
+      rainbow	=
+      {
+        minValue	= 0.00000;
+        maxValue	= 1.00000;
+      };
+      custom	=
+      {
+        colors	= [ "blue", "green", "yellow", "orange", "red" ];
+        ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+        hideMinMax	= false;
+      };
+      palettes	= [];
+    };
+    mesh	=
+    {
+      elements	= "all";
+      scale	= 1.00000;
+      rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+      translation	= [ 0.00000, 0.00000, 0.00000 ];
+      pointSize	= 1.00000;
+      lineWidth	= 1.00000;
+      shadeModel	= "Smooth";
+      color	= "gray";
+      material	=
+      {
+        specular	= "black";
+        shininess	= 0.00000;
+      };
+      edgeColor	= "black";
+      nodeColor	= "black";
+      showEdges	= true;
+      showLines	= true;
+      showFaces	= true;
+      hidden	= false;
+      deformation	=
+      {
+        scale	= 0.500000;
+        autoScale	= true;
+        scaleStep	= 0.100000;
+        dx	= "0.000";
+        dy	= "0.000";
+        dz	= "state";
+      };
+      colors	=
+      {
+        palette	= "rainbow";
+        title	= "";
+        data	= "flux{ abs( $$x ) }";
+        autoScale	= true;
+        scaleStep	= 0.100000;
+      };
+      nodes	=
+      {
+        hidden	= false;
+        nodes	= [ "innerEdge : numbers", "outerEdge : orbs" ];
+      };
+    };
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= true;
+    pause	= -1.00000;
+    runWhile	= "i < 1";
+  };
+  display	=
+  {
+    offScreen	= false;
+  };
+  meshgen	=
+  {
+    storageMode	= "Default";
+    elemSize	= 0.500000;
+    geometry	=
+    {
+      type	= "Ring";
+      groupNames	=
+      {
+        innerEdge	= "innerEdge";
+        outerEdge	= "outerEdge";
+      };
+      elemType	= "Triangle6";
+      innerNodes	= 8;
+      innerRadius	= 1.00000;
+      outerRadius	= 5.00000;
+    };
+    output	= none;
+  };
+  storageMode	= "Default";
+  input	=
+  {
+    storageMode	= "Default";
+    file	= "example.dat";
+    maxParts	= 0;
+    tableFilter	= "*";
+    dbaseFilter	= "*";
+    funcFilter	= "*";
+  };
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 0;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Transport";
+      elements	= "all";
+      dofName	= "u";
+      precision	= 0;
+      flowTable	= "";
+      diffusion	= [ 1.00000, 1.00000 ];
+    };
+    debug	= 0;
+    linear	= false;
+    matrix0	=
+    {
+      type	= "FEM";
+      symmetric	= true;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    vectors	= [];
+  };
+  linsolve	=
+  {
+    solver	=
+    {
+      type	= "SparseLU";
+      lenient	= false;
+      precision	= 1.00000e-05;
+      zeroThreshold	= 1.49012e-08;
+      maxZeroPivots	= 0;
+      pivotThreshold	= 0.100000;
+      reorder	= "Matrix";
+      printPivots	= false;
+    };
+  };
+
+Initialization phase completed successfully.
+
+  Elapsed CPU  time : 0.01000 seconds.
+  Elapsed real time : 0.04575 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.1300 seconds
+
+Assembling the global system of equations ...
+Solving the global system of equations ...
+
+Log file created on Thu Jul 07 16:47:01 CEST 2016.
+

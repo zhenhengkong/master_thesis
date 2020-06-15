@@ -1,0 +1,529 @@
+Log file created on Mon Jan 20 19:47:07 CET 2020.
+
+Reading input with userInput.input from file neohookean.msh
+ ...Adding 781 nodes.
+ ...Adding 1447 elements.
+ ...Created NodeGroup `left' with 12 nodes.
+ ...Created NodeGroup `right' with 12 nodes.
+
+Created a new model named `model'.
+
+Data summary:
+
+  nodes ......................................... 781
+  node dofs ..................................... 1562
+  node groups ................................... 4
+  elements ...................................... 1447
+  element groups ................................ 3
+
+userModules.view : loaded configuration data from `neohookean.view'
+userModules.view.mesh : building graphics mesh ...
+userModules.view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 781
+  faces     ...... 1447
+  triangles ...... 1447
+  lines     ...... 0
+  edges     ...... 2227
+
+*** WARNING: module `userModules.view' : unsupported image type: `png'; supported type is `ppm'
+*** WARNING: module `userModules.view' : snapshot files will be saved in PPM format
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-neohookean.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  userModules	=
+  {
+    solver	=
+    {
+      maxIter	= 50;
+      tiny	= 1.00000e-300;
+      precision	= 1.00000e-06;
+      maxIncr	= 10.0000;
+      lineSearch	= false;
+      deltaCons	= false;
+      updateWhen	= none;
+      solver	=
+      {
+        type	= "SkylineLU";
+        lenient	= true;
+        precision	= 5.00000e-07;
+        zeroThreshold	= 1.49012e-08;
+        maxZeroPivots	= 0;
+        reorder	= true;
+        useThreads	= true;
+        printPivots	= false;
+      };
+    };
+    graph	=
+    {
+      sampleWhen	= "accepted";
+      dataSets	= [ "loadDisp" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "userModules.graph";
+        width	= 400;
+        height	= 200;
+      };
+      camera	=
+      {
+        range	= 1.00000;
+        position	= [ -0.00000, -0.00000 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      graph	=
+      {
+        hidden	= false;
+        width	= 1.00000;
+        height	= 1.00000;
+        showKey	= true;
+        keyPos	= [ 0.900000, 0.900000 ];
+        title	= "";
+        xLabel	= "";
+        yLabel	= "";
+        scaleStep	= 0.100000;
+        xRange	= "auto";
+        yRange	= "auto";
+      };
+      loadDisp	=
+      {
+        key	= "Load-displacement curve";
+        maxPoints	= -1;
+        pointStyle	= none;
+        lineWidth	= 1.20000;
+        lineColor	= "black";
+        xData	= "model.model.lodi.disp[0]";
+        yData	= "model.model.lodi.load[0]";
+      };
+    };
+    view	=
+    {
+      snapFile	= "neohookean%2i.png";
+      configFile	= "neohookean.view";
+      updateWhen	= true;
+      snapWhen	= false;
+      offScreen	= false;
+      camera	=
+      {
+        type	= "Perspective";
+        farClip	= 97.9413;
+        nearClip	= 17.7413;
+        viewAngle	= 40.0000;
+        position	= [ 0.0500002, -0.00475669, 57.8413 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      disp	=
+      {
+        type	= "Vector";
+        vector	= "state";
+        nullValue	= 0.00000;
+      };
+      stress	=
+      {
+        type	= "Table";
+        table	= "nodes/stress";
+        tableType	= "Dense";
+        nullValue	= 0.00000;
+      };
+      dataSets	= [ "disp", "stress" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "feel.userModules.view";
+        width	= 1389;
+        height	= 759;
+      };
+      world	=
+      {
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+      };
+      lights	=
+      {
+        light0	=
+        {
+          color	= "white20";
+          direction	= [ -1.00000, -0.00000, -0.00000 ];
+          enable	= true;
+        };
+        light1	=
+        {
+          color	= "white20";
+          direction	= [ -0.00000, -1.00000, -0.00000 ];
+          enable	= true;
+        };
+        light2	=
+        {
+          color	= "white";
+          direction	= [ -0.00000, -0.00000, -1.00000 ];
+          enable	= true;
+        };
+        light3	=
+        {
+          color	= "white20";
+          direction	= [ 1.00000, 1.00000, -0.00000 ];
+          enable	= false;
+        };
+        specular	= false;
+        ambient	= "white20";
+      };
+      markerStyles	=
+      {
+        points	=
+        {
+          size	= 3.00000;
+          color	= "black";
+        };
+        orbs	=
+        {
+          size	= -0.0100000;
+          quality	= 1;
+          color	= "gold";
+        };
+        numbers	=
+        {
+          font	= "proportional medium";
+          color	= "black";
+        };
+        circles	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        diamonds	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        discs	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        squares	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        styles	= [];
+      };
+      palettes	=
+      {
+        linear	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+          minColor	= "blue";
+          maxColor	= "red";
+        };
+        rainbow	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+        };
+        custom	=
+        {
+          colors	= [ "blue", "green", "yellow", "orange", "red" ];
+          ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+          hideMinMax	= false;
+        };
+        palettes	= [];
+      };
+      mesh	=
+      {
+        elements	= "all";
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+        pointSize	= 1.00000;
+        lineWidth	= 1.00000;
+        shadeModel	= "Smooth";
+        color	= "gray";
+        material	=
+        {
+          specular	= "black";
+          shininess	= 0.00000;
+        };
+        edgeColor	= "black";
+        nodeColor	= "black";
+        showEdges	= true;
+        showLines	= true;
+        showFaces	= true;
+        hidden	= false;
+        deformation	=
+        {
+          scale	= 1.00000;
+          autoScale	= false;
+          scaleStep	= 0.100000;
+          dx	= "disp[dx]";
+          dy	= "disp[dy]";
+          dz	= "0.000";
+        };
+        colors	=
+        {
+          palette	= "custom";
+          title	= "";
+          data	= "stress[xx]";
+          autoScale	= true;
+          scaleStep	= 0.100000;
+        };
+      };
+    };
+  };
+  sample	=
+  {
+    file	= "lodi.dat";
+    header	= "";
+    separator	= " ";
+    append	= false;
+    precision	= 8;
+    dataSets	= [ "i", "model.model.lodi.disp[0]", "abs( model.model.lodi.load[0] )" ];
+    sampleWhen	= "accepted";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= true;
+    pause	= -1.00000;
+    runWhile	= "i<=1";
+  };
+  userInput	=
+  {
+    input	=
+    {
+      dim	= 2;
+      file	= "neohookean.msh";
+      doElemGroups	= false;
+      lowOrderCopy	= false;
+      nodeGroups	= [];
+      elemGroups	= [];
+    };
+    ngroups	=
+    {
+      nodeGroups	= [ "left", "right" ];
+      elemGroups	= [];
+      left	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+      };
+      right	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "max";
+      };
+    };
+  };
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 0;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Multi";
+      models	= [ "bulk", "diri", "diri2", "lodi" ];
+      bulk	=
+      {
+        type	= "NLSolid";
+        elements	= "all";
+        shape	=
+        {
+          type	= "Triangle3";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss1", "Gauss2", "Gauss2", "Gauss2" ];
+        };
+        material	=
+        {
+          type	= "Holzapfel";
+          dim	= 2;
+          lambda	= 5000.00;
+          mu	= 6000.00;
+          beta	= 0.00000;
+          k1_a	= 6000.00;
+          k2_a	= 1.00000;
+          kappam0	= 0.500000;
+          kappamu	= 0.500000;
+          kappaf0	= 0.500000;
+          kappafu	= 0.500000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+      };
+      diri	=
+      {
+        type	= "Dirichlet";
+        dispIncr	= 0.0500000;
+        initDisp	= 0.00000;
+        maxDisp	= 20.0000;
+        nodeGroups	= [ "right" ];
+        dofs	= [ "dx" ];
+        factors	= [ 1.00000 ];
+      };
+      diri2	=
+      {
+        type	= "Dirichlet";
+        dispIncr	= 0.00000;
+        initDisp	= 0.00000;
+        maxDisp	= 1.79769e+308;
+        nodeGroups	= [ "left" ];
+        dofs	= [ "dx" ];
+        factors	= [ 1.00000 ];
+      };
+      lodi	=
+      {
+        type	= "LoadDisp";
+        nodes	= [ 1, 2, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ];
+      };
+    };
+    debug	= 0;
+    linear	= false;
+    matrix0	=
+    {
+      type	= "Sparse";
+      symmetric	= false;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [];
+  };
+  xoutput	=
+  {
+    write	= true;
+    table	= "stress | eqstrain | eqveps | loading";
+    interval	= 1;
+    dissipation	= true;
+    writeCracks	= true;
+    writeCohInfo	= false;
+  };
+
+*** WARNING: Unknown property: `model.model.bulk.largeDisp'
+
+*** WARNING: Initialization phase completed with warnings.
+
+  Elapsed CPU  time : 0.08000 seconds.
+  Elapsed real time : 0.2014 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.2017 seconds
+
+New displacement factor 0.000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 1
+Elapsed runtime : 0.4711 seconds
+
+New displacement factor 0.05000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.9825e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0465e-01
+module `userModules.solver' : iter = 2, scaled residual = 6.3851e-02
+module `userModules.solver' : iter = 3, scaled residual = 5.1219e-02
+module `userModules.solver' : iter = 4, scaled residual = 4.5204e-02
+module `userModules.solver' : iter = 5, scaled residual = 4.1527e-02
+module `userModules.solver' : iter = 6, scaled residual = 3.8735e-02
+module `userModules.solver' : iter = 7, scaled residual = 3.6405e-02
+module `userModules.solver' : iter = 8, scaled residual = 3.4391e-02
+module `userModules.solver' : iter = 9, scaled residual = 3.2741e-02
+module `userModules.solver' : iter = 10, scaled residual = 3.1170e-02
+module `userModules.solver' : iter = 11, scaled residual = 2.9919e-02
+module `userModules.solver' : iter = 12, scaled residual = 2.8808e-02
+module `userModules.solver' : iter = 13, scaled residual = 2.7862e-02
+module `userModules.solver' : iter = 14, scaled residual = 2.6964e-02
+module `userModules.solver' : iter = 15, scaled residual = 2.6130e-02
+module `userModules.solver' : iter = 16, scaled residual = 2.5376e-02
+module `userModules.solver' : iter = 17, scaled residual = 2.4641e-02
+module `userModules.solver' : iter = 18, scaled residual = 2.4002e-02
+module `userModules.solver' : iter = 19, scaled residual = 2.3418e-02
+module `userModules.solver' : iter = 20, scaled residual = 2.2932e-02
+module `userModules.solver' : iter = 21, scaled residual = 2.2447e-02
+module `userModules.solver' : iter = 22, scaled residual = 2.1983e-02
+module `userModules.solver' : iter = 23, scaled residual = 2.1519e-02
+module `userModules.solver' : iter = 24, scaled residual = 2.1185e-02
+module `userModules.solver' : iter = 25, scaled residual = 2.0895e-02
+module `userModules.solver' : iter = 26, scaled residual = 2.0482e-02
+module `userModules.solver' : iter = 27, scaled residual = 2.0008e-02
+module `userModules.solver' : iter = 28, scaled residual = 1.9659e-02
+module `userModules.solver' : iter = 29, scaled residual = 1.9335e-02
+module `userModules.solver' : iter = 30, scaled residual = 1.9052e-02
+module `userModules.solver' : iter = 31, scaled residual = 1.8803e-02
+module `userModules.solver' : iter = 32, scaled residual = 1.8526e-02
+module `userModules.solver' : iter = 33, scaled residual = 1.8274e-02
+module `userModules.solver' : iter = 34, scaled residual = 1.8043e-02
+module `userModules.solver' : iter = 35, scaled residual = 1.7854e-02
+module `userModules.solver' : iter = 36, scaled residual = 1.7595e-02
+module `userModules.solver' : iter = 37, scaled residual = 1.7408e-02
+module `userModules.solver' : iter = 38, scaled residual = 1.7192e-02
+module `userModules.solver' : iter = 39, scaled residual = 1.7010e-02
+module `userModules.solver' : iter = 40, scaled residual = 1.6831e-02
+module `userModules.solver' : iter = 41, scaled residual = 1.6666e-02
+module `userModules.solver' : iter = 42, scaled residual = 1.6519e-02
+module `userModules.solver' : iter = 43, scaled residual = 1.6357e-02
+module `userModules.solver' : iter = 44, scaled residual = 1.6187e-02
+module `userModules.solver' : iter = 45, scaled residual = 1.6051e-02
+module `userModules.solver' : iter = 46, scaled residual = 1.5905e-02
+module `userModules.solver' : iter = 47, scaled residual = 1.5786e-02
+module `userModules.solver' : iter = 48, scaled residual = 1.5671e-02
+module `userModules.solver' : iter = 49, scaled residual = 1.5540e-02
+module `userModules.solver' : iter = 50, scaled residual = 1.5423e-02
+module `userModules.solver' : iter = 51, scaled residual = 1.5312e-02
+
+*** ERROR: Fatal runtime error
+
+*** ERROR:   Type    : jem::Exception
+*** ERROR:   Context : module `userModules.solver'
+*** ERROR:   Message : no convergence achieved in 51 iterations; final residual: 1.531246e-02
+
+*** ERROR: Stack trace:
+
+*** ERROR:   ../src/feel(_ZN4jive7implict12NonlinModule5solveERKN3jem4util10PropertiesES6_+0x429)
+*** ERROR:   [0x559a020995e1]
+*** ERROR:   ../src/feel(_ZN4jive7implict12SolverModule3runERKN3jem4util10PropertiesE+0x4c) [0x559a020a4ea8]
+*** ERROR:   ../src/feel(_ZN4jive3app14UserconfModule3runERKN3jem4util10PropertiesE+0x116) [0x559a023146f8]
+*** ERROR:   ../src/feel(_ZN4jive3app11ChainModule3runERKN3jem4util10PropertiesE+0x155) [0x559a022ec911]
+*** ERROR:   ../src/feel(_ZN4jive3app12ReportModule3runERKN3jem4util10PropertiesE+0x41) [0x559a0230c885]
+*** ERROR:   ../src/feel(_ZN4jive3app11Application7runLoopERN3jem6StringERNS0_6ModuleERKNS2_4util10PropertiesESA_SA_+0xd7)
+*** ERROR:   [0x559a022e64bb]
+*** ERROR:   ../src/feel(_ZN4jive3app11Application4execEiPPcPFN3jem3RefINS0_6ModuleEEEvE+0xc4b)
+*** ERROR:   [0x559a022ea3f9]
+*** ERROR:   ../src/feel(main+0x27) [0x559a01fce7ea]
+*** ERROR:   /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f835cb9bb97]
+*** ERROR:   ../src/feel(_start+0x2a) [0x559a01fbf95a]
+

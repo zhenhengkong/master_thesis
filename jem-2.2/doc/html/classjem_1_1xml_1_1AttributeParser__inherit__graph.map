@@ -1,0 +1,6 @@
+<map id="jem::xml::AttributeParser" name="jem::xml::AttributeParser">
+<area shape="rect" id="node2" href="$classjem_1_1xml_1_1EmptyTagParser.html" title="jem::xml::EmptyTagParser" alt="" coords="13,80,199,107"/>
+<area shape="rect" id="node4" href="$classjem_1_1xml_1_1TagParser.html" title="jem::xml::TagParser" alt="" coords="235,80,382,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1xml_1_1IncludeTagParser.html" title="jem::xml::IncludeTagParser" alt="" coords="5,155,196,181"/>
+<area shape="rect" id="node5" href="$classjem_1_1xml_1_1SimpleTagParser.html" title="jem::xml::SimpleTagParser" alt="" coords="220,155,411,181"/>
+</map>

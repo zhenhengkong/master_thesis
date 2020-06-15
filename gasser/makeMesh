@@ -1,0 +1,5 @@
+gmsh *geo -2
+
+../interface-generator/interface-elem --mesh-file *msh --out-file solid.mesh --interface-file interface.mesh --interface --isContinuum 1
+
+

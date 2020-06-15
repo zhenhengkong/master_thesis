@@ -1,0 +1,574 @@
+Log file created on Tue Mar 17 23:23:57 CET 2020.
+
+Reading data from `bar.mesh' ...
+
+  bar.mesh, line 1: reading tag `Nodes' ...
+  bar.mesh, line 18: done reading tag `Nodes'
+  bar.mesh, line 20: reading tag `Elements' ...
+  bar.mesh, line 28: done reading tag `Elements'
+  bar.mesh, line 30: reading tag `ElementGroup' ...
+  bar.mesh, line 32: done reading tag `ElementGroup'
+  bar.mesh, line 34: reading tag `ElementGroup' ...
+  bar.mesh, line 36: done reading tag `ElementGroup'
+
+ ...Created NodeGroup `right' with 2 nodes.
+ ...Created NodeGroup `left' with 2 nodes.
+ ...Created NodeGroup `lbot' with 1 nodes.
+
+Created a new model named `model'.
+
+Data summary:
+
+  nodes ......................................... 16
+  node dofs ..................................... 32
+  node groups ................................... 5
+  node tables ................................... 0
+  node data bases ............................... 0
+  elements ...................................... 7
+  element groups ................................ 4
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 0
+
+userModules.view : loaded configuration data from `specimen.view'
+userModules.view.mesh : building graphics mesh ...
+userModules.view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 23
+  faces     ...... 7
+  triangles ...... 28
+  lines     ...... 0
+  edges     ...... 22
+
+*** WARNING: module `userModules.view' : unsupported image type: `png'; supported type is `ppm'
+*** WARNING: module `userModules.view' : snapshot files will be saved in PPM format
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-specimen.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  userModules	=
+  {
+    solver	=
+    {
+      maxIter	= 50;
+      tiny	= 1.00000e-300;
+      precision	= 0.00100000;
+      maxIncr	= 10.0000;
+      lineSearch	= false;
+      deltaCons	= false;
+      updateWhen	= none;
+      solver	=
+      {
+        type	= "SkylineLU";
+        lenient	= true;
+        precision	= 0.000500000;
+        zeroThreshold	= 1.49012e-08;
+        maxZeroPivots	= 0;
+        reorder	= true;
+        useThreads	= false;
+        printPivots	= false;
+      };
+    };
+    graph	=
+    {
+      sampleWhen	= true;
+      dataSets	= [ "lodi" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "userModules.graph";
+        width	= 400;
+        height	= 200;
+      };
+      camera	=
+      {
+        range	= 1.00000;
+        position	= [ -0.00000, -0.00000 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      graph	=
+      {
+        hidden	= false;
+        width	= 1.00000;
+        height	= 1.00000;
+        showKey	= true;
+        keyPos	= [ 0.900000, 0.900000 ];
+        title	= "";
+        xLabel	= "";
+        yLabel	= "";
+        scaleStep	= 0.100000;
+        xRange	= "auto";
+        yRange	= "auto";
+      };
+      lodi	=
+      {
+        key	= "userModules.graph.lodi";
+        maxPoints	= -1;
+        pointStyle	= none;
+        lineWidth	= 1.20000;
+        lineColor	= "black";
+        xData	= "model.model.lodi.disp[0]";
+        yData	= "model.model.lodi.load[0]";
+      };
+    };
+    view	=
+    {
+      snapFile	= "specimen%2i.png";
+      configFile	= "specimen.view";
+      updateWhen	= true;
+      snapWhen	= false;
+      offScreen	= false;
+      camera	=
+      {
+        type	= "Perspective";
+        farClip	= 30.5303;
+        nearClip	= 5.53032;
+        viewAngle	= 40.0000;
+        position	= [ -0.00000, -0.00000, 18.0303 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      state	=
+      {
+        type	= "Vector";
+        vector	= "nodes/state";
+        nullValue	= 0.00000;
+      };
+      history	=
+      {
+        type	= "Table";
+        table	= "nodes/nodalHistory";
+        tableType	= "Dense";
+        nullValue	= 0.00000;
+      };
+      dataSets	= [ "state", "history" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "feel.userModules.view";
+        width	= 400;
+        height	= 200;
+      };
+      world	=
+      {
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+      };
+      lights	=
+      {
+        light0	=
+        {
+          color	= "white20";
+          direction	= [ -1.00000, -0.00000, -0.00000 ];
+          enable	= true;
+        };
+        light1	=
+        {
+          color	= "white20";
+          direction	= [ -0.00000, -1.00000, -0.00000 ];
+          enable	= true;
+        };
+        light2	=
+        {
+          color	= "white";
+          direction	= [ -0.00000, -0.00000, -1.00000 ];
+          enable	= true;
+        };
+        light3	=
+        {
+          color	= "white20";
+          direction	= [ 1.00000, 1.00000, -0.00000 ];
+          enable	= false;
+        };
+        specular	= false;
+        ambient	= "white20";
+      };
+      markerStyles	=
+      {
+        points	=
+        {
+          size	= 3.00000;
+          color	= "black";
+        };
+        orbs	=
+        {
+          size	= -0.0100000;
+          quality	= 1;
+          color	= "gold";
+        };
+        numbers	=
+        {
+          font	= "proportional medium";
+          color	= "black";
+        };
+        circles	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        diamonds	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        discs	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        squares	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        styles	= [];
+      };
+      palettes	=
+      {
+        linear	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+          minColor	= "blue";
+          maxColor	= "red";
+        };
+        rainbow	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+        };
+        custom	=
+        {
+          colors	= [ "blue", "green", "yellow", "orange", "red" ];
+          ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+          hideMinMax	= false;
+        };
+        palettes	= [];
+      };
+      mesh	=
+      {
+        elements	= "all";
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+        pointSize	= 1.00000;
+        lineWidth	= 1.00000;
+        shadeModel	= "Smooth";
+        color	= "gray";
+        material	=
+        {
+          specular	= "black";
+          shininess	= 0.00000;
+        };
+        edgeColor	= "black";
+        nodeColor	= "black";
+        showEdges	= true;
+        showLines	= true;
+        showFaces	= true;
+        hidden	= false;
+        deformation	=
+        {
+          scale	= 1.00000;
+          autoScale	= false;
+          scaleStep	= 0.100000;
+          dx	= "state[dx]";
+          dy	= "state[dy]";
+          dz	= "0.000";
+        };
+        colors	=
+        {
+          palette	= "rainbow";
+          title	= "";
+          data	= "state[dx]";
+          autoScale	= true;
+          scaleStep	= 0.100000;
+        };
+      };
+    };
+  };
+  sample	=
+  {
+    file	= "lodi.dat";
+    header	= "";
+    separator	= " ";
+    append	= false;
+    precision	= 8;
+    dataSets	= [ "i", "model.model.lodi.disp[0]", "model.model.lodi.load[0]" ];
+    sampleWhen	= "accepted";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= true;
+    pause	= -1.00000;
+    runWhile	= "i<1";
+  };
+  userInput	=
+  {
+    input	=
+    {
+      storageMode	= "Default";
+      file	= "bar.mesh";
+      maxParts	= 0;
+      tableFilter	= "*";
+      dbaseFilter	= "*";
+      funcFilter	= "*";
+    };
+    ngroup	=
+    {
+      nodeGroups	= [ "right", "left", "lbot" ];
+      elemGroups	= [];
+      right	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "max";
+      };
+      left	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+      };
+      lbot	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+        ytype	= "min";
+      };
+    };
+  };
+  storageMode	= "Default";
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 0;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Multi";
+      models	= [ "elas", "melro", "tension", "lodi" ];
+      elas	=
+      {
+        type	= "NLSolid";
+        elements	= "elastic";
+        shape	=
+        {
+          type	= "Quad4";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss2*Gauss2", "2", "2", "2", "2" ];
+        };
+        material	=
+        {
+          type	= "Holzapfel";
+          dim	= 2;
+          lambda	= 5000.00;
+          mu	= 6000.00;
+          beta	= 0.174000;
+          k1_a	= 3000.00;
+          k2_a	= 0.200000;
+          kappam0	= 0.200000;
+          kappamu	= 2.00000;
+          kappaf0	= 0.200000;
+          kappafu	= 2.00000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+      };
+      melro	=
+      {
+        type	= "NLSolid";
+        elements	= "damage";
+        shape	=
+        {
+          type	= "Quad4";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss2*Gauss2", "2", "2", "2", "2" ];
+        };
+        material	=
+        {
+          type	= "NeoHooke";
+          dim	= 2;
+          lambda	= 5000.00;
+          mu	= 6000.00;
+          kappa0	= 0.200000;
+          kappau	= 3.00000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+      };
+      tension	=
+      {
+        type	= "Dirichlet";
+        dispIncr	= 0.0200000;
+        initDisp	= 0.00000;
+        maxDisp	= 1.79769e+308;
+        nodeGroups	= [ "right", "lbot", "left" ];
+        dofs	= [ "dx", "dy", "dx" ];
+        factors	= [ 1.00000, 0.00000, 0.00000 ];
+      };
+      lodi	=
+      {
+        type	= "LoadDisp";
+        nodes	= [ 14, 15 ];
+      };
+    };
+    debug	= 0;
+    linear	= false;
+    matrix0	=
+    {
+      type	= "Sparse";
+      symmetric	= false;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [];
+  };
+  xoutput	=
+  {
+    write	= true;
+    table	= "stress";
+    interval	= 1;
+    dissipation	= true;
+    writeCracks	= true;
+    writeCohInfo	= false;
+  };
+
+*** WARNING: Unknown properties:
+
+*** WARNING:   sample.type
+*** WARNING:   userModules.graph.updateWhen
+
+*** WARNING: Initialization phase completed with warnings.
+
+  Elapsed CPU  time : 0.07000 seconds.
+  Elapsed real time : 0.2054 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.2063 seconds
+
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 1
+Elapsed runtime : 3.599 seconds
+
+New displacement factor 0.02000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.8956e+01
+module `userModules.solver' : iter = 1, scaled residual = 3.8542e-01
+module `userModules.solver' : iter = 2, scaled residual = 3.4342e-02
+module `userModules.solver' : iter = 3, scaled residual = 1.6378e-02
+module `userModules.solver' : iter = 4, scaled residual = 1.0531e-02
+module `userModules.solver' : iter = 5, scaled residual = 8.3446e-03
+module `userModules.solver' : iter = 6, scaled residual = 7.1913e-03
+module `userModules.solver' : iter = 7, scaled residual = 6.4044e-03
+module `userModules.solver' : iter = 8, scaled residual = 5.7993e-03
+module `userModules.solver' : iter = 9, scaled residual = 5.3089e-03
+module `userModules.solver' : iter = 10, scaled residual = 4.9005e-03
+module `userModules.solver' : iter = 11, scaled residual = 4.5555e-03
+module `userModules.solver' : iter = 12, scaled residual = 4.2613e-03
+module `userModules.solver' : iter = 13, scaled residual = 4.0088e-03
+module `userModules.solver' : iter = 14, scaled residual = 3.7911e-03
+module `userModules.solver' : iter = 15, scaled residual = 3.6028e-03
+module `userModules.solver' : iter = 16, scaled residual = 3.4390e-03
+module `userModules.solver' : iter = 17, scaled residual = 3.2962e-03
+module `userModules.solver' : iter = 18, scaled residual = 3.1710e-03
+module `userModules.solver' : iter = 19, scaled residual = 3.0608e-03
+module `userModules.solver' : iter = 20, scaled residual = 2.9631e-03
+module `userModules.solver' : iter = 21, scaled residual = 2.8762e-03
+module `userModules.solver' : iter = 22, scaled residual = 2.7982e-03
+module `userModules.solver' : iter = 23, scaled residual = 2.7278e-03
+module `userModules.solver' : iter = 24, scaled residual = 2.6638e-03
+module `userModules.solver' : iter = 25, scaled residual = 2.6054e-03
+module `userModules.solver' : iter = 26, scaled residual = 2.5515e-03
+module `userModules.solver' : iter = 27, scaled residual = 2.5016e-03
+module `userModules.solver' : iter = 28, scaled residual = 2.4551e-03
+module `userModules.solver' : iter = 29, scaled residual = 2.4114e-03
+module `userModules.solver' : iter = 30, scaled residual = 2.3703e-03
+module `userModules.solver' : iter = 31, scaled residual = 2.3313e-03
+module `userModules.solver' : iter = 32, scaled residual = 2.2942e-03
+module `userModules.solver' : iter = 33, scaled residual = 2.2587e-03
+module `userModules.solver' : iter = 34, scaled residual = 2.2246e-03
+module `userModules.solver' : iter = 35, scaled residual = 2.1918e-03
+module `userModules.solver' : iter = 36, scaled residual = 2.1602e-03
+module `userModules.solver' : iter = 37, scaled residual = 2.1296e-03
+module `userModules.solver' : iter = 38, scaled residual = 2.0999e-03
+module `userModules.solver' : iter = 39, scaled residual = 2.0710e-03
+module `userModules.solver' : iter = 40, scaled residual = 2.0428e-03
+module `userModules.solver' : iter = 41, scaled residual = 2.0153e-03
+module `userModules.solver' : iter = 42, scaled residual = 1.9885e-03
+module `userModules.solver' : iter = 43, scaled residual = 1.9623e-03
+module `userModules.solver' : iter = 44, scaled residual = 1.9366e-03
+module `userModules.solver' : iter = 45, scaled residual = 1.9114e-03
+module `userModules.solver' : iter = 46, scaled residual = 1.8866e-03
+module `userModules.solver' : iter = 47, scaled residual = 1.8624e-03
+module `userModules.solver' : iter = 48, scaled residual = 1.8385e-03
+module `userModules.solver' : iter = 49, scaled residual = 1.8151e-03
+module `userModules.solver' : iter = 50, scaled residual = 1.7920e-03
+module `userModules.solver' : iter = 51, scaled residual = 1.7693e-03
+
+*** ERROR: Fatal runtime error
+
+*** ERROR:   Type    : jem::Exception
+*** ERROR:   Context : module `userModules.solver'
+*** ERROR:   Message : no convergence achieved in 51 iterations; final residual: 1.769339e-03
+
+*** ERROR: Stack trace:
+
+*** ERROR:   ../src/feel(_ZN4jive7implict12NonlinModule5solveERKN3jem4util10PropertiesES6_+0x429)
+*** ERROR:   [0x556ee367f5e1]
+*** ERROR:   ../src/feel(_ZN4jive7implict12SolverModule3runERKN3jem4util10PropertiesE+0x4c) [0x556ee368aea8]
+*** ERROR:   ../src/feel(_ZN4jive3app14UserconfModule3runERKN3jem4util10PropertiesE+0x116) [0x556ee38fa6f8]
+*** ERROR:   ../src/feel(_ZN4jive3app11ChainModule3runERKN3jem4util10PropertiesE+0x155) [0x556ee38d2911]
+*** ERROR:   ../src/feel(_ZN4jive3app12ReportModule3runERKN3jem4util10PropertiesE+0x41) [0x556ee38f2885]
+*** ERROR:   ../src/feel(_ZN4jive3app11Application7runLoopERN3jem6StringERNS0_6ModuleERKNS2_4util10PropertiesESA_SA_+0xd7)
+*** ERROR:   [0x556ee38cc4bb]
+*** ERROR:   ../src/feel(_ZN4jive3app11Application4execEiPPcPFN3jem3RefINS0_6ModuleEEEvE+0xc4b)
+*** ERROR:   [0x556ee38d03f9]
+*** ERROR:   ../src/feel(main+0x27) [0x556ee35b47ea]
+*** ERROR:   /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f6adc4f3b97]
+*** ERROR:   ../src/feel(_start+0x2a) [0x556ee35a595a]
+

@@ -1,0 +1,189 @@
+Logfile created by `conf/configure.sh' on zo 19 mei 2019 18:50:06 CEST.
+Current directory: /home/kong/run/jem-2.2.
+Arguments:   
+Shell:       /bin/dash
+System name: linux
+Executing `./conf/linux/configure.sh' ...
+Reading CPU info ...
+  vendor_id	: genuineintel
+  model name	: intel(r) core(tm) i7-7500u cpu @ 2.70ghz
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+CPU type: 
+System architecture: x86_64
+Executing `./conf/posix/ccident.sh' ...
+Executing `g++ -o ccident ccident.cpp' ...
+Compiler name:    gcc
+Compiler name2:   
+Compiler version: 70400
+Sourcing `./conf/posix/TestCompiler.sh' ...
+Executing `conf/linux-gcc/configure.sh' ...
+Enabled vectorization support.
+Executing `g++ -m64 -o test-cxx test-cxx.cpp' ...
+Compiling in 64-bit mode (specify `-32' for 32-bit mode).
+Entered directory `/home/kong/run/jem-2.2/packages/base'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/gl'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/hdf5'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/io'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/mp'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/mt'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/numeric'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/std'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/util'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/xml'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/packages/xutil'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Writing `scripts/include/config.sh' ...
+Writing `include/jem/config.h' ...
+Writing `makefiles/config.mk' ...
+Installing scripts in `scripts/bin' ...
+Entered directory `/home/kong/run/jem-2.2/scripts'.
+Returned to directory `/home/kong/run/jem-2.2'.
+Entered directory `/home/kong/run/jem-2.2/bin'.
+Installing scripts in `bin' ...
+Returned to directory `/home/kong/run/jem-2.2'.
+
+--- package base ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/base'.
+Arguments: 
+Executing `./conf/posix/configure.sh' ...
+Entered directory `/home/kong/run/jem-2.2/packages/base/src'.
+Returned to directory `/home/kong/run/jem-2.2/packages/base'.
+Entered directory `/home/kong/run/jem-2.2/packages/base/src'.
+Created directory `/home/kong/run/jem-2.2/include/jem/base/native'.
+Returned to directory `/home/kong/run/jem-2.2/packages/base'.
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package io ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/io'.
+Arguments: 
+Executing `./conf/posix/configure.sh' ...
+Testing zlib setup ...
+g++ -Wall -fstrict-aliasing -m64 -msse2 -mtune=native -rdynamic -o ./conf/test-zlib ./conf/test-zlib.cpp -lz -lpthread -lm
+./conf/test-zlib.cpp:32:12: fatal error: zlib.h: No such file or directory
+   #include <zlib.h>
+            ^~~~~~~~
+compilation terminated.
+Entered directory `/home/kong/run/jem-2.2/packages/io/src'.
+Returned to directory `/home/kong/run/jem-2.2/packages/io'.
+Testing readline setup ...
+g++ -Wall -fstrict-aliasing -m64 -msse2 -mtune=native -rdynamic -o ./conf/test-readline ./conf/test-readline.cpp -lreadline -lpthread -lm
+./conf/test-readline.cpp:33:12: fatal error: readline/history.h: No such file or directory
+   #include <readline/history.h>
+            ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Entered directory `/home/kong/run/jem-2.2/packages/io/src'.
+Returned to directory `/home/kong/run/jem-2.2/packages/io'.
+Writing `/home/kong/run/jem-2.2/include/jem/io/config.h' ...
+Created directory `/home/kong/run/jem-2.2/include/jem/io/native'.
+Entered directory `/home/kong/run/jem-2.2/packages/io/src'.
+Returned to directory `/home/kong/run/jem-2.2/packages/io'.
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package util ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/util'.
+Arguments: 
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package gl ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/gl'.
+Arguments: 
+Executing `./conf/configure.sh' ...
+Executing `./conf/linux/defaults.sh' ...
+Testing GL setup ...
+g++ -Wall -fstrict-aliasing -m64 -msse2 -mtune=native -rdynamic -o ./conf/test-gl ./conf/test-gl.cpp -lglut -lGLU -lGL -lX11 -lpthread -lm
+./conf/test-gl.cpp:30:10: fatal error: GL/glut.h: No such file or directory
+ #include <GL/glut.h>
+          ^~~~~~~~~~~
+compilation terminated.
+Testing GL setup ...
+g++ -Wall -fstrict-aliasing -m64 -msse2 -mtune=native -rdynamic -o ./conf/test-gl ./conf/test-gl.cpp -lglut -lGLU -lGL -lX11 -lpthread -lm
+./conf/test-gl.cpp:30:10: fatal error: GL/glut.h: No such file or directory
+ #include <GL/glut.h>
+          ^~~~~~~~~~~
+compilation terminated.
+Disabled the gl package.
+
+--- package hdf5 ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/hdf5'.
+Arguments: 
+Executing `./conf/configure.sh' ...
+Testing HDF5 setup ...
+g++ -Wall -fstrict-aliasing -m64 -msse2 -mtune=native -rdynamic -o ./conf/test-hdf5 ./conf/test-hdf5.cpp -lhdf5 -lpthread -lm
+./conf/test-hdf5.cpp:32:12: fatal error: hdf5.h: No such file or directory
+   #include <hdf5.h>
+            ^~~~~~~~
+compilation terminated.
+Disabled the hdf5 package.
+
+--- package mp ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/mp'.
+Arguments: 
+Executing `./conf/configure.sh' ...
+Testing MPI setup ...
+g++ -Wall -fstrict-aliasing -m64 -msse2 -mtune=native -rdynamic -o ./conf/test-mpi ./conf/test-mpi.cpp -lmpi -lpthread -lm
+./conf/test-mpi.cpp:30:10: fatal error: mpi.h: No such file or directory
+ #include <mpi.h>
+          ^~~~~~~
+compilation terminated.
+Disabled MPI support.
+Entered directory `/home/kong/run/jem-2.2/packages/mp/src'.
+Returned to directory `/home/kong/run/jem-2.2/packages/mp'.
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package mt ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/mt'.
+Arguments: 
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package numeric ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/numeric'.
+Arguments: 
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package std ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/std'.
+Arguments: 
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package xml ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/xml'.
+Arguments: 
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+--- package xutil ---
+
+Changed to directory `/home/kong/run/jem-2.2/packages/xutil'.
+Arguments: 
+Writing `Makedefs.mk' ...
+Makedefs source file: /home/kong/run/jem-2.2/makefiles/pkg-defs.in.
+
+---
+Logfile closed on zo 19 mei 2019 18:50:07 CEST.

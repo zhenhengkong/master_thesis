@@ -1,0 +1,2636 @@
+Log file created on Tue Mar 17 23:23:29 CET 2020.
+
+Reading data from `bar.mesh' ...
+
+  bar.mesh, line 1: reading tag `Nodes' ...
+  bar.mesh, line 14: done reading tag `Nodes'
+  bar.mesh, line 16: reading tag `Elements' ...
+  bar.mesh, line 22: done reading tag `Elements'
+  bar.mesh, line 24: reading tag `ElementGroup' ...
+  bar.mesh, line 26: done reading tag `ElementGroup'
+  bar.mesh, line 28: reading tag `ElementGroup' ...
+  bar.mesh, line 30: done reading tag `ElementGroup'
+
+ ...Created NodeGroup `right' with 2 nodes.
+ ...Created NodeGroup `left' with 2 nodes.
+ ...Created NodeGroup `lbot' with 1 nodes.
+
+Created a new model named `model'.
+
+Data summary:
+
+  nodes ......................................... 12
+  node dofs ..................................... 24
+  node groups ................................... 5
+  node tables ................................... 0
+  node data bases ............................... 0
+  elements ...................................... 5
+  element groups ................................ 4
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 0
+
+userModules.view : loaded configuration data from `specimen.view'
+userModules.view.mesh : building graphics mesh ...
+userModules.view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 17
+  faces     ...... 5
+  triangles ...... 20
+  lines     ...... 0
+  edges     ...... 16
+
+*** WARNING: module `userModules.view' : unsupported image type: `png'; supported type is `ppm'
+*** WARNING: module `userModules.view' : snapshot files will be saved in PPM format
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-specimen.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  userModules	=
+  {
+    solver	=
+    {
+      maxIter	= 50;
+      tiny	= 1.00000e-300;
+      precision	= 0.00100000;
+      maxIncr	= 10.0000;
+      lineSearch	= false;
+      deltaCons	= false;
+      updateWhen	= none;
+      solver	=
+      {
+        type	= "SkylineLU";
+        lenient	= true;
+        precision	= 0.000500000;
+        zeroThreshold	= 1.49012e-08;
+        maxZeroPivots	= 0;
+        reorder	= true;
+        useThreads	= false;
+        printPivots	= false;
+      };
+    };
+    graph	=
+    {
+      sampleWhen	= true;
+      dataSets	= [ "lodi" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "userModules.graph";
+        width	= 400;
+        height	= 200;
+      };
+      camera	=
+      {
+        range	= 1.00000;
+        position	= [ -0.00000, -0.00000 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      graph	=
+      {
+        hidden	= false;
+        width	= 1.00000;
+        height	= 1.00000;
+        showKey	= true;
+        keyPos	= [ 0.900000, 0.900000 ];
+        title	= "";
+        xLabel	= "";
+        yLabel	= "";
+        scaleStep	= 0.100000;
+        xRange	= "auto";
+        yRange	= "auto";
+      };
+      lodi	=
+      {
+        key	= "userModules.graph.lodi";
+        maxPoints	= -1;
+        pointStyle	= none;
+        lineWidth	= 1.20000;
+        lineColor	= "black";
+        xData	= "model.model.lodi.disp[0]";
+        yData	= "model.model.lodi.load[0]";
+      };
+    };
+    view	=
+    {
+      snapFile	= "specimen%2i.png";
+      configFile	= "specimen.view";
+      updateWhen	= true;
+      snapWhen	= false;
+      offScreen	= false;
+      camera	=
+      {
+        type	= "Perspective";
+        farClip	= 30.5303;
+        nearClip	= 5.53032;
+        viewAngle	= 40.0000;
+        position	= [ -0.00000, -0.00000, 18.0303 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      state	=
+      {
+        type	= "Vector";
+        vector	= "nodes/state";
+        nullValue	= 0.00000;
+      };
+      history	=
+      {
+        type	= "Table";
+        table	= "nodes/nodalHistory";
+        tableType	= "Dense";
+        nullValue	= 0.00000;
+      };
+      dataSets	= [ "state", "history" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "feel.userModules.view";
+        width	= 400;
+        height	= 200;
+      };
+      world	=
+      {
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+      };
+      lights	=
+      {
+        light0	=
+        {
+          color	= "white20";
+          direction	= [ -1.00000, -0.00000, -0.00000 ];
+          enable	= true;
+        };
+        light1	=
+        {
+          color	= "white20";
+          direction	= [ -0.00000, -1.00000, -0.00000 ];
+          enable	= true;
+        };
+        light2	=
+        {
+          color	= "white";
+          direction	= [ -0.00000, -0.00000, -1.00000 ];
+          enable	= true;
+        };
+        light3	=
+        {
+          color	= "white20";
+          direction	= [ 1.00000, 1.00000, -0.00000 ];
+          enable	= false;
+        };
+        specular	= false;
+        ambient	= "white20";
+      };
+      markerStyles	=
+      {
+        points	=
+        {
+          size	= 3.00000;
+          color	= "black";
+        };
+        orbs	=
+        {
+          size	= -0.0100000;
+          quality	= 1;
+          color	= "gold";
+        };
+        numbers	=
+        {
+          font	= "proportional medium";
+          color	= "black";
+        };
+        circles	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        diamonds	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        discs	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        squares	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        styles	= [];
+      };
+      palettes	=
+      {
+        linear	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+          minColor	= "blue";
+          maxColor	= "red";
+        };
+        rainbow	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+        };
+        custom	=
+        {
+          colors	= [ "blue", "green", "yellow", "orange", "red" ];
+          ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+          hideMinMax	= false;
+        };
+        palettes	= [];
+      };
+      mesh	=
+      {
+        elements	= "all";
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+        pointSize	= 1.00000;
+        lineWidth	= 1.00000;
+        shadeModel	= "Smooth";
+        color	= "gray";
+        material	=
+        {
+          specular	= "black";
+          shininess	= 0.00000;
+        };
+        edgeColor	= "black";
+        nodeColor	= "black";
+        showEdges	= true;
+        showLines	= true;
+        showFaces	= true;
+        hidden	= false;
+        deformation	=
+        {
+          scale	= 1.00000;
+          autoScale	= false;
+          scaleStep	= 0.100000;
+          dx	= "state[dx]";
+          dy	= "state[dy]";
+          dz	= "0.000";
+        };
+        colors	=
+        {
+          palette	= "rainbow";
+          title	= "";
+          data	= "state[dx]";
+          autoScale	= true;
+          scaleStep	= 0.100000;
+        };
+      };
+    };
+  };
+  sample	=
+  {
+    file	= "lodi.dat";
+    header	= "";
+    separator	= " ";
+    append	= false;
+    precision	= 8;
+    dataSets	= [ "i", "model.model.lodi.disp[0]", "model.model.lodi.load[0]" ];
+    sampleWhen	= "accepted";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= true;
+    pause	= -1.00000;
+    runWhile	= "i<1";
+  };
+  userInput	=
+  {
+    input	=
+    {
+      storageMode	= "Default";
+      file	= "bar.mesh";
+      maxParts	= 0;
+      tableFilter	= "*";
+      dbaseFilter	= "*";
+      funcFilter	= "*";
+    };
+    ngroup	=
+    {
+      nodeGroups	= [ "right", "left", "lbot" ];
+      elemGroups	= [];
+      right	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "max";
+      };
+      left	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+      };
+      lbot	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+        ytype	= "min";
+      };
+    };
+  };
+  storageMode	= "Default";
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 0;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Multi";
+      models	= [ "elas", "melro", "tension", "lodi" ];
+      elas	=
+      {
+        type	= "NLSolid";
+        elements	= "elastic";
+        shape	=
+        {
+          type	= "Quad4";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss2*Gauss2", "2", "2", "2", "2" ];
+        };
+        material	=
+        {
+          type	= "Holzapfel";
+          dim	= 2;
+          lambda	= 5000.00;
+          mu	= 6000.00;
+          beta	= 0.174000;
+          k1_a	= 3000.00;
+          k2_a	= 0.200000;
+          kappam0	= 2.00000;
+          kappamu	= 3.00000;
+          kappaf0	= 2.00000;
+          kappafu	= 3.00000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+      };
+      melro	=
+      {
+        type	= "NLSolid";
+        elements	= "damage";
+        shape	=
+        {
+          type	= "Quad4";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss2*Gauss2", "2", "2", "2", "2" ];
+        };
+        material	=
+        {
+          type	= "Holzapfel";
+          dim	= 2;
+          lambda	= 5000.00;
+          mu	= 6000.00;
+          beta	= 0.174000;
+          k1_a	= 3000.00;
+          k2_a	= 0.200000;
+          kappam0	= 0.200000;
+          kappamu	= 2.00000;
+          kappaf0	= 0.200000;
+          kappafu	= 2.00000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+      };
+      tension	=
+      {
+        type	= "Dirichlet";
+        dispIncr	= 0.0200000;
+        initDisp	= 0.00000;
+        maxDisp	= 1.79769e+308;
+        nodeGroups	= [ "right", "lbot", "left" ];
+        dofs	= [ "dx", "dy", "dx" ];
+        factors	= [ 1.00000, 0.00000, 0.00000 ];
+      };
+      lodi	=
+      {
+        type	= "LoadDisp";
+        nodes	= [ 10, 11 ];
+      };
+    };
+    debug	= 0;
+    linear	= false;
+    matrix0	=
+    {
+      type	= "Sparse";
+      symmetric	= false;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [];
+  };
+  xoutput	=
+  {
+    write	= true;
+    table	= "stress";
+    interval	= 1;
+    dissipation	= true;
+    writeCracks	= true;
+    writeCohInfo	= false;
+  };
+
+*** WARNING: Unknown properties:
+
+*** WARNING:   sample.type
+*** WARNING:   userModules.graph.updateWhen
+
+*** WARNING: Initialization phase completed with warnings.
+
+  Elapsed CPU  time : 0.07000 seconds.
+  Elapsed real time : 0.2016 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.2028 seconds
+
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 1
+Elapsed runtime : 2.764 seconds
+
+New displacement factor 0.02000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.5221e+01
+module `userModules.solver' : iter = 1, scaled residual = 5.1306e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 2
+Elapsed runtime : 2.788 seconds
+
+New displacement factor 0.04000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7049e+02
+module `userModules.solver' : iter = 1, scaled residual = 5.9796e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 3
+Elapsed runtime : 2.802 seconds
+
+New displacement factor 0.06000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.5582e+02
+module `userModules.solver' : iter = 1, scaled residual = 4.8734e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 4
+Elapsed runtime : 2.809 seconds
+
+New displacement factor 0.08000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.4122e+02
+module `userModules.solver' : iter = 1, scaled residual = 3.7992e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 5
+Elapsed runtime : 2.814 seconds
+
+New displacement factor 0.1000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.2669e+02
+module `userModules.solver' : iter = 1, scaled residual = 5.1395e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 6
+Elapsed runtime : 2.819 seconds
+
+New displacement factor 0.1200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.1223e+02
+module `userModules.solver' : iter = 1, scaled residual = 2.6128e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 7
+Elapsed runtime : 2.828 seconds
+
+New displacement factor 0.1400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.9785e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.5638e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 8
+Elapsed runtime : 2.844 seconds
+
+New displacement factor 0.1600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.8354e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.6373e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 9
+Elapsed runtime : 2.861 seconds
+
+New displacement factor 0.1800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.6930e+02
+module `userModules.solver' : iter = 1, scaled residual = 3.1607e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 10
+Elapsed runtime : 2.878 seconds
+
+New displacement factor 0.2000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.5514e+02
+module `userModules.solver' : iter = 1, scaled residual = 2.3282e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 11
+Elapsed runtime : 2.896 seconds
+
+New displacement factor 0.2200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.4105e+02
+module `userModules.solver' : iter = 1, scaled residual = 2.4782e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 12
+Elapsed runtime : 2.913 seconds
+
+New displacement factor 0.2400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0270e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.3469e-14
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 13
+Elapsed runtime : 2.929 seconds
+
+New displacement factor 0.2600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.1131e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0464e-14
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 14
+Elapsed runtime : 2.947 seconds
+
+New displacement factor 0.2800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.1993e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.9022e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 15
+Elapsed runtime : 2.963 seconds
+
+New displacement factor 0.3000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2855e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.2749e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 16
+Elapsed runtime : 2.979 seconds
+
+New displacement factor 0.3200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3718e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.1473e-14
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 17
+Elapsed runtime : 2.996 seconds
+
+New displacement factor 0.3400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.4582e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.1149e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 18
+Elapsed runtime : 3.013 seconds
+
+New displacement factor 0.3600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5447e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.1665e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 19
+Elapsed runtime : 3.029 seconds
+
+New displacement factor 0.3800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6313e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.4948e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 20
+Elapsed runtime : 3.046 seconds
+
+New displacement factor 0.4000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7179e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7177e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 21
+Elapsed runtime : 3.062 seconds
+
+New displacement factor 0.4200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8047e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2099e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 22
+Elapsed runtime : 3.080 seconds
+
+New displacement factor 0.4400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8915e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.3302e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 23
+Elapsed runtime : 3.096 seconds
+
+New displacement factor 0.4600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.9784e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.8218e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 24
+Elapsed runtime : 3.113 seconds
+
+New displacement factor 0.4800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.0655e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.9769e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 25
+Elapsed runtime : 3.130 seconds
+
+New displacement factor 0.5000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.1526e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.0499e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 26
+Elapsed runtime : 3.146 seconds
+
+New displacement factor 0.5200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.2398e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2626e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 27
+Elapsed runtime : 3.162 seconds
+
+New displacement factor 0.5400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.3271e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.0919e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 28
+Elapsed runtime : 3.179 seconds
+
+New displacement factor 0.5600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.4145e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.0576e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 29
+Elapsed runtime : 3.197 seconds
+
+New displacement factor 0.5800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.5020e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7376e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 30
+Elapsed runtime : 3.213 seconds
+
+New displacement factor 0.6000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.5896e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.0308e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 31
+Elapsed runtime : 3.229 seconds
+
+New displacement factor 0.6200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.6772e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2967e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 32
+Elapsed runtime : 3.246 seconds
+
+New displacement factor 0.6400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.7650e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.9707e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 33
+Elapsed runtime : 3.262 seconds
+
+New displacement factor 0.6600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.8529e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.8216e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 34
+Elapsed runtime : 3.282 seconds
+
+New displacement factor 0.6800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.9409e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.2052e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 35
+Elapsed runtime : 3.299 seconds
+
+New displacement factor 0.7000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0290e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.1753e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 36
+Elapsed runtime : 3.312 seconds
+
+New displacement factor 0.7200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.1172e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.9493e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 37
+Elapsed runtime : 3.328 seconds
+
+New displacement factor 0.7400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2055e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4148e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 38
+Elapsed runtime : 3.348 seconds
+
+New displacement factor 0.7600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2940e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2066e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 39
+Elapsed runtime : 3.366 seconds
+
+New displacement factor 0.7800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.3825e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.1968e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 40
+Elapsed runtime : 3.379 seconds
+
+New displacement factor 0.8000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.4711e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.2290e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 41
+Elapsed runtime : 3.394 seconds
+
+New displacement factor 0.8200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.5599e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.3544e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 42
+Elapsed runtime : 3.411 seconds
+
+New displacement factor 0.8400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.6487e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.6082e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 43
+Elapsed runtime : 3.428 seconds
+
+New displacement factor 0.8600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.7377e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.1669e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 44
+Elapsed runtime : 3.445 seconds
+
+New displacement factor 0.8800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.8268e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.6889e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 45
+Elapsed runtime : 3.461 seconds
+
+New displacement factor 0.9000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.9160e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4440e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 46
+Elapsed runtime : 3.479 seconds
+
+New displacement factor 0.9200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.0053e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.0929e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 47
+Elapsed runtime : 3.499 seconds
+
+New displacement factor 0.9400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.0947e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.6395e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 48
+Elapsed runtime : 3.515 seconds
+
+New displacement factor 0.9600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.1843e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1193e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 49
+Elapsed runtime : 3.529 seconds
+
+New displacement factor 0.9800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.2740e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5301e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 50
+Elapsed runtime : 3.544 seconds
+
+New displacement factor 1.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.3638e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.8038e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 51
+Elapsed runtime : 3.565 seconds
+
+New displacement factor 1.020
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.4537e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7804e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 52
+Elapsed runtime : 3.582 seconds
+
+New displacement factor 1.040
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.5437e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9872e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 53
+Elapsed runtime : 3.599 seconds
+
+New displacement factor 1.060
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.6339e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.1778e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 54
+Elapsed runtime : 3.613 seconds
+
+New displacement factor 1.080
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.7242e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.9251e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 55
+Elapsed runtime : 3.629 seconds
+
+New displacement factor 1.100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.8146e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.3708e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 56
+Elapsed runtime : 3.646 seconds
+
+New displacement factor 1.120
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.9052e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1134e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 57
+Elapsed runtime : 3.662 seconds
+
+New displacement factor 1.140
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.9958e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.8680e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 58
+Elapsed runtime : 3.678 seconds
+
+New displacement factor 1.160
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.0866e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.4274e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 59
+Elapsed runtime : 3.695 seconds
+
+New displacement factor 1.180
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.1776e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.3358e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 60
+Elapsed runtime : 3.713 seconds
+
+New displacement factor 1.200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.2686e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.2738e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 61
+Elapsed runtime : 3.729 seconds
+
+New displacement factor 1.220
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.3599e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8162e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 62
+Elapsed runtime : 3.745 seconds
+
+New displacement factor 1.240
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.4512e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.3727e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 63
+Elapsed runtime : 3.762 seconds
+
+New displacement factor 1.260
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.5427e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0345e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 64
+Elapsed runtime : 3.784 seconds
+
+New displacement factor 1.280
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.6343e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2782e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 65
+Elapsed runtime : 3.799 seconds
+
+New displacement factor 1.300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.7260e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.0996e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 66
+Elapsed runtime : 3.814 seconds
+
+New displacement factor 1.320
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.8179e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.6066e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 67
+Elapsed runtime : 3.830 seconds
+
+New displacement factor 1.340
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.9100e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.2143e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 68
+Elapsed runtime : 3.846 seconds
+
+New displacement factor 1.360
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.0021e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.8158e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 69
+Elapsed runtime : 3.862 seconds
+
+New displacement factor 1.380
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.0945e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8861e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 70
+Elapsed runtime : 3.879 seconds
+
+New displacement factor 1.400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.1869e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.7627e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 71
+Elapsed runtime : 3.897 seconds
+
+New displacement factor 1.420
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.2795e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5099e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 72
+Elapsed runtime : 3.913 seconds
+
+New displacement factor 1.440
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.3723e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7729e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 73
+Elapsed runtime : 3.929 seconds
+
+New displacement factor 1.460
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.4652e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.0119e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 74
+Elapsed runtime : 3.946 seconds
+
+New displacement factor 1.480
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.5583e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2814e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 75
+Elapsed runtime : 3.963 seconds
+
+New displacement factor 1.500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.6515e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.3249e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 76
+Elapsed runtime : 3.980 seconds
+
+New displacement factor 1.520
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.7448e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.0072e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 77
+Elapsed runtime : 3.997 seconds
+
+New displacement factor 1.540
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.8383e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4611e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 78
+Elapsed runtime : 4.013 seconds
+
+New displacement factor 1.560
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.9320e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5598e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 79
+Elapsed runtime : 4.030 seconds
+
+New displacement factor 1.580
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.0258e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7222e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 80
+Elapsed runtime : 4.046 seconds
+
+New displacement factor 1.600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.1198e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.4466e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 81
+Elapsed runtime : 4.062 seconds
+
+New displacement factor 1.620
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.2139e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.5580e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 82
+Elapsed runtime : 4.082 seconds
+
+New displacement factor 1.640
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.3082e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.1453e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 83
+Elapsed runtime : 4.098 seconds
+
+New displacement factor 1.660
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.4027e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.8081e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 84
+Elapsed runtime : 4.113 seconds
+
+New displacement factor 1.680
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.4973e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4293e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 85
+Elapsed runtime : 4.129 seconds
+
+New displacement factor 1.700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.5921e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.6050e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 86
+Elapsed runtime : 4.146 seconds
+
+New displacement factor 1.720
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.6870e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7439e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 87
+Elapsed runtime : 4.163 seconds
+
+New displacement factor 1.740
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.7821e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2506e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 88
+Elapsed runtime : 4.179 seconds
+
+New displacement factor 1.760
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.8774e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.2745e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 89
+Elapsed runtime : 4.196 seconds
+
+New displacement factor 1.780
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.9728e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.9601e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 90
+Elapsed runtime : 4.216 seconds
+
+New displacement factor 1.800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.0685e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7110e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 91
+Elapsed runtime : 4.232 seconds
+
+New displacement factor 1.820
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.1642e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7198e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 92
+Elapsed runtime : 4.246 seconds
+
+New displacement factor 1.840
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.2602e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6378e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 93
+Elapsed runtime : 4.262 seconds
+
+New displacement factor 1.860
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.3563e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.6827e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 94
+Elapsed runtime : 4.278 seconds
+
+New displacement factor 1.880
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.4526e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.7296e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 95
+Elapsed runtime : 4.296 seconds
+
+New displacement factor 1.900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.5491e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.4517e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 96
+Elapsed runtime : 4.312 seconds
+
+New displacement factor 1.920
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.6458e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1491e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 97
+Elapsed runtime : 4.328 seconds
+
+New displacement factor 1.940
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.7426e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0770e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 98
+Elapsed runtime : 4.345 seconds
+
+New displacement factor 1.960
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.8396e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.2302e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 99
+Elapsed runtime : 4.362 seconds
+
+New displacement factor 1.980
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.9368e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.0604e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 100
+Elapsed runtime : 4.379 seconds
+
+New displacement factor 2.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.0342e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.9119e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 101
+Elapsed runtime : 6.719 seconds
+
+New displacement factor 2.020
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.1317e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8500e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 102
+Elapsed runtime : 6.735 seconds
+
+New displacement factor 2.040
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.2295e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1541e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 103
+Elapsed runtime : 6.748 seconds
+
+New displacement factor 2.060
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.3274e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6874e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 104
+Elapsed runtime : 6.756 seconds
+
+New displacement factor 2.080
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.4255e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9897e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 105
+Elapsed runtime : 6.762 seconds
+
+New displacement factor 2.100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.5238e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.8954e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 106
+Elapsed runtime : 6.768 seconds
+
+New displacement factor 2.120
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.6223e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7621e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 107
+Elapsed runtime : 6.781 seconds
+
+New displacement factor 2.140
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.7210e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0103e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 108
+Elapsed runtime : 6.795 seconds
+
+New displacement factor 2.160
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.8199e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.6786e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 109
+Elapsed runtime : 6.812 seconds
+
+New displacement factor 2.180
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.9190e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.8355e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 110
+Elapsed runtime : 6.828 seconds
+
+New displacement factor 2.200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0018e+04
+module `userModules.solver' : iter = 1, scaled residual = 5.9258e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 111
+Elapsed runtime : 6.845 seconds
+
+New displacement factor 2.220
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0118e+04
+module `userModules.solver' : iter = 1, scaled residual = 1.0149e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 112
+Elapsed runtime : 6.862 seconds
+
+New displacement factor 2.240
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0217e+04
+module `userModules.solver' : iter = 1, scaled residual = 9.1009e-16
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 113
+Elapsed runtime : 6.878 seconds
+
+New displacement factor 2.260
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0317e+04
+module `userModules.solver' : iter = 1, scaled residual = 1.0658e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 114
+Elapsed runtime : 6.895 seconds
+
+New displacement factor 2.280
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0417e+04
+module `userModules.solver' : iter = 1, scaled residual = 1.0237e-15
+The Newton-Raphson solver converged in 1 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 115
+Elapsed runtime : 6.913 seconds
+
+New displacement factor 2.300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0518e+04
+module `userModules.solver' : iter = 1, scaled residual = 5.1317e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.9998e-03
+module `userModules.solver' : iter = 3, scaled residual = 2.2360e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.3963e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.1531e-03
+module `userModules.solver' : iter = 6, scaled residual = 6.7451e-04
+The Newton-Raphson solver converged in 6 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 116
+Elapsed runtime : 6.930 seconds
+
+New displacement factor 2.320
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0404e+04
+module `userModules.solver' : iter = 1, scaled residual = 6.5874e-03
+module `userModules.solver' : iter = 2, scaled residual = 4.4113e-03
+module `userModules.solver' : iter = 3, scaled residual = 2.4088e-03
+module `userModules.solver' : iter = 4, scaled residual = 2.0254e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.1197e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.1530e-03
+module `userModules.solver' : iter = 7, scaled residual = 7.9142e-04
+The Newton-Raphson solver converged in 7 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 117
+Elapsed runtime : 6.944 seconds
+
+New displacement factor 2.340
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0309e+04
+module `userModules.solver' : iter = 1, scaled residual = 5.9844e-03
+module `userModules.solver' : iter = 2, scaled residual = 4.0069e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.9782e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.8709e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.2121e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.2536e-03
+module `userModules.solver' : iter = 7, scaled residual = 1.0327e-03
+module `userModules.solver' : iter = 8, scaled residual = 1.0107e-03
+module `userModules.solver' : iter = 9, scaled residual = 9.1069e-04
+The Newton-Raphson solver converged in 9 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 118
+Elapsed runtime : 6.960 seconds
+
+New displacement factor 2.360
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0203e+04
+module `userModules.solver' : iter = 1, scaled residual = 5.4485e-03
+module `userModules.solver' : iter = 2, scaled residual = 3.5633e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.7231e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.7143e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.2518e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.2522e-03
+module `userModules.solver' : iter = 7, scaled residual = 1.0975e-03
+module `userModules.solver' : iter = 8, scaled residual = 1.0478e-03
+module `userModules.solver' : iter = 9, scaled residual = 9.6611e-04
+The Newton-Raphson solver converged in 9 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 119
+Elapsed runtime : 6.977 seconds
+
+New displacement factor 2.380
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0093e+04
+module `userModules.solver' : iter = 1, scaled residual = 4.9662e-03
+module `userModules.solver' : iter = 2, scaled residual = 3.2061e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.5843e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.6055e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.2558e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.2258e-03
+module `userModules.solver' : iter = 7, scaled residual = 1.1002e-03
+module `userModules.solver' : iter = 8, scaled residual = 1.0387e-03
+module `userModules.solver' : iter = 9, scaled residual = 9.6409e-04
+The Newton-Raphson solver converged in 9 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 120
+Elapsed runtime : 6.993 seconds
+
+New displacement factor 2.400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.9824e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.6174e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.9347e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.4830e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.5066e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.2207e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.1742e-03
+module `userModules.solver' : iter = 7, scaled residual = 1.0642e-03
+module `userModules.solver' : iter = 8, scaled residual = 9.9888e-04
+The Newton-Raphson solver converged in 8 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 121
+Elapsed runtime : 7.010 seconds
+
+New displacement factor 2.420
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.8767e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.3911e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.7769e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.4364e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.4572e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.2046e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.1479e-03
+module `userModules.solver' : iter = 7, scaled residual = 1.0448e-03
+module `userModules.solver' : iter = 8, scaled residual = 9.7714e-04
+The Newton-Raphson solver converged in 8 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 122
+Elapsed runtime : 7.027 seconds
+
+New displacement factor 2.440
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.7719e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.2241e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.6340e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.3707e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.3883e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.1587e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.0984e-03
+module `userModules.solver' : iter = 7, scaled residual = 1.0014e-03
+module `userModules.solver' : iter = 8, scaled residual = 9.3451e-04
+The Newton-Raphson solver converged in 8 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 123
+Elapsed runtime : 7.043 seconds
+
+New displacement factor 2.460
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.6689e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.1151e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.5156e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.2981e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.3137e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.0997e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.0391e-03
+module `userModules.solver' : iter = 7, scaled residual = 9.4750e-04
+The Newton-Raphson solver converged in 7 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 124
+Elapsed runtime : 7.060 seconds
+
+New displacement factor 2.480
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.5701e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.0629e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.4717e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.2717e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.2864e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.0779e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.0159e-03
+module `userModules.solver' : iter = 7, scaled residual = 9.2581e-04
+The Newton-Raphson solver converged in 7 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 125
+Elapsed runtime : 7.077 seconds
+
+New displacement factor 2.500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.4725e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.0490e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.4248e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.2238e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.2401e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.0362e-03
+module `userModules.solver' : iter = 6, scaled residual = 9.7623e-04
+The Newton-Raphson solver converged in 6 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 126
+Elapsed runtime : 7.093 seconds
+
+New displacement factor 2.520
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.3795e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.0892e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.4464e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.2199e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.2380e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.0306e-03
+module `userModules.solver' : iter = 6, scaled residual = 9.7048e-04
+The Newton-Raphson solver converged in 6 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 127
+Elapsed runtime : 7.110 seconds
+
+New displacement factor 2.540
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.2862e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.1420e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.4507e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1909e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.2129e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.0031e-03
+module `userModules.solver' : iter = 6, scaled residual = 9.4599e-04
+The Newton-Raphson solver converged in 6 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 128
+Elapsed runtime : 7.126 seconds
+
+New displacement factor 2.560
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.1939e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.2210e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.4591e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1535e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1790e-03
+module `userModules.solver' : iter = 5, scaled residual = 9.6498e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 129
+Elapsed runtime : 7.143 seconds
+
+New displacement factor 2.580
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.1033e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.2962e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.5243e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1655e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1939e-03
+module `userModules.solver' : iter = 5, scaled residual = 9.6829e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 130
+Elapsed runtime : 7.160 seconds
+
+New displacement factor 2.600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.0145e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.4234e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.5864e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1568e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1884e-03
+module `userModules.solver' : iter = 5, scaled residual = 9.5060e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 131
+Elapsed runtime : 7.177 seconds
+
+New displacement factor 2.620
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.9260e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.5715e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.6523e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1427e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1748e-03
+module `userModules.solver' : iter = 5, scaled residual = 9.2221e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 132
+Elapsed runtime : 7.193 seconds
+
+New displacement factor 2.640
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.8380e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.7409e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.7303e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1316e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1596e-03
+module `userModules.solver' : iter = 5, scaled residual = 8.8792e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 133
+Elapsed runtime : 7.210 seconds
+
+New displacement factor 2.660
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.7505e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.9315e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.8251e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1295e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1468e-03
+module `userModules.solver' : iter = 5, scaled residual = 8.5056e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 134
+Elapsed runtime : 7.227 seconds
+
+New displacement factor 2.680
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.6635e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.1432e-03
+module `userModules.solver' : iter = 2, scaled residual = 2.9403e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1420e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1400e-03
+module `userModules.solver' : iter = 5, scaled residual = 8.1214e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 135
+Elapsed runtime : 7.243 seconds
+
+New displacement factor 2.700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.5767e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.3757e-03
+module `userModules.solver' : iter = 2, scaled residual = 3.0790e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.1744e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1424e-03
+module `userModules.solver' : iter = 5, scaled residual = 7.7430e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 136
+Elapsed runtime : 7.260 seconds
+
+New displacement factor 2.720
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.4902e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.6288e-03
+module `userModules.solver' : iter = 2, scaled residual = 3.2441e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.2314e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1574e-03
+module `userModules.solver' : iter = 5, scaled residual = 7.3877e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 137
+Elapsed runtime : 7.277 seconds
+
+New displacement factor 2.740
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.4037e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.9023e-03
+module `userModules.solver' : iter = 2, scaled residual = 3.4384e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.3176e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.1888e-03
+module `userModules.solver' : iter = 5, scaled residual = 7.0782e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 138
+Elapsed runtime : 7.294 seconds
+
+New displacement factor 2.760
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.3170e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.1958e-03
+module `userModules.solver' : iter = 2, scaled residual = 3.6650e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.4372e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.2411e-03
+module `userModules.solver' : iter = 5, scaled residual = 6.8485e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 139
+Elapsed runtime : 7.310 seconds
+
+New displacement factor 2.780
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.2301e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.5092e-03
+module `userModules.solver' : iter = 2, scaled residual = 3.9270e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.5942e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.3194e-03
+module `userModules.solver' : iter = 5, scaled residual = 6.7518e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 140
+Elapsed runtime : 7.327 seconds
+
+New displacement factor 2.800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.1427e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.8419e-03
+module `userModules.solver' : iter = 2, scaled residual = 4.2280e-03
+module `userModules.solver' : iter = 3, scaled residual = 1.7927e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.4302e-03
+module `userModules.solver' : iter = 5, scaled residual = 6.8682e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 141
+Elapsed runtime : 7.343 seconds
+
+New displacement factor 2.820
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.0545e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.1928e-03
+module `userModules.solver' : iter = 2, scaled residual = 4.5720e-03
+module `userModules.solver' : iter = 3, scaled residual = 2.0376e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.5807e-03
+module `userModules.solver' : iter = 5, scaled residual = 7.3066e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 142
+Elapsed runtime : 7.360 seconds
+
+New displacement factor 2.840
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.9653e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.5605e-03
+module `userModules.solver' : iter = 2, scaled residual = 4.9631e-03
+module `userModules.solver' : iter = 3, scaled residual = 2.3345e-03
+module `userModules.solver' : iter = 4, scaled residual = 1.7803e-03
+module `userModules.solver' : iter = 5, scaled residual = 8.1969e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 143
+Elapsed runtime : 7.377 seconds
+
+New displacement factor 2.860
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.8748e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.9422e-03
+module `userModules.solver' : iter = 2, scaled residual = 5.4057e-03
+module `userModules.solver' : iter = 3, scaled residual = 2.6904e-03
+module `userModules.solver' : iter = 4, scaled residual = 2.0402e-03
+module `userModules.solver' : iter = 5, scaled residual = 9.6780e-04
+The Newton-Raphson solver converged in 5 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 144
+Elapsed runtime : 7.393 seconds
+
+New displacement factor 2.880
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.7827e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.3335e-03
+module `userModules.solver' : iter = 2, scaled residual = 5.9039e-03
+module `userModules.solver' : iter = 3, scaled residual = 3.1135e-03
+module `userModules.solver' : iter = 4, scaled residual = 2.3746e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.1899e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.0703e-03
+module `userModules.solver' : iter = 7, scaled residual = 5.5365e-04
+The Newton-Raphson solver converged in 7 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 145
+Elapsed runtime : 7.410 seconds
+
+New displacement factor 2.900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.6968e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.1756e-03
+module `userModules.solver' : iter = 2, scaled residual = 6.7233e-03
+module `userModules.solver' : iter = 3, scaled residual = 3.8017e-03
+module `userModules.solver' : iter = 4, scaled residual = 2.8856e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.5738e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.3154e-03
+module `userModules.solver' : iter = 7, scaled residual = 6.8833e-04
+The Newton-Raphson solver converged in 7 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 146
+Elapsed runtime : 7.427 seconds
+
+New displacement factor 2.920
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.6003e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.6575e-03
+module `userModules.solver' : iter = 2, scaled residual = 7.4109e-03
+module `userModules.solver' : iter = 3, scaled residual = 4.4521e-03
+module `userModules.solver' : iter = 4, scaled residual = 3.4649e-03
+module `userModules.solver' : iter = 5, scaled residual = 2.0434e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.6738e-03
+module `userModules.solver' : iter = 7, scaled residual = 9.4526e-04
+The Newton-Raphson solver converged in 7 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 147
+Elapsed runtime : 7.443 seconds
+
+New displacement factor 2.940
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.5016e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.0138e-02
+module `userModules.solver' : iter = 2, scaled residual = 8.1989e-03
+module `userModules.solver' : iter = 3, scaled residual = 5.2239e-03
+module `userModules.solver' : iter = 4, scaled residual = 4.2238e-03
+module `userModules.solver' : iter = 5, scaled residual = 2.6828e-03
+module `userModules.solver' : iter = 6, scaled residual = 2.2150e-03
+module `userModules.solver' : iter = 7, scaled residual = 1.3713e-03
+module `userModules.solver' : iter = 8, scaled residual = 1.1925e-03
+module `userModules.solver' : iter = 9, scaled residual = 7.1042e-04
+The Newton-Raphson solver converged in 9 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 148
+Elapsed runtime : 7.460 seconds
+
+New displacement factor 2.960
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.4074e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.1029e-02
+module `userModules.solver' : iter = 2, scaled residual = 9.4247e-03
+module `userModules.solver' : iter = 3, scaled residual = 6.3843e-03
+module `userModules.solver' : iter = 4, scaled residual = 5.3890e-03
+module `userModules.solver' : iter = 5, scaled residual = 3.6914e-03
+module `userModules.solver' : iter = 6, scaled residual = 3.1112e-03
+module `userModules.solver' : iter = 7, scaled residual = 2.1204e-03
+module `userModules.solver' : iter = 8, scaled residual = 1.8141e-03
+module `userModules.solver' : iter = 9, scaled residual = 1.2141e-03
+module `userModules.solver' : iter = 10, scaled residual = 1.0728e-03
+module `userModules.solver' : iter = 11, scaled residual = 6.9775e-04
+The Newton-Raphson solver converged in 11 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 149
+Elapsed runtime : 7.476 seconds
+
+New displacement factor 2.980
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.3073e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.1854e-02
+module `userModules.solver' : iter = 2, scaled residual = 1.0779e-02
+module `userModules.solver' : iter = 3, scaled residual = 7.7447e-03
+module `userModules.solver' : iter = 4, scaled residual = 6.9160e-03
+module `userModules.solver' : iter = 5, scaled residual = 5.0673e-03
+module `userModules.solver' : iter = 6, scaled residual = 4.4633e-03
+module `userModules.solver' : iter = 7, scaled residual = 3.2992e-03
+module `userModules.solver' : iter = 8, scaled residual = 2.8930e-03
+module `userModules.solver' : iter = 9, scaled residual = 2.1398e-03
+module `userModules.solver' : iter = 10, scaled residual = 1.8830e-03
+module `userModules.solver' : iter = 11, scaled residual = 1.3839e-03
+module `userModules.solver' : iter = 12, scaled residual = 1.2316e-03
+module `userModules.solver' : iter = 13, scaled residual = 8.9366e-04
+The Newton-Raphson solver converged in 13 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 150
+Elapsed runtime : 7.493 seconds
+
+New displacement factor 3.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.2022e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.2632e-02
+module `userModules.solver' : iter = 2, scaled residual = 1.2315e-02
+module `userModules.solver' : iter = 3, scaled residual = 9.3677e-03
+module `userModules.solver' : iter = 4, scaled residual = 8.9690e-03
+module `userModules.solver' : iter = 5, scaled residual = 6.9744e-03
+module `userModules.solver' : iter = 6, scaled residual = 6.5560e-03
+module `userModules.solver' : iter = 7, scaled residual = 5.1780e-03
+module `userModules.solver' : iter = 8, scaled residual = 4.8042e-03
+module `userModules.solver' : iter = 9, scaled residual = 3.8347e-03
+module `userModules.solver' : iter = 10, scaled residual = 3.5270e-03
+module `userModules.solver' : iter = 11, scaled residual = 2.8337e-03
+module `userModules.solver' : iter = 12, scaled residual = 2.5931e-03
+module `userModules.solver' : iter = 13, scaled residual = 2.0902e-03
+module `userModules.solver' : iter = 14, scaled residual = 1.9088e-03
+module `userModules.solver' : iter = 15, scaled residual = 1.5393e-03
+module `userModules.solver' : iter = 16, scaled residual = 1.4069e-03
+module `userModules.solver' : iter = 17, scaled residual = 1.1322e-03
+module `userModules.solver' : iter = 18, scaled residual = 1.0382e-03
+module `userModules.solver' : iter = 19, scaled residual = 8.3184e-04
+The Newton-Raphson solver converged in 19 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 151
+Elapsed runtime : 7.512 seconds
+
+New displacement factor 3.020
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.0973e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.3711e-02
+module `userModules.solver' : iter = 2, scaled residual = 1.4470e-02
+module `userModules.solver' : iter = 3, scaled residual = 1.1619e-02
+module `userModules.solver' : iter = 4, scaled residual = 1.2107e-02
+module `userModules.solver' : iter = 5, scaled residual = 9.9028e-03
+module `userModules.solver' : iter = 6, scaled residual = 1.0152e-02
+module `userModules.solver' : iter = 7, scaled residual = 8.4335e-03
+module `userModules.solver' : iter = 8, scaled residual = 8.5271e-03
+module `userModules.solver' : iter = 9, scaled residual = 7.1761e-03
+module `userModules.solver' : iter = 10, scaled residual = 7.1705e-03
+module `userModules.solver' : iter = 11, scaled residual = 6.1009e-03
+module `userModules.solver' : iter = 12, scaled residual = 6.0351e-03
+module `userModules.solver' : iter = 13, scaled residual = 5.1823e-03
+module `userModules.solver' : iter = 14, scaled residual = 5.0830e-03
+module `userModules.solver' : iter = 15, scaled residual = 4.3985e-03
+module `userModules.solver' : iter = 16, scaled residual = 4.2832e-03
+module `userModules.solver' : iter = 17, scaled residual = 3.7304e-03
+module `userModules.solver' : iter = 18, scaled residual = 3.6107e-03
+module `userModules.solver' : iter = 19, scaled residual = 3.1616e-03
+module `userModules.solver' : iter = 20, scaled residual = 3.0447e-03
+module `userModules.solver' : iter = 21, scaled residual = 2.6779e-03
+module `userModules.solver' : iter = 22, scaled residual = 2.5680e-03
+module `userModules.solver' : iter = 23, scaled residual = 2.2670e-03
+module `userModules.solver' : iter = 24, scaled residual = 2.1663e-03
+module `userModules.solver' : iter = 25, scaled residual = 1.9182e-03
+module `userModules.solver' : iter = 26, scaled residual = 1.8277e-03
+module `userModules.solver' : iter = 27, scaled residual = 1.6224e-03
+module `userModules.solver' : iter = 28, scaled residual = 1.5422e-03
+module `userModules.solver' : iter = 29, scaled residual = 1.3716e-03
+module `userModules.solver' : iter = 30, scaled residual = 1.3014e-03
+module `userModules.solver' : iter = 31, scaled residual = 1.1593e-03
+module `userModules.solver' : iter = 32, scaled residual = 1.0982e-03
+module `userModules.solver' : iter = 33, scaled residual = 9.7955e-04
+The Newton-Raphson solver converged in 33 iterations
+
+*** WARNING: data set `userModules.view.history' : unknown table: `nodes/nodalHistory'
+
+Iteration       : 152
+Elapsed runtime : 7.543 seconds
+
+New displacement factor 3.040
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.9864e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4782e-02
+module `userModules.solver' : iter = 2, scaled residual = 2.3668e-02
+module `userModules.solver' : iter = 3, scaled residual = 1.0947e-02
+module `userModules.solver' : iter = 4, scaled residual = 9.1575e-03
+module `userModules.solver' : iter = 5, scaled residual = 1.0148e-02
+module `userModules.solver' : iter = 6, scaled residual = 9.0282e-03
+module `userModules.solver' : iter = 7, scaled residual = 9.9327e-03
+module `userModules.solver' : iter = 8, scaled residual = 8.8877e-03
+module `userModules.solver' : iter = 9, scaled residual = 9.7300e-03
+module `userModules.solver' : iter = 10, scaled residual = 8.7432e-03
+module `userModules.solver' : iter = 11, scaled residual = 9.5366e-03
+module `userModules.solver' : iter = 12, scaled residual = 8.5976e-03
+module `userModules.solver' : iter = 13, scaled residual = 9.3505e-03
+module `userModules.solver' : iter = 14, scaled residual = 8.4525e-03
+module `userModules.solver' : iter = 15, scaled residual = 9.1703e-03
+module `userModules.solver' : iter = 16, scaled residual = 8.3088e-03
+module `userModules.solver' : iter = 17, scaled residual = 8.9953e-03
+module `userModules.solver' : iter = 18, scaled residual = 8.1672e-03
+module `userModules.solver' : iter = 19, scaled residual = 8.8250e-03
+module `userModules.solver' : iter = 20, scaled residual = 8.0280e-03
+module `userModules.solver' : iter = 21, scaled residual = 8.6592e-03
+module `userModules.solver' : iter = 22, scaled residual = 7.8912e-03
+module `userModules.solver' : iter = 23, scaled residual = 8.4975e-03
+module `userModules.solver' : iter = 24, scaled residual = 7.7571e-03
+module `userModules.solver' : iter = 25, scaled residual = 8.3399e-03
+module `userModules.solver' : iter = 26, scaled residual = 7.6256e-03
+module `userModules.solver' : iter = 27, scaled residual = 8.1860e-03
+module `userModules.solver' : iter = 28, scaled residual = 7.4967e-03
+module `userModules.solver' : iter = 29, scaled residual = 8.0359e-03
+module `userModules.solver' : iter = 30, scaled residual = 7.3704e-03
+module `userModules.solver' : iter = 31, scaled residual = 7.8894e-03
+module `userModules.solver' : iter = 32, scaled residual = 7.2467e-03
+module `userModules.solver' : iter = 33, scaled residual = 7.7463e-03
+module `userModules.solver' : iter = 34, scaled residual = 7.1256e-03
+module `userModules.solver' : iter = 35, scaled residual = 7.6067e-03
+module `userModules.solver' : iter = 36, scaled residual = 7.0069e-03
+module `userModules.solver' : iter = 37, scaled residual = 7.4702e-03
+module `userModules.solver' : iter = 38, scaled residual = 6.8906e-03
+module `userModules.solver' : iter = 39, scaled residual = 7.3370e-03
+module `userModules.solver' : iter = 40, scaled residual = 6.7766e-03
+module `userModules.solver' : iter = 41, scaled residual = 7.2068e-03
+module `userModules.solver' : iter = 42, scaled residual = 6.6650e-03
+module `userModules.solver' : iter = 43, scaled residual = 7.0796e-03
+module `userModules.solver' : iter = 44, scaled residual = 6.5556e-03
+module `userModules.solver' : iter = 45, scaled residual = 6.9553e-03
+module `userModules.solver' : iter = 46, scaled residual = 6.4484e-03
+module `userModules.solver' : iter = 47, scaled residual = 6.8337e-03
+module `userModules.solver' : iter = 48, scaled residual = 6.3434e-03
+module `userModules.solver' : iter = 49, scaled residual = 6.7149e-03
+module `userModules.solver' : iter = 50, scaled residual = 6.2404e-03
+module `userModules.solver' : iter = 51, scaled residual = 6.5987e-03
+
+*** ERROR: Fatal runtime error
+
+*** ERROR:   Type    : jem::Exception
+*** ERROR:   Context : module `userModules.solver'
+*** ERROR:   Message : no convergence achieved in 51 iterations; final residual: 6.598706e-03
+
+*** ERROR: Stack trace:
+
+*** ERROR:   ../src/feel(_ZN4jive7implict12NonlinModule5solveERKN3jem4util10PropertiesES6_+0x429)
+*** ERROR:   [0x5570128435e1]
+*** ERROR:   ../src/feel(_ZN4jive7implict12SolverModule3runERKN3jem4util10PropertiesE+0x4c) [0x55701284eea8]
+*** ERROR:   ../src/feel(_ZN4jive3app14UserconfModule3runERKN3jem4util10PropertiesE+0x116) [0x557012abe6f8]
+*** ERROR:   ../src/feel(_ZN4jive3app11ChainModule3runERKN3jem4util10PropertiesE+0x155) [0x557012a96911]
+*** ERROR:   ../src/feel(_ZN4jive3app12ReportModule3runERKN3jem4util10PropertiesE+0x41) [0x557012ab6885]
+*** ERROR:   ../src/feel(_ZN4jive3app11Application7runLoopERN3jem6StringERNS0_6ModuleERKNS2_4util10PropertiesESA_SA_+0xd7)
+*** ERROR:   [0x557012a904bb]
+*** ERROR:   ../src/feel(_ZN4jive3app11Application4execEiPPcPFN3jem3RefINS0_6ModuleEEEvE+0xc4b)
+*** ERROR:   [0x557012a943f9]
+*** ERROR:   ../src/feel(main+0x27) [0x5570127787ea]
+*** ERROR:   /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f06c3cafb97]
+*** ERROR:   ../src/feel(_start+0x2a) [0x55701276995a]
+

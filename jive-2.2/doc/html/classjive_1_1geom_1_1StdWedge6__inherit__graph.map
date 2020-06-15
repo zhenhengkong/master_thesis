@@ -1,0 +1,6 @@
+<map id="jive::geom::StdWedge6" name="jive::geom::StdWedge6">
+<area shape="rect" id="node2" href="$classjive_1_1geom_1_1StdWedge.html" title="jive::geom::StdWedge" alt="" coords="5,80,165,107"/>
+<area shape="rect" id="node3" href="$classjive_1_1geom_1_1StdShape.html" title="Encapsulates the geometrical properties of a finite element in its local coordinate system..." alt="" coords="6,5,165,32"/>
+<area shape="rect" id="node4" href="$classjem_1_1io_1_1Serializable.html" title="jem::io::Serializable" alt="" coords="189,80,336,107"/>
+<area shape="rect" id="node5" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="207,5,318,32"/>
+</map>

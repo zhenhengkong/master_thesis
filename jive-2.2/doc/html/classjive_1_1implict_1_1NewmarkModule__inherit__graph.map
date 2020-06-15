@@ -1,0 +1,8 @@
+<map id="jive::implict::NewmarkModule" name="jive::implict::NewmarkModule">
+<area shape="rect" id="node2" href="$classjive_1_1implict_1_1TransientSolver.html" title="jive::implict::Transient\lSolver" alt="" coords="29,379,188,420"/>
+<area shape="rect" id="node3" href="$classjive_1_1implict_1_1SolverModule.html" title="jive::implict::SolverModule" alt="" coords="15,304,202,331"/>
+<area shape="rect" id="node4" href="$classjive_1_1app_1_1Module.html" title="jive::app::Module" alt="" coords="44,229,173,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1NamedObject.html" title="jem::NamedObject" alt="" coords="37,155,180,181"/>
+<area shape="rect" id="node6" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="61,80,156,107"/>
+<area shape="rect" id="node7" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="47,5,171,32"/>
+</map>

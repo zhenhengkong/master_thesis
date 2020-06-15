@@ -1,0 +1,8 @@
+<map id="jive::algebra::MPVectorSpace" name="jive::algebra::MPVectorSpace">
+<area shape="rect" id="node2" href="$classjive_1_1algebra_1_1VectorSpace.html" title="Computes the scalar product of two vectors. " alt="" coords="5,155,193,181"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="52,80,147,107"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="37,5,161,32"/>
+<area shape="rect" id="node5" href="$classjem_1_1Clonable.html" title="jem::Clonable" alt="" coords="218,155,327,181"/>
+<area shape="rect" id="node6" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="293,80,404,107"/>
+<area shape="rect" id="node7" href="$classjem_1_1io_1_1Serializable.html" title="jem::io::Serializable" alt="" coords="351,155,498,181"/>
+</map>

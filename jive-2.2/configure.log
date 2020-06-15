@@ -1,0 +1,123 @@
+Logfile created by `scripts/conf/configure' on zo 19 mei 2019 19:22:49 CEST.
+Current directory: /home/kong/run/jive-2.2.
+Arguments: 
+Entered directory `/home/kong/run/jive-2.2/packages/algebra'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/app'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/fem'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/femodel'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/geom'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/gl'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/graph'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/implict'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/mbody'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/mesh'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/model'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/mp'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/solver'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Entered directory `/home/kong/run/jive-2.2/packages/util'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Wrote `scripts/include/config.sh'.
+Installing scripts in `scripts/bin' ...
+Entered directory `/home/kong/run/jive-2.2/scripts/src'.
+Returned to directory `/home/kong/run/jive-2.2'.
+Configuring installed packages ...
+
+--- package util ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/util'.
+Arguments: util
+Wrote `Makedefs.mk'.
+
+--- package mp ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/mp'.
+Arguments: mp
+Wrote `Makedefs.mk'.
+
+--- package algebra ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/algebra'.
+Arguments: algebra
+Wrote `Makedefs.mk'.
+
+--- package model ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/model'.
+Arguments: model
+Wrote `Makedefs.mk'.
+
+--- package app ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/app'.
+Arguments: app
+Wrote `Makedefs.mk'.
+
+--- package geom ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/geom'.
+Arguments: geom
+Wrote `Makedefs.mk'.
+
+--- package graph ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/graph'.
+Arguments: graph
+Wrote `Makedefs.mk'.
+
+--- package fem ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/fem'.
+Arguments: fem
+Wrote `Makedefs.mk'.
+
+--- package femodel ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/femodel'.
+Arguments: femodel
+Wrote `Makedefs.mk'.
+
+--- package gl ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/gl'.
+Arguments: gl
+Missing required package `jem.gl'.
+
+--- package solver ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/solver'.
+Arguments: solver
+Wrote `Makedefs.mk'.
+
+--- package implict ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/implict'.
+Arguments: implict
+Wrote `Makedefs.mk'.
+
+--- package mesh ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/mesh'.
+Arguments: mesh
+Wrote `Makedefs.mk'.
+
+--- package mbody ---
+
+Changed to directory `/home/kong/run/jive-2.2/packages/mbody'.
+Arguments: mbody
+Wrote `Makedefs.mk'.
+
+---
+Logfile closed on zo 19 mei 2019 19:22:50 CEST.

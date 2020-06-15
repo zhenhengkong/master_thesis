@@ -1,0 +1,10 @@
+<map id="jive::util::XTable" name="jive::util::XTable">
+<area shape="rect" id="node8" href="$classjive_1_1util_1_1DenseTable.html" title="jive::util::DenseTable" alt="" coords="5,379,156,405"/>
+<area shape="rect" id="node9" href="$classjive_1_1util_1_1SparseTable.html" title="jive::util::SparseTable" alt="" coords="181,379,335,405"/>
+<area shape="rect" id="node2" href="$classjive_1_1util_1_1Table.html" title="jive::util::Table" alt="" coords="113,229,224,256"/>
+<area shape="rect" id="node3" href="$classjem_1_1NamedObject.html" title="jem::NamedObject" alt="" coords="11,155,153,181"/>
+<area shape="rect" id="node4" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="35,80,129,107"/>
+<area shape="rect" id="node5" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="20,5,144,32"/>
+<area shape="rect" id="node6" href="$classjive_1_1util_1_1EventSource.html" title="jive::util::EventSource" alt="" coords="177,155,336,181"/>
+<area shape="rect" id="node7" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="201,80,312,107"/>
+</map>

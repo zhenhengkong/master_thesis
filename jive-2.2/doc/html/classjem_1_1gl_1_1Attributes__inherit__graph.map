@@ -1,0 +1,7 @@
+<map id="jem::gl::Attributes" name="jem::gl::Attributes">
+<area shape="rect" id="node4" href="$classjem_1_1gl_1_1DummyAttribs.html" title="jem::gl::DummyAttribs" alt="" coords="5,229,172,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1gl_1_1StdAttribs.html" title="jem::gl::StdAttribs" alt="" coords="196,229,333,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="129,80,224,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="115,5,239,32"/>
+<area shape="rect" id="node6" href="$classjive_1_1gl_1_1MeshAttribs.html" title="jive::gl::MeshAttribs" alt="" coords="191,304,338,331"/>
+</map>

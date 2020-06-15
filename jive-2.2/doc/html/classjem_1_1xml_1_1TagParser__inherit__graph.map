@@ -1,0 +1,11 @@
+<map id="jem::xml::TagParser" name="jem::xml::TagParser">
+<area shape="rect" id="node6" href="$classjem_1_1xml_1_1SimpleTagParser.html" title="jem::xml::SimpleTagParser" alt="" coords="745,5,936,32"/>
+<area shape="rect" id="node7" href="$classjive_1_1util_1_1DBasesParser.html" title="jive::util::DBasesParser" alt="" coords="757,56,924,83"/>
+<area shape="rect" id="node8" href="$classjive_1_1util_1_1FuncsParser.html" title="jive::util::FuncsParser" alt="" coords="763,107,918,133"/>
+<area shape="rect" id="node9" href="$classjive_1_1util_1_1ItemGroupsParser.html" title="jive::util::ItemGroupsParser" alt="" coords="744,157,937,184"/>
+<area shape="rect" id="node10" href="$classjive_1_1util_1_1TablesParser.html" title="jive::util::TablesParser" alt="" coords="762,208,919,235"/>
+<area shape="rect" id="node2" href="$classjem_1_1xml_1_1Parser.html" title="jem::xml::Parser" alt="" coords="348,81,473,108"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,81,272,108"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,81,129,108"/>
+<area shape="rect" id="node5" href="$classjem_1_1xml_1_1AttributeParser.html" title="jem::xml::AttributeParser" alt="" coords="320,132,501,159"/>
+</map>

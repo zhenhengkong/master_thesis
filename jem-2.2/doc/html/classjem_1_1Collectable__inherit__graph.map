@@ -1,0 +1,12 @@
+<map id="jem::Collectable" name="jem::Collectable">
+<area shape="rect" id="node2" href="$classjem_1_1io_1_1Deflator.html" title="jem::io::Deflator" alt="" coords="181,5,305,32"/>
+<area shape="rect" id="node3" href="$classjem_1_1io_1_1Inflator.html" title="jem::io::Inflator" alt="" coords="185,56,302,83"/>
+<area shape="rect" id="node4" href="$classjem_1_1mt_1_1IOMutex.html" title="jem::mt::IOMutex" alt="" coords="177,107,309,133"/>
+<area shape="rect" id="node5" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="196,157,291,184"/>
+<area shape="rect" id="node6" href="$classjem_1_1Boolean.html" title="jem::Boolean" alt="" coords="381,31,488,57"/>
+<area shape="rect" id="node7" href="$classjem_1_1Character.html" title="jem::Character" alt="" coords="376,81,493,108"/>
+<area shape="rect" id="node8" href="$classjem_1_1gl_1_1Attributes.html" title="jem::gl::Attributes" alt="" coords="367,132,503,159"/>
+<area shape="rect" id="node9" href="$classjem_1_1gl_1_1ColorMap.html" title="jem::gl::ColorMap" alt="" coords="368,183,501,209"/>
+<area shape="rect" id="node10" href="$classjem_1_1gl_1_1Controller.html" title="jem::gl::Controller" alt="" coords="367,233,502,260"/>
+<area shape="rect" id="node11" href="$classjem_1_1gl_1_1ErrorHandler.html" title="jem::gl::ErrorHandler" alt="" coords="357,284,512,311"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="jive::solver::LocalSolver" name="jive::solver::LocalSolver">
+<area shape="rect" id="node2" href="$classjive_1_1solver_1_1Solver.html" title="Computes the solution of a linear system of equations. " alt="" coords="22,155,159,181"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="43,80,138,107"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="29,5,153,32"/>
+</map>

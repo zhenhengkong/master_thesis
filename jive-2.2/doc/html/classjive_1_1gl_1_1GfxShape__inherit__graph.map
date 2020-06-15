@@ -1,0 +1,7 @@
+<map id="jive::gl::GfxShape" name="jive::gl::GfxShape">
+<area shape="rect" id="node4" href="$classjive_1_1gl_1_1GfxFace.html" title="jive::gl::GfxFace" alt="" coords="5,229,125,256"/>
+<area shape="rect" id="node5" href="$classjive_1_1gl_1_1GfxLine.html" title="jive::gl::GfxLine" alt="" coords="149,229,267,256"/>
+<area shape="rect" id="node6" href="$classjive_1_1gl_1_1GfxPoint.html" title="jive::gl::GfxPoint" alt="" coords="291,229,413,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="161,80,255,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="146,5,270,32"/>
+</map>

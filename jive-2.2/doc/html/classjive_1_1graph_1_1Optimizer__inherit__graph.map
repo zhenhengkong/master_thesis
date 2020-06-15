@@ -1,0 +1,9 @@
+<map id="jive::graph::Optimizer" name="jive::graph::Optimizer">
+<area shape="rect" id="node5" href="$classjive_1_1graph_1_1Balancer.html" title="jive::graph::Balancer" alt="" coords="746,5,898,32"/>
+<area shape="rect" id="node6" href="$classjive_1_1graph_1_1DummyOptimizer.html" title="jive::graph::DummyOptimizer" alt="" coords="717,56,927,83"/>
+<area shape="rect" id="node7" href="$classjive_1_1graph_1_1FMOptimizer.html" title="jive::graph::FMOptimizer" alt="" coords="734,107,910,133"/>
+<area shape="rect" id="node8" href="$classjive_1_1graph_1_1GreedyOptimizer.html" title="jive::graph::GreedyOptimizer" alt="" coords="720,157,924,184"/>
+<area shape="rect" id="node2" href="$classjem_1_1NamedObject.html" title="jem::NamedObject" alt="" coords="320,81,463,108"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,81,272,108"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,81,129,108"/>
+</map>

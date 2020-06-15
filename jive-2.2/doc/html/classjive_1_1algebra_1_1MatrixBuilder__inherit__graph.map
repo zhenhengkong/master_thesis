@@ -1,0 +1,11 @@
+<map id="jive::algebra::MatrixBuilder" name="jive::algebra::MatrixBuilder">
+<area shape="rect" id="node5" href="$classjive_1_1algebra_1_1ConMatrixBuilder.html" title="jive::algebra::ConMatrix\lBuilder" alt="" coords="763,5,934,47"/>
+<area shape="rect" id="node6" href="$classjive_1_1algebra_1_1FlexMatrixBuilder.html" title="jive::algebra::FlexMatrix\lBuilder" alt="" coords="763,71,934,112"/>
+<area shape="rect" id="node7" href="$classjive_1_1algebra_1_1LumpedMatrixBuilder.html" title="jive::algebra::LumpedMatrix\lBuilder" alt="" coords="749,136,948,177"/>
+<area shape="rect" id="node8" href="$classjive_1_1algebra_1_1NullMatrixBuilder.html" title="jive::algebra::NullMatrix\lBuilder" alt="" coords="763,201,934,243"/>
+<area shape="rect" id="node9" href="$classjive_1_1algebra_1_1SparseMatrixBuilder.html" title="jive::algebra::SparseMatrix\lBuilder" alt="" coords="753,267,944,308"/>
+<area shape="rect" id="node2" href="$classjem_1_1NamedObject.html" title="jem::NamedObject" alt="" coords="320,143,463,170"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,143,272,170"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,143,129,170"/>
+<area shape="rect" id="node10" href="$classjive_1_1fem_1_1FEMatrixBuilder.html" title="jive::fem::FEMatrixBuilder" alt="" coords="996,274,1179,301"/>
+</map>

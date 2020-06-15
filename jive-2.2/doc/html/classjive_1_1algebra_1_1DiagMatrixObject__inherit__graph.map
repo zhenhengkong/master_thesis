@@ -1,0 +1,12 @@
+<map id="jive::algebra::DiagMatrixObject" name="jive::algebra::DiagMatrixObject">
+<area shape="rect" id="node2" href="$classjive_1_1algebra_1_1AbstractMatrix.html" title="Defines a common interface for different matrix types. " alt="" coords="336,5,536,32"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="185,5,280,32"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node5" href="$classjive_1_1algebra_1_1DiagMatrixExtension.html" title="DiagMatrixExt" alt="" coords="381,56,491,83"/>
+<area shape="rect" id="node6" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="177,183,288,209"/>
+<area shape="rect" id="node7" href="$classjive_1_1algebra_1_1MultiMatmulExtension.html" title="MultiMatmulExt" alt="" coords="376,107,496,133"/>
+<area shape="rect" id="node8" href="$classjive_1_1algebra_1_1DirectMatrixExtension.html" title="DirectMatrixExt" alt="" coords="377,157,495,184"/>
+<area shape="rect" id="node9" href="$classjive_1_1algebra_1_1SparseMatrixExtension.html" title="SparseMatrixExt" alt="" coords="373,208,499,235"/>
+<area shape="rect" id="node10" href="$classjem_1_1Clonable.html" title="jem::Clonable" alt="" coords="381,259,491,285"/>
+<area shape="rect" id="node11" href="$classjem_1_1io_1_1Serializable.html" title="jem::io::Serializable" alt="" coords="363,309,509,336"/>
+</map>

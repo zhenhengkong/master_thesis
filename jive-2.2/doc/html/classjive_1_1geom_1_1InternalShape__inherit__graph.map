@@ -1,0 +1,10 @@
+<map id="jive::geom::InternalShape" name="jive::geom::InternalShape">
+<area shape="rect" id="node5" href="$classjive_1_1geom_1_1ParametricShape.html" title="jive::geom::ParametricShape" alt="" coords="739,81,945,108"/>
+<area shape="rect" id="node2" href="$classjive_1_1geom_1_1Shape.html" title="Encapsulates the geometrical properties of a finite element. " alt="" coords="320,81,457,108"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,81,272,108"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,81,129,108"/>
+<area shape="rect" id="node6" href="$classjive_1_1geom_1_1Parametric4DShape.html" title="jive::geom::Parametric4DShape" alt="" coords="993,5,1217,32"/>
+<area shape="rect" id="node7" href="$classjive_1_1geom_1_1ParametricArea.html" title="jive::geom::ParametricArea" alt="" coords="1008,56,1203,83"/>
+<area shape="rect" id="node8" href="$classjive_1_1geom_1_1ParametricLine.html" title="jive::geom::ParametricLine" alt="" coords="1010,107,1201,133"/>
+<area shape="rect" id="node9" href="$classjive_1_1geom_1_1ParametricVolume.html" title="jive::geom::ParametricVolume" alt="" coords="999,157,1212,184"/>
+</map>

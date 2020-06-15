@@ -1,0 +1,154 @@
+
+/*
+ *  Copyright (C) 2016 DRG. All rights reserved.
+ *
+ *  This file is part of Jem, a general purpose programming toolkit.
+ *
+ *  Commercial License Usage
+ *
+ *  This file may be used under the terms of a commercial license
+ *  provided with the software, or under the terms contained in a written
+ *  agreement between you and DRG. For more information contact DRG at
+ *  http://www.dynaflow.com.
+ *
+ *  GNU Lesser General Public License Usage
+ *
+ *  Alternatively, this file may be used under the terms of the GNU
+ *  Lesser General Public License version 2.1 or version 3 as published
+ *  by the Free Software Foundation and appearing in the file
+ *  LICENSE.LGPLv21 and LICENSE.LGPLv3 included in the packaging of this
+ *  file. Please review the following information to ensure the GNU
+ *  Lesser General Public License requirements will be met:
+ *  https://www.gnu.org/licenses/lgpl.html and
+ *  http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ *
+ *  Jem version: 2.2
+ *  Date:        Thu 28 Jan 10:36:48 CET 2016
+ */
+
+
+#include <jem/base/assert.h>
+#include <jem/base/utilities.h>
+#include <jem/io/ArrayInputStream.h>
+
+
+JEM_BEGIN_PACKAGE( io )
+
+
+//=======================================================================
+//   class ArrayInputStream
+//=======================================================================
+
+//-----------------------------------------------------------------------
+//   constructors & destructor
+//-----------------------------------------------------------------------
+
+
+ArrayInputStream::ArrayInputStream ( const Array<byte>& buf ) :
+
+  buffer_ ( buf ),
+  pos_    ( JEM_IDX_C(0) )
+
+{}
+
+
+ArrayInputStream::ArrayInputStream ( const Self& rhs ) :
+
+  buffer_ ( rhs.buffer_.clone() )
+
+{
+  pos_ = rhs.pos_;
+}
+
+
+ArrayInputStream::~ArrayInputStream ()
+{}
+
+
+//-----------------------------------------------------------------------
+//   dup
+//-----------------------------------------------------------------------
+
+
+Ref<InputStream> ArrayInputStream::dup ()
+{
+  return newInstance<Self> ( *this );
+}
+
+
+//-----------------------------------------------------------------------
+//   poll
+//-----------------------------------------------------------------------
+
+
+idx_t ArrayInputStream::poll ( const Time& timeout )
+{
+  return max ( JEM_IDX_C(0), buffer_.size() - pos_ );
+}
+
+
+//-----------------------------------------------------------------------
+//   read
+//-----------------------------------------------------------------------
+
+
+idx_t ArrayInputStream::read ( void* buf, idx_t n )
+{
+  JEM_PRECHECK( n >= 0 );
+
+  if ( pos_ >= buffer_.size() )
+  {
+    return JEM_IDX_C(0);
+  }
+
+  n = min ( n, buffer_.size() - pos_ );
+
+  if ( buffer_.isContiguous() )
+  {
+    std::memcpy ( buf, buffer_.addr( pos_ ), (size_t) n );
+  }
+  else
+  {
+    copy ( (byte*) buf, buffer_.begin() + pos_,
+                        buffer_.begin() + (pos_ + n) );
+  }
+
+  pos_ += n;
+
+  return n;
+}
+
+
+//-----------------------------------------------------------------------
+//   skip
+//-----------------------------------------------------------------------
+
+
+idx_t ArrayInputStream::skip ( idx_t n )
+{
+  if ( pos_ < buffer_.size() )
+  {
+    n     = min ( n, buffer_.size() - pos_ );
+    pos_ += n;
+
+    return n;
+  }
+  else
+  {
+    return JEM_IDX_C(0);
+  }
+}
+
+
+//-----------------------------------------------------------------------
+//   reset
+//-----------------------------------------------------------------------
+
+
+void ArrayInputStream::reset ()
+{
+  pos_ = JEM_IDX_C(0);
+}
+
+
+JEM_END_PACKAGE( io )

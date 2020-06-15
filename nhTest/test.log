@@ -1,0 +1,3663 @@
+Log file created on Sun Mar 15 22:51:50 CET 2020.
+
+Reading data from `simple.mesh' ...
+
+  simple.mesh, line 1: reading tag `Nodes' ...
+  simple.mesh, line 6: done reading tag `Nodes'
+  simple.mesh, line 8: reading tag `Elements' ...
+  simple.mesh, line 10: done reading tag `Elements'
+
+ ...Created NodeGroup `left' with 2 nodes.
+ ...Created NodeGroup `right' with 2 nodes.
+ ...Created NodeGroup `leftbottom' with 1 nodes.
+ ...Created NodeGroup `bottom' with 2 nodes.
+ ...Created NodeGroup `top' with 2 nodes.
+
+Created a new model named `model'.
+
+Data summary:
+
+  nodes ......................................... 4
+  node dofs ..................................... 8
+  node groups ................................... 7
+  node tables ................................... 0
+  node data bases ............................... 0
+  elements ...................................... 1
+  element groups ................................ 2
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 0
+
+userModules.view : loaded configuration data from `test.view'
+userModules.view.mesh : building graphics mesh ...
+userModules.view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 5
+  faces     ...... 1
+  triangles ...... 4
+  lines     ...... 0
+  edges     ...... 4
+
+*** WARNING: module `userModules.view' : unsupported image type: `png'; supported type is `ppm'
+*** WARNING: module `userModules.view' : snapshot files will be saved in PPM format
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-test.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  userModules	=
+  {
+    solver	=
+    {
+      maxIter	= 20;
+      tiny	= 1.00000e-300;
+      precision	= 1.00000e-06;
+      maxIncr	= 10.0000;
+      lineSearch	= false;
+      deltaCons	= false;
+      updateWhen	= none;
+      solver	=
+      {
+        type	= "SkylineLU";
+        lenient	= true;
+        precision	= 5.00000e-07;
+        zeroThreshold	= 1.49012e-08;
+        maxZeroPivots	= 0;
+        reorder	= true;
+        useThreads	= true;
+        printPivots	= false;
+      };
+    };
+    graph	=
+    {
+      sampleWhen	= "accepted";
+      dataSets	= [ "loadDisp" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "userModules.graph";
+        width	= 400;
+        height	= 200;
+      };
+      camera	=
+      {
+        range	= 1.00000;
+        position	= [ -0.00000, -0.00000 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      graph	=
+      {
+        hidden	= false;
+        width	= 1.00000;
+        height	= 1.00000;
+        showKey	= true;
+        keyPos	= [ 0.900000, 0.900000 ];
+        title	= "";
+        xLabel	= "";
+        yLabel	= "";
+        scaleStep	= 0.100000;
+        xRange	= "auto";
+        yRange	= "auto";
+      };
+      loadDisp	=
+      {
+        key	= "Load-displacement curve";
+        maxPoints	= -1;
+        pointStyle	= none;
+        lineWidth	= 1.20000;
+        lineColor	= "black";
+        xData	= "model.model.lodi.disp[0]";
+        yData	= "model.model.lodi.load[0]";
+      };
+    };
+    view	=
+    {
+      snapFile	= "test%2i.png";
+      configFile	= "test.view";
+      updateWhen	= true;
+      snapWhen	= false;
+      offScreen	= false;
+      camera	=
+      {
+        type	= "Perspective";
+        farClip	= 8.54849;
+        nearClip	= 1.54849;
+        viewAngle	= 40.0000;
+        position	= [ 1.75000, 0.862004, 5.04849 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      disp	=
+      {
+        type	= "Vector";
+        vector	= "state";
+        nullValue	= 0.00000;
+      };
+      stress	=
+      {
+        type	= "Table";
+        table	= "nodes/stress";
+        tableType	= "Dense";
+        nullValue	= 0.00000;
+      };
+      dataSets	= [ "disp", "stress" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "feel.userModules.view";
+        width	= 400;
+        height	= 200;
+      };
+      world	=
+      {
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+      };
+      lights	=
+      {
+        light0	=
+        {
+          color	= "white20";
+          direction	= [ -1.00000, -0.00000, -0.00000 ];
+          enable	= true;
+        };
+        light1	=
+        {
+          color	= "white20";
+          direction	= [ -0.00000, -1.00000, -0.00000 ];
+          enable	= true;
+        };
+        light2	=
+        {
+          color	= "white";
+          direction	= [ -0.00000, -0.00000, -1.00000 ];
+          enable	= true;
+        };
+        light3	=
+        {
+          color	= "white20";
+          direction	= [ 1.00000, 1.00000, -0.00000 ];
+          enable	= false;
+        };
+        specular	= false;
+        ambient	= "white20";
+      };
+      markerStyles	=
+      {
+        points	=
+        {
+          size	= 3.00000;
+          color	= "black";
+        };
+        orbs	=
+        {
+          size	= -0.0100000;
+          quality	= 1;
+          color	= "gold";
+        };
+        numbers	=
+        {
+          font	= "proportional medium";
+          color	= "black";
+        };
+        circles	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        diamonds	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        discs	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        squares	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        styles	= [];
+      };
+      palettes	=
+      {
+        linear	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+          minColor	= "blue";
+          maxColor	= "red";
+        };
+        rainbow	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+        };
+        custom	=
+        {
+          colors	= [ "blue", "green", "yellow", "orange", "red" ];
+          ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+          hideMinMax	= false;
+        };
+        palettes	= [];
+      };
+      mesh	=
+      {
+        elements	= "all";
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+        pointSize	= 1.00000;
+        lineWidth	= 1.00000;
+        shadeModel	= "Smooth";
+        color	= "gray";
+        material	=
+        {
+          specular	= "black";
+          shininess	= 0.00000;
+        };
+        edgeColor	= "black";
+        nodeColor	= "black";
+        showEdges	= true;
+        showLines	= true;
+        showFaces	= true;
+        hidden	= false;
+        deformation	=
+        {
+          scale	= 1.00000;
+          autoScale	= false;
+          scaleStep	= 0.100000;
+          dx	= "disp[dx]";
+          dy	= "disp[dy]";
+          dz	= "0.000";
+        };
+        colors	=
+        {
+          palette	= "custom";
+          title	= "";
+          data	= "stress[xx]";
+          autoScale	= true;
+          scaleStep	= 0.100000;
+        };
+      };
+    };
+  };
+  sample	=
+  {
+    file	= "lodi.dat";
+    header	= "";
+    separator	= " ";
+    append	= false;
+    precision	= 8;
+    dataSets	= [ "i", "model.model.lodi.disp[0]", "abs( model.model.lodi.load[0] )" ];
+    sampleWhen	= "accepted";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= true;
+    pause	= -1.00000;
+    runWhile	= "i<=1";
+  };
+  userInput	=
+  {
+    input	=
+    {
+      storageMode	= "Default";
+      file	= "simple.mesh";
+      maxParts	= 0;
+      tableFilter	= "*";
+      dbaseFilter	= "*";
+      funcFilter	= "*";
+    };
+    ngroups	=
+    {
+      nodeGroups	= [ "left", "right", "leftbottom", "bottom", "top" ];
+      elemGroups	= [];
+      left	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+      };
+      right	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "max";
+      };
+      leftbottom	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+        ytype	= "min";
+      };
+      bottom	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        ytype	= "min";
+      };
+      top	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        ytype	= "max";
+      };
+    };
+  };
+  storageMode	= "Default";
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 0;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Multi";
+      models	= [ "bulk", "diri", "lodi" ];
+      bulk	=
+      {
+        type	= "NLSolid";
+        elements	= "all";
+        shape	=
+        {
+          type	= "Quad4";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss2*Gauss2", "2", "2", "2", "2" ];
+        };
+        material	=
+        {
+          type	= "NeoHooke";
+          dim	= 2;
+          lambda	= 5000.00;
+          mu	= 6000.00;
+          kappa0	= 0.200000;
+          kappau	= 2.00000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+      };
+      diri	=
+      {
+        type	= "Dirichlet";
+        dispIncr	= 0.0100000;
+        initDisp	= 0.00000;
+        maxDisp	= 2.00000;
+        nodeGroups	= [ "right", "left", "bottom" ];
+        dofs	= [ "dx", "dx", "dy" ];
+        factors	= [ 1.00000, 0.00000, 0.00000 ];
+      };
+      lodi	=
+      {
+        type	= "LoadDisp";
+        nodes	= [ 1, 3 ];
+      };
+    };
+    debug	= 0;
+    linear	= false;
+    matrix0	=
+    {
+      type	= "Sparse";
+      symmetric	= false;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [];
+  };
+  xoutput	=
+  {
+    write	= true;
+    table	= "stress | eqstrain | eqveps | loading";
+    interval	= 1;
+    dissipation	= true;
+    writeCracks	= true;
+    writeCohInfo	= false;
+  };
+
+*** WARNING: Unknown properties:
+
+*** WARNING:   model.model.bulk.largeDisp
+*** WARNING:   model.model.diri2
+*** WARNING:   model.model.diri2.dispIncr
+*** WARNING:   model.model.diri2.dofs
+*** WARNING:   model.model.diri2.initDisp
+*** WARNING:   model.model.diri2.loaded
+*** WARNING:   model.model.diri2.nodeGroups
+*** WARNING:   model.model.diri2.type
+
+*** WARNING: Initialization phase completed with warnings.
+
+  Elapsed CPU  time : 0.08000 seconds.
+  Elapsed real time : 0.2345 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.2360 seconds
+
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 1
+Elapsed runtime : 0.2646 seconds
+
+New displacement factor 0.01000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5469e+02
+module `userModules.solver' : iter = 1, scaled residual = 5.0109e-04
+module `userModules.solver' : iter = 2, scaled residual = 1.2847e-09
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 2
+Elapsed runtime : 3.569 seconds
+
+New displacement factor 0.02000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0826e+02
+module `userModules.solver' : iter = 1, scaled residual = 2.4935e-04
+module `userModules.solver' : iter = 2, scaled residual = 6.3482e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 3
+Elapsed runtime : 3.580 seconds
+
+New displacement factor 0.03000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.6072e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.6546e-04
+module `userModules.solver' : iter = 2, scaled residual = 4.1831e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 4
+Elapsed runtime : 3.588 seconds
+
+New displacement factor 0.04000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.1207e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2352e-04
+module `userModules.solver' : iter = 2, scaled residual = 3.1013e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 5
+Elapsed runtime : 3.595 seconds
+
+New displacement factor 0.05000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.6234e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.8357e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.4526e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 6
+Elapsed runtime : 3.601 seconds
+
+New displacement factor 0.06000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.1154e+02
+module `userModules.solver' : iter = 1, scaled residual = 8.1587e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.0206e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 7
+Elapsed runtime : 3.606 seconds
+
+New displacement factor 0.07000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0597e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.9612e-05
+module `userModules.solver' : iter = 2, scaled residual = 1.7123e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 8
+Elapsed runtime : 3.613 seconds
+
+New displacement factor 0.08000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2068e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.0633e-05
+module `userModules.solver' : iter = 2, scaled residual = 1.4814e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 9
+Elapsed runtime : 3.629 seconds
+
+New displacement factor 0.09000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3529e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.3652e-05
+module `userModules.solver' : iter = 2, scaled residual = 1.3020e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 10
+Elapsed runtime : 3.646 seconds
+
+New displacement factor 0.1000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.4980e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.8068e-05
+module `userModules.solver' : iter = 2, scaled residual = 1.1588e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 11
+Elapsed runtime : 3.662 seconds
+
+New displacement factor 0.1100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6421e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.3502e-05
+module `userModules.solver' : iter = 2, scaled residual = 1.0418e-10
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 12
+Elapsed runtime : 3.680 seconds
+
+New displacement factor 0.1200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7853e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.9698e-05
+module `userModules.solver' : iter = 2, scaled residual = 9.4441e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 13
+Elapsed runtime : 3.697 seconds
+
+New displacement factor 0.1300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.9275e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.6481e-05
+module `userModules.solver' : iter = 2, scaled residual = 8.6217e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 14
+Elapsed runtime : 3.713 seconds
+
+New displacement factor 0.1400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.0687e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.3724e-05
+module `userModules.solver' : iter = 2, scaled residual = 7.9186e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 15
+Elapsed runtime : 3.730 seconds
+
+New displacement factor 0.1500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.2090e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.1337e-05
+module `userModules.solver' : iter = 2, scaled residual = 7.3102e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 16
+Elapsed runtime : 3.747 seconds
+
+New displacement factor 0.1600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.3485e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.9249e-05
+module `userModules.solver' : iter = 2, scaled residual = 6.7793e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 17
+Elapsed runtime : 3.763 seconds
+
+New displacement factor 0.1700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.4870e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7407e-05
+module `userModules.solver' : iter = 2, scaled residual = 6.3117e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 18
+Elapsed runtime : 3.780 seconds
+
+New displacement factor 0.1800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.6246e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.5771e-05
+module `userModules.solver' : iter = 2, scaled residual = 5.8971e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 19
+Elapsed runtime : 3.797 seconds
+
+New displacement factor 0.1900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.7614e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4308e-05
+module `userModules.solver' : iter = 2, scaled residual = 5.5271e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 20
+Elapsed runtime : 3.814 seconds
+
+New displacement factor 0.2000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.8973e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2993e-05
+module `userModules.solver' : iter = 2, scaled residual = 5.1950e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 21
+Elapsed runtime : 3.830 seconds
+
+New displacement factor 0.2100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0324e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1803e-05
+module `userModules.solver' : iter = 2, scaled residual = 4.8954e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 22
+Elapsed runtime : 3.847 seconds
+
+New displacement factor 0.2200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.1667e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0722e-05
+module `userModules.solver' : iter = 2, scaled residual = 4.6238e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 23
+Elapsed runtime : 3.863 seconds
+
+New displacement factor 0.2300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.3001e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9736e-05
+module `userModules.solver' : iter = 2, scaled residual = 4.3763e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 24
+Elapsed runtime : 3.882 seconds
+
+New displacement factor 0.2400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.4328e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8833e-05
+module `userModules.solver' : iter = 2, scaled residual = 4.1504e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 25
+Elapsed runtime : 3.897 seconds
+
+New displacement factor 0.2500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.5646e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8003e-05
+module `userModules.solver' : iter = 2, scaled residual = 3.9432e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 26
+Elapsed runtime : 3.913 seconds
+
+New displacement factor 0.2600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.6957e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7237e-05
+module `userModules.solver' : iter = 2, scaled residual = 3.7523e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 27
+Elapsed runtime : 3.931 seconds
+
+New displacement factor 0.2700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.8260e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6528e-05
+module `userModules.solver' : iter = 2, scaled residual = 3.5763e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 28
+Elapsed runtime : 3.947 seconds
+
+New displacement factor 0.2800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.9555e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5871e-05
+module `userModules.solver' : iter = 2, scaled residual = 3.4133e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 29
+Elapsed runtime : 3.963 seconds
+
+New displacement factor 0.2900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.0843e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5259e-05
+module `userModules.solver' : iter = 2, scaled residual = 3.2621e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 30
+Elapsed runtime : 3.981 seconds
+
+New displacement factor 0.3000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.2124e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4689e-05
+module `userModules.solver' : iter = 2, scaled residual = 3.1214e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 31
+Elapsed runtime : 3.998 seconds
+
+New displacement factor 0.3100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.3397e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4156e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.9903e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 32
+Elapsed runtime : 4.014 seconds
+
+New displacement factor 0.3200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.4663e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.3657e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.8678e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 33
+Elapsed runtime : 4.031 seconds
+
+New displacement factor 0.3300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.5923e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.3188e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.7531e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 34
+Elapsed runtime : 4.047 seconds
+
+New displacement factor 0.3400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.7175e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.2748e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.6456e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 35
+Elapsed runtime : 4.064 seconds
+
+New displacement factor 0.3500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.8420e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.2333e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.5445e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 36
+Elapsed runtime : 4.080 seconds
+
+New displacement factor 0.3600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.9659e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.1941e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.4495e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 37
+Elapsed runtime : 4.098 seconds
+
+New displacement factor 0.3700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.0300e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.1571e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.3599e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 38
+Elapsed runtime : 4.113 seconds
+
+New displacement factor 0.3800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.0300e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.1126e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.2561e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 39
+Elapsed runtime : 4.130 seconds
+
+New displacement factor 0.3900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.9876e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.0797e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.1770e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 40
+Elapsed runtime : 4.146 seconds
+
+New displacement factor 0.4000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.9456e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.0485e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.1020e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 41
+Elapsed runtime : 4.164 seconds
+
+New displacement factor 0.4100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.9039e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.0188e-05
+module `userModules.solver' : iter = 2, scaled residual = 2.0310e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 42
+Elapsed runtime : 4.180 seconds
+
+New displacement factor 0.4200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.8625e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.9054e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.9636e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 43
+Elapsed runtime : 4.197 seconds
+
+New displacement factor 0.4300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.8215e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.6364e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.8997e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 44
+Elapsed runtime : 4.214 seconds
+
+New displacement factor 0.4400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.7808e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.3800e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.8388e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 45
+Elapsed runtime : 4.231 seconds
+
+New displacement factor 0.4500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.7404e+03
+module `userModules.solver' : iter = 1, scaled residual = 9.1352e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.7809e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 46
+Elapsed runtime : 4.247 seconds
+
+New displacement factor 0.4600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.7004e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.9013e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.7258e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 47
+Elapsed runtime : 4.264 seconds
+
+New displacement factor 0.4700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.6607e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.6777e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.6731e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 48
+Elapsed runtime : 4.282 seconds
+
+New displacement factor 0.4800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.6213e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.4636e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.6230e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 49
+Elapsed runtime : 4.297 seconds
+
+New displacement factor 0.4900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.5822e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.2585e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5751e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 50
+Elapsed runtime : 4.313 seconds
+
+New displacement factor 0.5000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.5434e+03
+module `userModules.solver' : iter = 1, scaled residual = 8.0618e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5293e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 51
+Elapsed runtime : 4.330 seconds
+
+New displacement factor 0.5100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.5049e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.8730e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4855e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 52
+Elapsed runtime : 4.347 seconds
+
+New displacement factor 0.5200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.4668e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.6918e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4435e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 53
+Elapsed runtime : 4.363 seconds
+
+New displacement factor 0.5300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.4289e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.5175e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4034e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 54
+Elapsed runtime : 4.380 seconds
+
+New displacement factor 0.5400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.3913e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.3500e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3648e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 55
+Elapsed runtime : 4.399 seconds
+
+New displacement factor 0.5500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.3540e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.1887e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3278e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 56
+Elapsed runtime : 4.413 seconds
+
+New displacement factor 0.5600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.3169e+03
+module `userModules.solver' : iter = 1, scaled residual = 7.0334e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2923e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 57
+Elapsed runtime : 4.430 seconds
+
+New displacement factor 0.5700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.2802e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.8837e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2582e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 58
+Elapsed runtime : 4.446 seconds
+
+New displacement factor 0.5800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.2437e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.7394e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2255e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 59
+Elapsed runtime : 4.464 seconds
+
+New displacement factor 0.5900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.2075e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.6002e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1939e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 60
+Elapsed runtime : 4.480 seconds
+
+New displacement factor 0.6000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.1716e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.4657e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1636e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 61
+Elapsed runtime : 4.499 seconds
+
+New displacement factor 0.6100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.1359e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.3358e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1345e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 62
+Elapsed runtime : 4.515 seconds
+
+New displacement factor 0.6200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.1005e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.2103e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1063e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 63
+Elapsed runtime : 4.530 seconds
+
+New displacement factor 0.6300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.0654e+03
+module `userModules.solver' : iter = 1, scaled residual = 6.0890e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0792e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 64
+Elapsed runtime : 4.548 seconds
+
+New displacement factor 0.6400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.0305e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.9716e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0530e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 65
+Elapsed runtime : 4.563 seconds
+
+New displacement factor 0.6500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.9959e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.8579e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0278e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 66
+Elapsed runtime : 4.581 seconds
+
+New displacement factor 0.6600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.9615e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.7478e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0034e-11
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 67
+Elapsed runtime : 4.597 seconds
+
+New displacement factor 0.6700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.9273e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.6412e-06
+module `userModules.solver' : iter = 2, scaled residual = 9.7994e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 68
+Elapsed runtime : 4.613 seconds
+
+New displacement factor 0.6800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.8934e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.5379e-06
+module `userModules.solver' : iter = 2, scaled residual = 9.5726e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 69
+Elapsed runtime : 4.631 seconds
+
+New displacement factor 0.6900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.8598e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.4376e-06
+module `userModules.solver' : iter = 2, scaled residual = 9.3526e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 70
+Elapsed runtime : 4.646 seconds
+
+New displacement factor 0.7000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.8263e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.3404e-06
+module `userModules.solver' : iter = 2, scaled residual = 9.1405e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 71
+Elapsed runtime : 4.663 seconds
+
+New displacement factor 0.7100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.7931e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.2461e-06
+module `userModules.solver' : iter = 2, scaled residual = 8.9352e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 72
+Elapsed runtime : 4.679 seconds
+
+New displacement factor 0.7200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.7602e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.1545e-06
+module `userModules.solver' : iter = 2, scaled residual = 8.7363e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 73
+Elapsed runtime : 4.698 seconds
+
+New displacement factor 0.7300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.7274e+03
+module `userModules.solver' : iter = 1, scaled residual = 5.0655e-06
+module `userModules.solver' : iter = 2, scaled residual = 8.5443e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 74
+Elapsed runtime : 4.713 seconds
+
+New displacement factor 0.7400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.6949e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.9791e-06
+module `userModules.solver' : iter = 2, scaled residual = 8.3576e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 75
+Elapsed runtime : 4.729 seconds
+
+New displacement factor 0.7500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.6626e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.8950e-06
+module `userModules.solver' : iter = 2, scaled residual = 8.1776e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 76
+Elapsed runtime : 4.747 seconds
+
+New displacement factor 0.7600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.6306e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.8134e-06
+module `userModules.solver' : iter = 2, scaled residual = 8.0031e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 77
+Elapsed runtime : 4.763 seconds
+
+New displacement factor 0.7700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.5987e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.7339e-06
+module `userModules.solver' : iter = 2, scaled residual = 7.8334e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 78
+Elapsed runtime : 4.780 seconds
+
+New displacement factor 0.7800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.5671e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.6566e-06
+module `userModules.solver' : iter = 2, scaled residual = 7.6690e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 79
+Elapsed runtime : 4.798 seconds
+
+New displacement factor 0.7900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.5356e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.5814e-06
+module `userModules.solver' : iter = 2, scaled residual = 7.5098e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 80
+Elapsed runtime : 4.813 seconds
+
+New displacement factor 0.8000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.5044e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.5081e-06
+module `userModules.solver' : iter = 2, scaled residual = 7.3549e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 81
+Elapsed runtime : 4.830 seconds
+
+New displacement factor 0.8100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.4734e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.4368e-06
+module `userModules.solver' : iter = 2, scaled residual = 7.2049e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 82
+Elapsed runtime : 4.846 seconds
+
+New displacement factor 0.8200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.4426e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.3673e-06
+module `userModules.solver' : iter = 2, scaled residual = 7.0589e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 83
+Elapsed runtime : 4.863 seconds
+
+New displacement factor 0.8300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.4120e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.2996e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.9172e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 84
+Elapsed runtime : 4.880 seconds
+
+New displacement factor 0.8400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.3816e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.2336e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.7797e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 85
+Elapsed runtime : 4.896 seconds
+
+New displacement factor 0.8500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.3514e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.1692e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.6457e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 86
+Elapsed runtime : 4.913 seconds
+
+New displacement factor 0.8600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.3214e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.1064e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.5164e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 87
+Elapsed runtime : 4.930 seconds
+
+New displacement factor 0.8700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2915e+03
+module `userModules.solver' : iter = 1, scaled residual = 4.0452e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.3896e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 88
+Elapsed runtime : 4.946 seconds
+
+New displacement factor 0.8800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2619e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.9854e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.2670e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 89
+Elapsed runtime : 4.963 seconds
+
+New displacement factor 0.8900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2325e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.9271e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.1474e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 90
+Elapsed runtime : 4.980 seconds
+
+New displacement factor 0.9000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2032e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.8702e-06
+module `userModules.solver' : iter = 2, scaled residual = 6.0311e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 91
+Elapsed runtime : 4.997 seconds
+
+New displacement factor 0.9100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.1741e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.8146e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.9179e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 92
+Elapsed runtime : 5.013 seconds
+
+New displacement factor 0.9200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.1452e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.7602e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.8077e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 93
+Elapsed runtime : 5.029 seconds
+
+New displacement factor 0.9300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.1165e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.7072e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.7000e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 94
+Elapsed runtime : 5.047 seconds
+
+New displacement factor 0.9400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0879e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.6553e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.5956e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 95
+Elapsed runtime : 5.063 seconds
+
+New displacement factor 0.9500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0596e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.6046e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.4942e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 96
+Elapsed runtime : 5.080 seconds
+
+New displacement factor 0.9600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0314e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.5551e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.3947e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 97
+Elapsed runtime : 5.096 seconds
+
+New displacement factor 0.9700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0034e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.5066e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.2985e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 98
+Elapsed runtime : 5.114 seconds
+
+New displacement factor 0.9800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.9755e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.4592e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.2040e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 99
+Elapsed runtime : 5.130 seconds
+
+New displacement factor 0.9900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.9478e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.4128e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.1120e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 100
+Elapsed runtime : 5.147 seconds
+
+New displacement factor 1.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.9203e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.3675e-06
+module `userModules.solver' : iter = 2, scaled residual = 5.0224e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 101
+Elapsed runtime : 5.163 seconds
+
+New displacement factor 1.010
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.8929e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.3231e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.9351e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 102
+Elapsed runtime : 5.180 seconds
+
+New displacement factor 1.020
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.8657e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.2796e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.8497e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 103
+Elapsed runtime : 5.196 seconds
+
+New displacement factor 1.030
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.8387e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.2370e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.7662e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 104
+Elapsed runtime : 5.213 seconds
+
+New displacement factor 1.040
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.8118e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.1954e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.6854e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 105
+Elapsed runtime : 5.229 seconds
+
+New displacement factor 1.050
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.7851e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.1545e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.6059e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 106
+Elapsed runtime : 5.246 seconds
+
+New displacement factor 1.060
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.7585e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.1146e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.5285e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 107
+Elapsed runtime : 5.263 seconds
+
+New displacement factor 1.070
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.7321e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.0754e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.4532e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 108
+Elapsed runtime : 5.279 seconds
+
+New displacement factor 1.080
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.7058e+03
+module `userModules.solver' : iter = 1, scaled residual = 3.0370e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.3788e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 109
+Elapsed runtime : 5.296 seconds
+
+New displacement factor 1.090
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.6797e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.9994e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.3068e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 110
+Elapsed runtime : 5.313 seconds
+
+New displacement factor 1.100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.6538e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.9625e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.2363e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 111
+Elapsed runtime : 5.330 seconds
+
+New displacement factor 1.110
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.6279e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.9263e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.1674e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 112
+Elapsed runtime : 5.346 seconds
+
+New displacement factor 1.120
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.6022e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.8909e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.0999e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 113
+Elapsed runtime : 5.364 seconds
+
+New displacement factor 1.130
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.5767e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.8561e-06
+module `userModules.solver' : iter = 2, scaled residual = 4.0342e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 114
+Elapsed runtime : 5.381 seconds
+
+New displacement factor 1.140
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.5513e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.8220e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.9698e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 115
+Elapsed runtime : 5.398 seconds
+
+New displacement factor 1.150
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.5261e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7885e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.9073e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 116
+Elapsed runtime : 5.413 seconds
+
+New displacement factor 1.160
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.5009e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7557e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.8456e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 117
+Elapsed runtime : 5.429 seconds
+
+New displacement factor 1.170
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.4760e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.7234e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.7852e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 118
+Elapsed runtime : 5.446 seconds
+
+New displacement factor 1.180
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.4511e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.6918e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.7264e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 119
+Elapsed runtime : 5.463 seconds
+
+New displacement factor 1.190
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.4264e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.6608e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.6689e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 120
+Elapsed runtime : 5.479 seconds
+
+New displacement factor 1.200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.4018e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.6303e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.6125e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 121
+Elapsed runtime : 5.496 seconds
+
+New displacement factor 1.210
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.3774e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.6004e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.5573e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 122
+Elapsed runtime : 5.513 seconds
+
+New displacement factor 1.220
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.3531e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.5710e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.5032e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 123
+Elapsed runtime : 5.529 seconds
+
+New displacement factor 1.230
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.3289e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.5421e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.4505e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 124
+Elapsed runtime : 5.546 seconds
+
+New displacement factor 1.240
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.3048e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.5137e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.3986e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 125
+Elapsed runtime : 5.563 seconds
+
+New displacement factor 1.250
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.2809e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4859e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.3478e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 126
+Elapsed runtime : 5.581 seconds
+
+New displacement factor 1.260
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.2571e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4585e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.2980e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 127
+Elapsed runtime : 5.596 seconds
+
+New displacement factor 1.270
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.2334e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4316e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.2497e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 128
+Elapsed runtime : 5.613 seconds
+
+New displacement factor 1.280
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.2098e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.4052e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.2019e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 129
+Elapsed runtime : 5.630 seconds
+
+New displacement factor 1.290
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.1864e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.3792e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.1552e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 130
+Elapsed runtime : 5.647 seconds
+
+New displacement factor 1.300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.1631e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.3536e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.1093e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 131
+Elapsed runtime : 5.663 seconds
+
+New displacement factor 1.310
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.1399e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.3285e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.0647e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 132
+Elapsed runtime : 5.681 seconds
+
+New displacement factor 1.320
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.1168e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.3038e-06
+module `userModules.solver' : iter = 2, scaled residual = 3.0206e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 133
+Elapsed runtime : 5.696 seconds
+
+New displacement factor 1.330
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.0938e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2795e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.9777e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 134
+Elapsed runtime : 5.713 seconds
+
+New displacement factor 1.340
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.0709e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2556e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.9353e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 135
+Elapsed runtime : 5.729 seconds
+
+New displacement factor 1.350
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.0482e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2321e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.8940e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 136
+Elapsed runtime : 5.746 seconds
+
+New displacement factor 1.360
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.0256e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.2090e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.8532e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 137
+Elapsed runtime : 5.763 seconds
+
+New displacement factor 1.370
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.0030e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1863e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.8138e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 138
+Elapsed runtime : 5.780 seconds
+
+New displacement factor 1.380
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.9806e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1639e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.7744e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 139
+Elapsed runtime : 5.796 seconds
+
+New displacement factor 1.390
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.9583e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1419e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.7364e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 140
+Elapsed runtime : 5.813 seconds
+
+New displacement factor 1.400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.9361e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.1202e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.6985e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 141
+Elapsed runtime : 5.830 seconds
+
+New displacement factor 1.410
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.9141e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0989e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.6618e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 142
+Elapsed runtime : 5.846 seconds
+
+New displacement factor 1.420
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8921e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0779e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.6254e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 143
+Elapsed runtime : 5.863 seconds
+
+New displacement factor 1.430
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8702e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0572e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.5902e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 144
+Elapsed runtime : 5.881 seconds
+
+New displacement factor 1.440
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8484e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0368e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.5552e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 145
+Elapsed runtime : 5.898 seconds
+
+New displacement factor 1.450
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8268e+03
+module `userModules.solver' : iter = 1, scaled residual = 2.0168e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.5208e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 146
+Elapsed runtime : 5.913 seconds
+
+New displacement factor 1.460
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8052e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9971e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.4873e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 147
+Elapsed runtime : 5.929 seconds
+
+New displacement factor 1.470
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7837e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9776e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.4542e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 148
+Elapsed runtime : 5.946 seconds
+
+New displacement factor 1.480
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7624e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9585e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.4219e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 149
+Elapsed runtime : 5.964 seconds
+
+New displacement factor 1.490
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7411e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9396e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.3900e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 150
+Elapsed runtime : 5.980 seconds
+
+New displacement factor 1.500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7199e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9210e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.3590e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 151
+Elapsed runtime : 5.996 seconds
+
+New displacement factor 1.510
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6988e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.9027e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.3282e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 152
+Elapsed runtime : 6.013 seconds
+
+New displacement factor 1.520
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6779e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8847e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.2978e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 153
+Elapsed runtime : 6.029 seconds
+
+New displacement factor 1.530
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6570e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8669e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.2683e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 154
+Elapsed runtime : 6.047 seconds
+
+New displacement factor 1.540
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6362e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8494e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.2391e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 155
+Elapsed runtime : 6.063 seconds
+
+New displacement factor 1.550
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6155e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8321e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.2107e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 156
+Elapsed runtime : 6.079 seconds
+
+New displacement factor 1.560
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5949e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.8151e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.1828e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 157
+Elapsed runtime : 6.096 seconds
+
+New displacement factor 1.570
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5744e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7983e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.1552e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 158
+Elapsed runtime : 6.113 seconds
+
+New displacement factor 1.580
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5540e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7818e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.1279e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 159
+Elapsed runtime : 6.130 seconds
+
+New displacement factor 1.590
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5336e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7654e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.1012e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 160
+Elapsed runtime : 6.146 seconds
+
+New displacement factor 1.600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5134e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7494e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.0750e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 161
+Elapsed runtime : 6.163 seconds
+
+New displacement factor 1.610
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.4932e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7335e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.0492e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 162
+Elapsed runtime : 6.180 seconds
+
+New displacement factor 1.620
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.4732e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7179e-06
+module `userModules.solver' : iter = 2, scaled residual = 2.0237e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 163
+Elapsed runtime : 6.196 seconds
+
+New displacement factor 1.630
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.4532e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.7024e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.9987e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 164
+Elapsed runtime : 6.213 seconds
+
+New displacement factor 1.640
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.4333e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6872e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.9744e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 165
+Elapsed runtime : 6.229 seconds
+
+New displacement factor 1.650
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.4135e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6722e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.9504e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 166
+Elapsed runtime : 6.247 seconds
+
+New displacement factor 1.660
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3938e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6574e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.9266e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 167
+Elapsed runtime : 6.262 seconds
+
+New displacement factor 1.670
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3741e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6427e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.9032e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 168
+Elapsed runtime : 6.284 seconds
+
+New displacement factor 1.680
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3546e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6283e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.8803e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 169
+Elapsed runtime : 6.296 seconds
+
+New displacement factor 1.690
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3351e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6141e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.8577e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 170
+Elapsed runtime : 6.312 seconds
+
+New displacement factor 1.700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3157e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.6000e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.8356e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 171
+Elapsed runtime : 6.329 seconds
+
+New displacement factor 1.710
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2964e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5862e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.8137e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 172
+Elapsed runtime : 6.346 seconds
+
+New displacement factor 1.720
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2771e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5725e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.7921e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 173
+Elapsed runtime : 6.363 seconds
+
+New displacement factor 1.730
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2580e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5590e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.7712e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 174
+Elapsed runtime : 6.379 seconds
+
+New displacement factor 1.740
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2389e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5456e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.7503e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 175
+Elapsed runtime : 6.396 seconds
+
+New displacement factor 1.750
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2199e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5324e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.7299e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 176
+Elapsed runtime : 6.413 seconds
+
+New displacement factor 1.760
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2010e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5194e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.7096e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 177
+Elapsed runtime : 6.429 seconds
+
+New displacement factor 1.770
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.1821e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.5066e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.6898e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 178
+Elapsed runtime : 6.446 seconds
+
+New displacement factor 1.780
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.1633e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4939e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.6701e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 179
+Elapsed runtime : 6.462 seconds
+
+New displacement factor 1.790
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.1446e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4814e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.6509e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 180
+Elapsed runtime : 6.479 seconds
+
+New displacement factor 1.800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.1260e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4690e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.6321e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 181
+Elapsed runtime : 6.496 seconds
+
+New displacement factor 1.810
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.1075e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4568e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.6134e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 182
+Elapsed runtime : 6.513 seconds
+
+New displacement factor 1.820
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0890e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4447e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5950e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 183
+Elapsed runtime : 6.530 seconds
+
+New displacement factor 1.830
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0706e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4327e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5764e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 184
+Elapsed runtime : 6.546 seconds
+
+New displacement factor 1.840
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0522e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4209e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5588e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 185
+Elapsed runtime : 6.564 seconds
+
+New displacement factor 1.850
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0340e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.4093e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5411e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 186
+Elapsed runtime : 6.580 seconds
+
+New displacement factor 1.860
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0158e+03
+module `userModules.solver' : iter = 1, scaled residual = 1.3977e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5238e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 187
+Elapsed runtime : 6.596 seconds
+
+New displacement factor 1.870
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.9767e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3863e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.5068e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 188
+Elapsed runtime : 6.612 seconds
+
+New displacement factor 1.880
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.7961e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3751e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4900e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 189
+Elapsed runtime : 6.629 seconds
+
+New displacement factor 1.890
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.6162e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3639e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4734e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 190
+Elapsed runtime : 6.646 seconds
+
+New displacement factor 1.900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.4370e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3529e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4570e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 191
+Elapsed runtime : 6.662 seconds
+
+New displacement factor 1.910
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.2585e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3420e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4410e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 192
+Elapsed runtime : 6.679 seconds
+
+New displacement factor 1.920
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.0807e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3312e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4249e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 193
+Elapsed runtime : 6.696 seconds
+
+New displacement factor 1.930
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.9035e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3206e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.4094e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 194
+Elapsed runtime : 6.713 seconds
+
+New displacement factor 1.940
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.7269e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.3100e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3938e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 195
+Elapsed runtime : 6.729 seconds
+
+New displacement factor 1.950
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.5510e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2996e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3786e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 196
+Elapsed runtime : 6.746 seconds
+
+New displacement factor 1.960
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.3758e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2893e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3634e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 197
+Elapsed runtime : 6.762 seconds
+
+New displacement factor 1.970
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.2012e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2791e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3486e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 198
+Elapsed runtime : 6.780 seconds
+
+New displacement factor 1.980
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 8.0272e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2689e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3340e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 199
+Elapsed runtime : 6.798 seconds
+
+New displacement factor 1.990
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.8539e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2589e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3195e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 200
+Elapsed runtime : 6.813 seconds
+
+New displacement factor 2.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.6811e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2490e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.3053e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 201
+Elapsed runtime : 6.829 seconds
+
+New displacement factor 2.010
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.5090e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2392e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2912e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 202
+Elapsed runtime : 6.846 seconds
+
+New displacement factor 2.020
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.3375e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2294e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2774e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 203
+Elapsed runtime : 6.863 seconds
+
+New displacement factor 2.030
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.1667e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2198e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2634e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 204
+Elapsed runtime : 6.879 seconds
+
+New displacement factor 2.040
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.9964e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2102e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2498e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 205
+Elapsed runtime : 6.896 seconds
+
+New displacement factor 2.050
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.8267e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.2007e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2366e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 206
+Elapsed runtime : 6.912 seconds
+
+New displacement factor 2.060
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.6576e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1913e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2234e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 207
+Elapsed runtime : 6.929 seconds
+
+New displacement factor 2.070
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.4891e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1820e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.2103e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 208
+Elapsed runtime : 6.946 seconds
+
+New displacement factor 2.080
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.3212e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1728e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1974e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 209
+Elapsed runtime : 6.962 seconds
+
+New displacement factor 2.090
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.1538e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1636e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1847e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 210
+Elapsed runtime : 6.979 seconds
+
+New displacement factor 2.100
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.9870e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1545e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1718e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 211
+Elapsed runtime : 6.996 seconds
+
+New displacement factor 2.110
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.8208e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1454e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1595e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 212
+Elapsed runtime : 7.013 seconds
+
+New displacement factor 2.120
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.6552e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1364e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1470e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 213
+Elapsed runtime : 7.029 seconds
+
+New displacement factor 2.130
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.4901e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1275e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1347e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 214
+Elapsed runtime : 7.046 seconds
+
+New displacement factor 2.140
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.3256e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1186e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1228e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 215
+Elapsed runtime : 7.063 seconds
+
+New displacement factor 2.150
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 5.1616e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1097e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.1108e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 216
+Elapsed runtime : 7.079 seconds
+
+New displacement factor 2.160
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.9981e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.1009e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0989e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 217
+Elapsed runtime : 7.096 seconds
+
+New displacement factor 2.170
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.8352e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0921e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0871e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 218
+Elapsed runtime : 7.113 seconds
+
+New displacement factor 2.180
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.6729e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0834e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0754e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 219
+Elapsed runtime : 7.129 seconds
+
+New displacement factor 2.190
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.5110e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0746e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0637e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 220
+Elapsed runtime : 7.146 seconds
+
+New displacement factor 2.200
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.3497e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0659e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0520e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 221
+Elapsed runtime : 7.162 seconds
+
+New displacement factor 2.210
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.1890e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0572e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0404e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 222
+Elapsed runtime : 7.179 seconds
+
+New displacement factor 2.220
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.0287e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0484e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0291e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 223
+Elapsed runtime : 7.196 seconds
+
+New displacement factor 2.230
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.8690e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0397e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0176e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 224
+Elapsed runtime : 7.212 seconds
+
+New displacement factor 2.240
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.7097e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0309e-06
+module `userModules.solver' : iter = 2, scaled residual = 1.0063e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 225
+Elapsed runtime : 7.229 seconds
+
+New displacement factor 2.250
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.5510e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0220e-06
+module `userModules.solver' : iter = 2, scaled residual = 9.9485e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 226
+Elapsed runtime : 7.246 seconds
+
+New displacement factor 2.260
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.3928e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0131e-06
+module `userModules.solver' : iter = 2, scaled residual = 9.8352e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 227
+Elapsed runtime : 7.262 seconds
+
+New displacement factor 2.270
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2351e+02
+module `userModules.solver' : iter = 1, scaled residual = 1.0041e-06
+module `userModules.solver' : iter = 2, scaled residual = 9.7207e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 228
+Elapsed runtime : 7.280 seconds
+
+New displacement factor 2.280
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.0778e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.9492e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 229
+Elapsed runtime : 7.296 seconds
+
+New displacement factor 2.290
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.9211e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.8484e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 230
+Elapsed runtime : 7.313 seconds
+
+New displacement factor 2.300
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.7649e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.7537e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 231
+Elapsed runtime : 7.330 seconds
+
+New displacement factor 2.310
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.6091e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.6566e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 232
+Elapsed runtime : 7.346 seconds
+
+New displacement factor 2.320
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.4538e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.5567e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 233
+Elapsed runtime : 7.362 seconds
+
+New displacement factor 2.330
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.2990e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.4531e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 234
+Elapsed runtime : 7.379 seconds
+
+New displacement factor 2.340
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 2.1447e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.3449e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 235
+Elapsed runtime : 7.396 seconds
+
+New displacement factor 2.350
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.9908e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.2310e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 236
+Elapsed runtime : 7.412 seconds
+
+New displacement factor 2.360
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.8374e+02
+module `userModules.solver' : iter = 1, scaled residual = 9.1098e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 237
+Elapsed runtime : 7.429 seconds
+
+New displacement factor 2.370
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.6845e+02
+module `userModules.solver' : iter = 1, scaled residual = 8.9790e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 238
+Elapsed runtime : 7.445 seconds
+
+New displacement factor 2.380
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.5320e+02
+module `userModules.solver' : iter = 1, scaled residual = 8.8357e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 239
+Elapsed runtime : 7.462 seconds
+
+New displacement factor 2.390
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.3799e+02
+module `userModules.solver' : iter = 1, scaled residual = 8.6757e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 240
+Elapsed runtime : 7.480 seconds
+
+New displacement factor 2.400
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.2284e+02
+module `userModules.solver' : iter = 1, scaled residual = 8.4926e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 241
+Elapsed runtime : 7.496 seconds
+
+New displacement factor 2.410
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.0772e+02
+module `userModules.solver' : iter = 1, scaled residual = 8.2764e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 242
+Elapsed runtime : 7.512 seconds
+
+New displacement factor 2.420
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 9.2655e+01
+module `userModules.solver' : iter = 1, scaled residual = 8.0109e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 243
+Elapsed runtime : 7.530 seconds
+
+New displacement factor 2.430
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 7.7630e+01
+module `userModules.solver' : iter = 1, scaled residual = 7.6675e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 244
+Elapsed runtime : 7.546 seconds
+
+New displacement factor 2.440
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 6.2650e+01
+module `userModules.solver' : iter = 1, scaled residual = 7.1901e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 245
+Elapsed runtime : 7.563 seconds
+
+New displacement factor 2.450
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 4.7712e+01
+module `userModules.solver' : iter = 1, scaled residual = 6.4532e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 246
+Elapsed runtime : 7.579 seconds
+
+New displacement factor 2.460
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.2818e+01
+module `userModules.solver' : iter = 1, scaled residual = 5.1041e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 247
+Elapsed runtime : 7.597 seconds
+
+New displacement factor 2.470
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 1.7967e+01
+module `userModules.solver' : iter = 1, scaled residual = 1.6284e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 248
+Elapsed runtime : 7.613 seconds
+
+New displacement factor 2.480
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 3.1577e+00
+module `userModules.solver' : iter = 1, scaled residual = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 249
+Elapsed runtime : 7.630 seconds
+
+New displacement factor 2.490
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 250
+Elapsed runtime : 7.645 seconds
+
+New displacement factor 2.500
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 251
+Elapsed runtime : 7.662 seconds
+
+New displacement factor 2.510
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 252
+Elapsed runtime : 7.679 seconds
+
+New displacement factor 2.520
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 253
+Elapsed runtime : 7.696 seconds
+
+New displacement factor 2.530
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 254
+Elapsed runtime : 7.712 seconds
+
+New displacement factor 2.540
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 255
+Elapsed runtime : 7.730 seconds
+
+New displacement factor 2.550
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 256
+Elapsed runtime : 7.746 seconds
+
+New displacement factor 2.560
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 257
+Elapsed runtime : 7.762 seconds
+
+New displacement factor 2.570
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 258
+Elapsed runtime : 7.779 seconds
+
+New displacement factor 2.580
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 259
+Elapsed runtime : 7.796 seconds
+
+New displacement factor 2.590
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 260
+Elapsed runtime : 7.812 seconds
+
+New displacement factor 2.600
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 261
+Elapsed runtime : 7.829 seconds
+
+New displacement factor 2.610
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 262
+Elapsed runtime : 7.846 seconds
+
+New displacement factor 2.620
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 263
+Elapsed runtime : 7.862 seconds
+
+New displacement factor 2.630
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 264
+Elapsed runtime : 7.879 seconds
+
+New displacement factor 2.640
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 265
+Elapsed runtime : 7.896 seconds
+
+New displacement factor 2.650
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 266
+Elapsed runtime : 7.912 seconds
+
+New displacement factor 2.660
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 267
+Elapsed runtime : 7.929 seconds
+
+New displacement factor 2.670
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 268
+Elapsed runtime : 7.945 seconds
+
+New displacement factor 2.680
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 269
+Elapsed runtime : 7.963 seconds
+
+New displacement factor 2.690
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 270
+Elapsed runtime : 7.979 seconds
+
+New displacement factor 2.700
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 271
+Elapsed runtime : 7.996 seconds
+
+New displacement factor 2.710
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 272
+Elapsed runtime : 8.012 seconds
+
+New displacement factor 2.720
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 273
+Elapsed runtime : 8.029 seconds
+
+New displacement factor 2.730
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 274
+Elapsed runtime : 8.045 seconds
+
+New displacement factor 2.740
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 275
+Elapsed runtime : 8.062 seconds
+
+New displacement factor 2.750
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 276
+Elapsed runtime : 8.079 seconds
+
+New displacement factor 2.760
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 277
+Elapsed runtime : 8.096 seconds
+
+New displacement factor 2.770
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 278
+Elapsed runtime : 8.112 seconds
+
+New displacement factor 2.780
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 279
+Elapsed runtime : 8.129 seconds
+
+New displacement factor 2.790
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 280
+Elapsed runtime : 8.145 seconds
+
+New displacement factor 2.800
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 281
+Elapsed runtime : 8.162 seconds
+
+New displacement factor 2.810
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 282
+Elapsed runtime : 8.179 seconds
+
+New displacement factor 2.820
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 283
+Elapsed runtime : 8.195 seconds
+
+New displacement factor 2.830
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 284
+Elapsed runtime : 8.212 seconds
+
+New displacement factor 2.840
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 285
+Elapsed runtime : 8.229 seconds
+
+New displacement factor 2.850
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 286
+Elapsed runtime : 8.245 seconds
+
+New displacement factor 2.860
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 287
+Elapsed runtime : 8.262 seconds
+
+New displacement factor 2.870
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 288
+Elapsed runtime : 8.279 seconds
+
+New displacement factor 2.880
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 289
+Elapsed runtime : 8.295 seconds
+
+New displacement factor 2.890
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 290
+Elapsed runtime : 8.312 seconds
+
+New displacement factor 2.900
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 291
+Elapsed runtime : 8.329 seconds
+
+New displacement factor 2.910
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 292
+Elapsed runtime : 8.345 seconds
+
+New displacement factor 2.920
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 293
+Elapsed runtime : 8.362 seconds
+
+New displacement factor 2.930
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 294
+Elapsed runtime : 8.380 seconds
+
+New displacement factor 2.940
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 295
+Elapsed runtime : 8.396 seconds
+
+New displacement factor 2.950
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 296
+Elapsed runtime : 8.413 seconds
+
+New displacement factor 2.960
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 297
+Elapsed runtime : 8.429 seconds
+
+New displacement factor 2.970
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 298
+Elapsed runtime : 8.446 seconds
+
+New displacement factor 2.980
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 299
+Elapsed runtime : 8.462 seconds
+
+New displacement factor 2.990
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 300
+Elapsed runtime : 8.479 seconds
+
+New displacement factor 3.000
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 301
+Elapsed runtime : 8.497 seconds
+
+New displacement factor 3.010
+
+Starting the Newton-Raphson solver `userModules.solver' ...
+module `userModules.solver' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+

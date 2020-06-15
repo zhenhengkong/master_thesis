@@ -1,0 +1,9 @@
+<map id="jive::algebra::DiagMatrixExtension" name="jive::algebra::DiagMatrixExtension">
+<area shape="rect" id="node3" href="$classjive_1_1algebra_1_1DenseMatrixObject.html" title="jive::algebra::DenseMatrix\lObject" alt="" coords="397,5,583,47"/>
+<area shape="rect" id="node4" href="$classjive_1_1algebra_1_1DiagMatrixObject.html" title="jive::algebra::DiagMatrix\lObject" alt="" coords="403,71,577,112"/>
+<area shape="rect" id="node5" href="$classjive_1_1algebra_1_1IdentMatrixObject.html" title="jive::algebra::IdentMatrix\lObject" alt="" coords="401,136,579,177"/>
+<area shape="rect" id="node6" href="$classjive_1_1algebra_1_1MPMatrixObject.html" title="jive::algebra::MPMatrixObject" alt="" coords="387,202,593,229"/>
+<area shape="rect" id="node7" href="$classjive_1_1algebra_1_1NullMatrixObject.html" title="jive::algebra::NullMatrix\lObject" alt="" coords="405,253,575,295"/>
+<area shape="rect" id="node8" href="$classjive_1_1algebra_1_1SparseMatrixObject.html" title="jive::algebra::SparseMatrix\lObject" alt="" coords="395,319,585,360"/>
+<area shape="rect" id="node2" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="5,173,116,199"/>
+</map>

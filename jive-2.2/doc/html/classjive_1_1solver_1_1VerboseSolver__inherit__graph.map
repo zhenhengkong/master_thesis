@@ -1,0 +1,7 @@
+<map id="jive::solver::VerboseSolver" name="jive::solver::VerboseSolver">
+<area shape="rect" id="node5" href="$classjive_1_1solver_1_1DirectVerboseSolver.html" title="jive::solver::DirectVerbose\lSolver" alt="" coords="5,304,192,345"/>
+<area shape="rect" id="node6" href="$classjive_1_1solver_1_1IterativeVerboseSolver.html" title="jive::solver::IterativeVerbose\lSolver" alt="" coords="217,304,418,345"/>
+<area shape="rect" id="node2" href="$classjive_1_1solver_1_1Solver.html" title="Computes the solution of a linear system of equations. " alt="" coords="139,155,277,181"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="161,80,255,107"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="146,5,270,32"/>
+</map>

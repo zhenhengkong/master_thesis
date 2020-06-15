@@ -1,0 +1,8 @@
+<map id="jem::gl::Popup" name="jem::gl::Popup">
+<area shape="rect" id="node6" href="$classjem_1_1gl_1_1MessageBox.html" title="jem::gl::MessageBox" alt="" coords="5,379,160,405"/>
+<area shape="rect" id="node7" href="$classjem_1_1gl_1_1TextBalloon.html" title="jem::gl::TextBalloon" alt="" coords="185,379,330,405"/>
+<area shape="rect" id="node2" href="$classjem_1_1gl_1_1GfxNode.html" title="jem::gl::GfxNode" alt="" coords="105,229,233,256"/>
+<area shape="rect" id="node3" href="$classjem_1_1NamedObject.html" title="jem::NamedObject" alt="" coords="98,155,241,181"/>
+<area shape="rect" id="node4" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="122,80,217,107"/>
+<area shape="rect" id="node5" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="107,5,231,32"/>
+</map>

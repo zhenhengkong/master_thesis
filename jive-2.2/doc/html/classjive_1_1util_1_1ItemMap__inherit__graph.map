@@ -1,0 +1,8 @@
+<map id="jive::util::ItemMap" name="jive::util::ItemMap">
+<area shape="rect" id="node4" href="$classjive_1_1util_1_1XItemMap.html" title="jive::util::XItemMap" alt="" coords="209,229,352,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="233,80,328,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="219,5,343,32"/>
+<area shape="rect" id="node5" href="$classjive_1_1util_1_1HashItemMap.html" title="jive::util::HashItemMap" alt="" coords="5,304,172,331"/>
+<area shape="rect" id="node6" href="$classjive_1_1util_1_1HeapItemMap.html" title="jive::util::HeapItemMap" alt="" coords="197,304,365,331"/>
+<area shape="rect" id="node7" href="$classjive_1_1util_1_1SimpleItemMap.html" title="jive::util::SimpleItemMap" alt="" coords="389,304,567,331"/>
+</map>

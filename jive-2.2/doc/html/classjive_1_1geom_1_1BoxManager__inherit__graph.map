@@ -1,0 +1,6 @@
+<map id="jive::geom::BoxManager" name="jive::geom::BoxManager">
+<area shape="rect" id="node4" href="$classjive_1_1geom_1_1GridBoxManager.html" title="jive::geom::GridBoxManager" alt="" coords="5,229,208,256"/>
+<area shape="rect" id="node5" href="$classjive_1_1geom_1_1SimpleBoxManager.html" title="jive::geom::SimpleBoxManager" alt="" coords="233,229,453,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,80,271,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="162,5,286,32"/>
+</map>

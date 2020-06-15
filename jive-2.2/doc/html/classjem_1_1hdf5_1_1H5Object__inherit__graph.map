@@ -1,0 +1,6 @@
+<map id="jem::hdf5::H5Object" name="jem::hdf5::H5Object">
+<area shape="rect" id="node4" href="$classjem_1_1hdf5_1_1DataSet.html" title="jem::hdf5::DataSet" alt="" coords="5,229,148,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1hdf5_1_1Group.html" title="jem::hdf5::Group" alt="" coords="172,229,301,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="109,80,204,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="95,5,219,32"/>
+</map>

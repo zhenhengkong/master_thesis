@@ -1,0 +1,106 @@
+Log file created on Fri Jul 05 17:56:32 CEST 2019.
+
+Reading data from `input.dat' ...
+
+  input.dat, line 1: reading tag `Nodes' ...
+  input.dat, line 6: done reading tag `Nodes'
+  input.dat, line 8: reading tag `Elements' ...
+  input.dat, line 10: done reading tag `Elements'
+  input.dat, line 12: reading tag `NodeGroup' ...
+  input.dat, line 14: done reading tag `NodeGroup'
+  input.dat, line 16: reading tag `NodeGroup' ...
+  input.dat, line 18: done reading tag `NodeGroup'
+
+Created a new model named `model'.
+
+action : INIT
+params :
+
+Data summary:
+
+  nodes ......................................... 4
+  node groups ................................... 4
+  node tables ................................... 0
+  node data bases ............................... 0
+  elements ...................................... 1
+  element groups ................................ 2
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 0
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-input.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= false;
+    pause	= -1.00000;
+    runWhile	= "save
+    step = 0
+    let
+    step = step + 1;
+    return
+    step < 3";
+  };
+  input	=
+  {
+    storageMode	= "Default";
+    file	= "input.dat";
+    maxParts	= 0;
+    tableFilter	= "*";
+    dbaseFilter	= "*";
+    funcFilter	= "*";
+  };
+  storageMode	= "Default";
+  model	=
+  {
+    type	= "Example";
+    parameter	= 2.00000;
+  };
+  init	=
+  {
+    vectors	= [];
+  };
+
+Initialization phase completed successfully.
+
+  Elapsed CPU  time : 0.000 seconds.
+  Elapsed real time : 0.002067 seconds.
+
+Iteration       : 1
+Elapsed runtime : 0.002273 seconds
+
+Iteration       : 2
+Elapsed runtime : 0.002358 seconds
+
+Iteration       : 3
+Elapsed runtime : 0.002427 seconds
+
+Runtime phase completed successfully.
+
+  Elapsed CPU  time : 0.000 seconds.
+  Elapsed real time : 0.002415 seconds.
+
+action : SHUTDOWN
+params :
+
+Shutdown phase completed successfully.
+
+  Elapsed CPU  time : 0.000 seconds.
+  Elapsed real time : 0.002575 seconds.
+

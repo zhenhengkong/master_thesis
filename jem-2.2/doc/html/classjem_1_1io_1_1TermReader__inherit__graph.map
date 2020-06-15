@@ -1,0 +1,6 @@
+<map id="jem::io::TermReader" name="jem::io::TermReader">
+<area shape="rect" id="node4" href="$classjem_1_1io_1_1NullTermReader.html" title="jem::io::NullTermReader" alt="" coords="5,229,177,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1io_1_1StdTermReader.html" title="jem::io::StdTermReader" alt="" coords="202,229,373,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="141,80,236,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="127,5,251,32"/>
+</map>

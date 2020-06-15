@@ -1,0 +1,374 @@
+Log file created on Thu Dec 03 22:50:02 CET 2015.
+
+Generating mesh with element size 0.05000 ...
+
+Reading data from `test.data' ...
+
+  test.data, line 2: reading tag `NodeConstraints' ...
+  test.data, line 7: done reading tag `NodeConstraints'
+  test.data, line 10: reading tag `NodeTable' ...
+  test.data, line 12: reading tag `Section' ...
+  test.data, line 16: done reading tag `Section'
+  test.data, line 18: done reading tag `NodeTable'
+
+shapeTable : updating shape table ...
+
+  creating 5 shapes of type `Quad4' ...
+
+    precision 0:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "2*2", "2", "2", "2", "2" ];
+
+    precision 1:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "3*3", "3", "3", "3", "3" ];
+
+    precision 2:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "4*4", "4", "4", "4", "4" ];
+
+    precision 3:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "5*5", "5", "5", "5", "5" ];
+
+    precision 4:
+
+      shapeFuncs	=
+      {
+        type	= "Linear";
+      };
+      intScheme	= [ "6*6", "6", "6", "6", "6" ];
+
+Created a new model named `model'.
+jive::util::FlexDofSpace(nodes) : switching to dense storage mode ...
+
+jive::util::Constraints(nodes) : reallocating constraints, kind = COMPRESSED
+Model `model.model.model.transport.model' is taking action `INIT'
+
+No action has been taken.
+
+Data summary:
+
+  nodes ......................................... 244061
+  node dofs ..................................... 244061
+  node constraints .............................. 122
+  node groups ................................... 6
+  node tables ................................... 1
+  node data bases ............................... 0
+  elements ...................................... 240000
+  element groups ................................ 2
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 0
+
+Model `model.model.model.transport.model' is taking action `NEW_MATRIX0'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `NEW_PRECON0'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `GET_SOLVER_PARAMS'
+
+No action has been taken.
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-test.log";
+    rank	= 0;
+    pattern	= "*.info|*.debug";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  checkpoint	=
+  {
+    file	= "";
+    backups	= 2;
+    sync	= false;
+    dumpWhen	= "save    last = 0.0
+    let     dump = (runtime - last) > 1000.0,
+            last = if( dump, runtime, last )
+    return  dump";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= false;
+    pause	= -1.00000;
+    runWhile	= "i < 2";
+  };
+  output	=
+  {
+    file	= "test.out";
+    append	= false;
+    precision	= 6;
+    pageWidth	= 200;
+    bufsize	= -1;
+    vectors	= [ "state = temp[%i]" ];
+    tables	= [ "nodes/flux = flux[%i]" ];
+    saveWhen	= true;
+  };
+  meshgen	=
+  {
+    storageMode	= "Compact";
+    elemSize	= 0.0500000;
+    geometry	=
+    {
+      type	= "Rectangle";
+      groupNames	=
+      {
+        leftEdge	= "leftEdge";
+        rightEdge	= "rightEdge";
+        lowerEdge	= "lowerEdge";
+        upperEdge	= "upperEdge";
+      };
+      size	= [ 200.000, 3.00000 ];
+      elemType	= "Quad4";
+    };
+    output	= none;
+  };
+  storageMode	= "Compact";
+  input	=
+  {
+    storageMode	= "Compact";
+    file	= "test.data";
+    maxParts	= 0;
+    tableFilter	= "*";
+    dbaseFilter	= "*";
+    funcFilter	= "*";
+  };
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 4;
+  };
+  model	=
+  {
+    type	= "MP";
+    model	=
+    {
+      type	= "Matrix";
+      model	=
+      {
+        type	= "Multi";
+        models	= [ "transport" ];
+        transport	=
+        {
+          type	= "Debug";
+          model	=
+          {
+            type	= "Transport";
+            elements	= "all";
+            dofName	= "u";
+            precision	= 1;
+            flowTable	= "";
+            diffusion	= [ 1.00000, 1.00000 ];
+          };
+          noiseLevel	= 1;
+        };
+      };
+      debug	= 0;
+      linear	= false;
+      matrix0	=
+      {
+        type	= "FEM";
+        symmetric	= true;
+        optimize	= "Runtime";
+      };
+    };
+    items	= "nodes";
+    tables	= [ "*" ];
+    vectors	= [ "GET_INT_VECTOR", "intVector", "GET_EXT_VECTOR", "extVector", "UPD_MATRIX0", "intVector",
+    "GET_MATRIX0", "intVector" ];
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [];
+  };
+  linsolve	=
+  {
+    solver	=
+    {
+      type	= "SparseLU";
+      printInterval	= 1.00000;
+      noiseLevel	= 2;
+      lenient	= false;
+      precision	= 1.00000e-05;
+      zeroThreshold	= 1.49012e-08;
+      maxZeroPivots	= 0;
+      pivotThreshold	= 0.100000;
+      reorder	= "Matrix";
+      printPivots	= false;
+    };
+  };
+
+Initialization phase completed successfully.
+
+  Elapsed CPU  time : 0.1300 seconds.
+  Elapsed real time : 0.1263 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.1265 seconds
+
+Model `model.model.model.transport.model' is taking action `ADVANCE'
+
+No action has been taken.
+
+Assembling the global system of equations ...
+Model `model.model.model.transport.model' is taking action `GET_CONSTRAINTS'
+
+No action has been taken.
+
+model.model.matrix0 : updating matrix structure ...
+model.model.matrix0 : matrix structure updated.
+Model `model.model.model.transport.model' is taking action `GET_MATRIX0'
+
+Action completed in 0.379244 seconds.
+
+model.model.matrix0 : updating sparse matrix structure ...
+model.model.matrix0 : scanning matrix for super rows ...
+model.model.matrix0 : done; found 244061 super rows in 244061 matrix rows.
+model.model.matrix0 : not enough super rows to enable blocking mode.
+Model `model.model.model.transport.model' is taking action `GET_EXT_VECTOR'
+
+No action has been taken.
+
+Solving the global system of equations ...
+
+Starting solver `linsolve.solver' ...
+
+linsolve.solver : zero threshold =  1.490e-08
+
+linsolve.solver.constrainer : updating matrix structure ...
+linsolve.solver : re-ordering matrix ...
+linsolve.solver : factoring matrix ...
+linsolve.solver : factoring matrix ...
+linsolve.solver :  51% done
+linsolve.solver : factorization complete
+linsolve.solver : residual =  4.480e-14
+
+  type	= "SparseLU";
+  memUsage	=  3.752e+08;
+  residual	=  4.480e-14;
+  iterCount	=   1;
+  dofCount	= 244061;
+
+Solution obtained in  1.857e+00 seconds
+
+Model `model.model.model.transport.model' is taking action `UPDATE'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `CHECK_COMMIT'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `COMMIT'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `GET_TABLE'
+
+Action completed in 0.296892 seconds.
+
+Iteration       : 1
+Elapsed runtime : 3.129 seconds
+
+Model `model.model.model.transport.model' is taking action `ADVANCE'
+
+No action has been taken.
+
+Assembling the global system of equations ...
+Model `model.model.model.transport.model' is taking action `GET_CONSTRAINTS'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `GET_MATRIX0'
+
+Action completed in 0.376420 seconds.
+
+model.model.matrix0 : updating sparse matrix values ...
+Model `model.model.model.transport.model' is taking action `GET_EXT_VECTOR'
+
+No action has been taken.
+
+Solving the global system of equations ...
+
+Starting solver `linsolve.solver' ...
+
+linsolve.solver : zero threshold =  1.490e-08
+
+linsolve.solver.constrainer : updating matrix values ...
+linsolve.solver : factoring matrix ...
+linsolve.solver : factoring matrix ...
+linsolve.solver :  62% done
+linsolve.solver : factorization complete
+linsolve.solver : residual =  9.983e-15
+
+  type	= "SparseLU";
+  memUsage	=  3.752e+08;
+  residual	=  9.983e-15;
+  iterCount	=   1;
+  dofCount	= 244061;
+
+Solution obtained in  1.635e+00 seconds
+
+Model `model.model.model.transport.model' is taking action `UPDATE'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `CHECK_COMMIT'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `COMMIT'
+
+No action has been taken.
+
+Model `model.model.model.transport.model' is taking action `GET_TABLE'
+
+Action completed in 0.281700 seconds.
+
+Runtime phase completed successfully.
+
+  Elapsed CPU  time : 5.830 seconds.
+  Elapsed real time : 5.836 seconds.
+
+Model `model.model.model.transport.model' is taking action `SHUTDOWN'
+
+No action has been taken.
+
+Shutdown phase completed successfully.
+
+  Elapsed CPU  time : 5.880 seconds.
+  Elapsed real time : 5.885 seconds.
+

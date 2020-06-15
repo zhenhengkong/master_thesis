@@ -1,0 +1,8 @@
+<map id="jive::geom::BoundaryPoint" name="jive::geom::BoundaryPoint">
+<area shape="rect" id="node2" href="$classjive_1_1geom_1_1BoundaryShape.html" title="Encapsulates the geometrical properties of a boundary of a finite element. " alt="" coords="5,229,204,256"/>
+<area shape="rect" id="node3" href="$classjive_1_1geom_1_1Shape.html" title="Encapsulates the geometrical properties of a finite element. " alt="" coords="36,155,173,181"/>
+<area shape="rect" id="node4" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="57,80,152,107"/>
+<area shape="rect" id="node5" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="43,5,167,32"/>
+<area shape="rect" id="node6" href="$classjem_1_1io_1_1Serializable.html" title="jem::io::Serializable" alt="" coords="229,229,375,256"/>
+<area shape="rect" id="node7" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="247,155,357,181"/>
+</map>

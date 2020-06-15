@@ -1,0 +1,7 @@
+<map id="jem::mp::Context" name="jem::mp::Context">
+<area shape="rect" id="node4" href="$classjem_1_1mp_1_1MPIContext.html" title="jem::mp::MPIContext" alt="" coords="5,229,160,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1mp_1_1MTContext.html" title="jem::mp::MTContext" alt="" coords="185,229,335,256"/>
+<area shape="rect" id="node6" href="$classjem_1_1mp_1_1UniContext.html" title="jem::mp::UniContext" alt="" coords="360,229,515,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="213,80,307,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="198,5,322,32"/>
+</map>

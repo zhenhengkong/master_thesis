@@ -1,0 +1,74 @@
+b = 8.;      // specimen width
+l = 20.;     // specimen length
+l1 = 0.6*l;  // mesh density transition coordinate
+l0 = 0.8*l;  // mesh density transition coordinate
+fi = 0.2;    // finest mesh density
+me = 0.5;    // medium mesh density
+co = 2.0;    // coarse mesh density
+
+yc = -3;     // y-coordinate inclusion center
+xc = 0;      // x-coordinate inclusion center
+ry = 3.;     // vertical inclusion size
+rx = 3.;     // horizontal inclusion size
+
+Point(1) = {-l,-b,0,co};
+Point(2) = { l,-b,0,co};
+Point(3) = { l, b,0,co};
+Point(4) = {-l, b,0,co};
+Point(5) = {xc,yc+ry,0,me};
+Point(6) = {xc,yc-ry,0,fi};
+Point(7) = {xc,yc,0,fi};
+Point(8) = {-l1,-b,0,fi};
+Point(9) = {l1,-b,0,fi};
+Point(10) = {-l1,b,0,me};
+Point(11) = {l1,b,0,me};
+Point(16) = {-rx,yc,0,me};
+Point(17) = { rx,yc,0,me};
+Point(18) = {-l,0,-0,co};
+Point(19) = { l,-0,0,co};
+Point(20) = {-l0, b, 0, co};
+Point(21) = {-l0,-b, 0, co};
+Point(22) = { l0,-b, 0, co};
+Point(23) = { l0, b, 0, co};
+Point(24) = {  l1, 0, 0, me};
+Point(25) = { -l1, 0, 0, me};
+Point(26) = {  0, b, 0, me};
+Point(27) = {  0,-b, 0, fi};
+Line (23) = {8,27};
+Line (24) = {27,9};
+Line (25) = {2,19};
+Line (26) = {19,3};
+Line (28) = {11,26};
+Line (29) = {26,10};
+Line (30) = {4,18};
+Line (31) = {18,1};
+Line (36) = {1, 21};
+Line (37) = {21, 8};
+Line (38) = {8, 25};
+Line (39) = {25, 10};
+Line (40) = {10, 20};
+Line (41) = {20, 4};
+Line (42) = {11, 24};
+Line (43) = {24, 9};
+Line (44) = {9, 22};
+Line (45) = {22, 2};
+Line (46) = {3, 23};
+Line (47) = {23, 11};
+
+Ellipse(48) = {16, 7, 17, 5};
+Ellipse(49) = {5, 7, 17, 17};
+Ellipse(50) = {17, 7, 16, 6};
+Ellipse(51) = {6, 7, 16, 16};
+
+Line Loop(0) = {40, 41, 30, 31, 36, 37, 38, 39};
+Plane Surface(0) = {0};
+Line Loop(1) = {43, 44, 45, 25, 26, 46, 47, 42};
+Plane Surface(1) = {1};
+Line Loop(2) = {29, -39, -38, 23, 24, -43, -42, 28};
+Line Loop(9) = {48, 49, 50, 51};
+Plane Surface(2) = {2, 9};
+Plane Surface(3) = {9};
+
+Physical Surface(0) = {0, 1, 2};
+Physical Surface(1) = {3};
+

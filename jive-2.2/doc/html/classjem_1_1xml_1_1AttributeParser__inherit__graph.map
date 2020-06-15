@@ -1,0 +1,12 @@
+<map id="jem::xml::AttributeParser" name="jem::xml::AttributeParser">
+<area shape="rect" id="node2" href="$classjem_1_1xml_1_1EmptyTagParser.html" title="jem::xml::EmptyTagParser" alt="" coords="235,31,421,57"/>
+<area shape="rect" id="node5" href="$classjem_1_1xml_1_1TagParser.html" title="jem::xml::TagParser" alt="" coords="255,132,401,159"/>
+<area shape="rect" id="node11" href="$classjive_1_1util_1_1PartParser.html" title="jive::util::PartParser" alt="" coords="257,183,399,209"/>
+<area shape="rect" id="node3" href="$classjem_1_1xml_1_1IncludeTagParser.html" title="jem::xml::IncludeTagParser" alt="" coords="471,5,661,32"/>
+<area shape="rect" id="node4" href="$classjive_1_1util_1_1IncludeParser.html" title="jive::util::IncludeParser" alt="" coords="711,5,873,32"/>
+<area shape="rect" id="node6" href="$classjem_1_1xml_1_1SimpleTagParser.html" title="jem::xml::SimpleTagParser" alt="" coords="471,56,661,83"/>
+<area shape="rect" id="node7" href="$classjive_1_1util_1_1DBasesParser.html" title="jive::util::DBasesParser" alt="" coords="483,107,649,133"/>
+<area shape="rect" id="node8" href="$classjive_1_1util_1_1FuncsParser.html" title="jive::util::FuncsParser" alt="" coords="489,157,643,184"/>
+<area shape="rect" id="node9" href="$classjive_1_1util_1_1ItemGroupsParser.html" title="jive::util::ItemGroupsParser" alt="" coords="469,208,663,235"/>
+<area shape="rect" id="node10" href="$classjive_1_1util_1_1TablesParser.html" title="jive::util::TablesParser" alt="" coords="487,259,645,285"/>
+</map>

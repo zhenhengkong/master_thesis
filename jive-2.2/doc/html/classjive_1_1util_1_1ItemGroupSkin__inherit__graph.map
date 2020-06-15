@@ -1,0 +1,7 @@
+<map id="jive::util::ItemGroupSkin" name="jive::util::ItemGroupSkin">
+<area shape="rect" id="node2" href="$classjive_1_1fem_1_1BoundaryGroup.html" title="jive::fem::BoundaryGroup" alt="" coords="227,5,411,32"/>
+<area shape="rect" id="node4" href="$classjive_1_1fem_1_1ElementGroup.html" title="jive::fem::ElementGroup" alt="" coords="231,56,407,83"/>
+<area shape="rect" id="node5" href="$classjive_1_1fem_1_1NodeGroup.html" title="jive::fem::NodeGroup" alt="" coords="240,107,397,133"/>
+<area shape="rect" id="node6" href="$classjive_1_1mbody_1_1BodyGroup.html" title="jive::mbody::BodyGroup" alt="" coords="232,157,405,184"/>
+<area shape="rect" id="node3" href="$classjive_1_1fem_1_1OrderedBndGroup.html" title="jive::fem::OrderedBndGroup" alt="" coords="459,5,659,32"/>
+</map>

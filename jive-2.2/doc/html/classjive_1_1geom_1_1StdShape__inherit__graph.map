@@ -1,0 +1,12 @@
+<map id="jive::geom::StdShape" name="jive::geom::StdShape">
+<area shape="rect" id="node2" href="$classjive_1_1geom_1_1StdBezierShape.html" title="jive::geom::StdBezierShape" alt="" coords="212,5,411,32"/>
+<area shape="rect" id="node3" href="$classjive_1_1geom_1_1StdBoundary.html" title="jive::geom::StdBoundary" alt="" coords="222,56,401,83"/>
+<area shape="rect" id="node4" href="$classjive_1_1geom_1_1StdCube.html" title="jive::geom::StdCube" alt="" coords="236,107,387,133"/>
+<area shape="rect" id="node5" href="$classjive_1_1geom_1_1StdHyperCube.html" title="jive::geom::StdHyperCube" alt="" coords="217,157,406,184"/>
+<area shape="rect" id="node6" href="$classjive_1_1geom_1_1StdLine.html" title="jive::geom::StdLine" alt="" coords="239,208,383,235"/>
+<area shape="rect" id="node7" href="$classjive_1_1geom_1_1StdPrism.html" title="jive::geom::StdPrism" alt="" coords="234,259,389,285"/>
+<area shape="rect" id="node8" href="$classjive_1_1geom_1_1StdPumShape.html" title="jive::geom::StdPumShape" alt="" coords="217,309,405,336"/>
+<area shape="rect" id="node9" href="$classjive_1_1geom_1_1StdSquare.html" title="jive::geom::StdSquare" alt="" coords="229,360,393,387"/>
+<area shape="rect" id="node10" href="$classjive_1_1geom_1_1StdTetrahedron.html" title="jive::geom::StdTetrahedron" alt="" coords="214,411,409,437"/>
+<area shape="rect" id="node11" href="$classjive_1_1geom_1_1StdTriangle.html" title="jive::geom::StdTriangle" alt="" coords="228,461,395,488"/>
+</map>

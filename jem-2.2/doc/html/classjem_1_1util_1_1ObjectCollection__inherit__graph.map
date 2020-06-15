@@ -1,0 +1,12 @@
+<map id="jem::util::ObjectCollection" name="jem::util::ObjectCollection">
+<area shape="rect" id="node6" href="$classjem_1_1util_1_1Dictionary.html" title="Implements an associative, heterogeneous collection that maps strings to objects. ..." alt="" coords="233,229,378,256"/>
+<area shape="rect" id="node9" href="$classjem_1_1util_1_1ObjectMap.html" title="jem::util::ObjectMap" alt="" coords="423,229,572,256"/>
+<area shape="rect" id="node11" href="$classjem_1_1util_1_1ObjectSequence.html" title="jem::util::ObjectSequence" alt="" coords="596,229,783,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="375,80,470,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="361,5,485,32"/>
+<area shape="rect" id="node4" href="$classjem_1_1util_1_1Enumerable.html" title="Represents an enumerable set of objects. " alt="" coords="494,80,653,107"/>
+<area shape="rect" id="node5" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="518,5,629,32"/>
+<area shape="rect" id="node7" href="$classjem_1_1util_1_1HashDictionary.html" title="Implements a dictionary based on a hash table. " alt="" coords="5,304,184,331"/>
+<area shape="rect" id="node8" href="$classjem_1_1xutil_1_1SnoopDictionary.html" title="jem::xutil::SnoopDictionary" alt="" coords="209,304,402,331"/>
+<area shape="rect" id="node10" href="$classjem_1_1util_1_1ObjectHashMap.html" title="jem::util::ObjectHashMap" alt="" coords="426,304,609,331"/>
+</map>

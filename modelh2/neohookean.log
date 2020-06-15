@@ -1,0 +1,3429 @@
+Log file created on Fri Feb 28 00:53:23 CET 2020.
+
+Reading input with userInput.input from file neohookean.msh
+ ...Adding 398 nodes.
+ ...Adding 708 elements.
+ ...Created NodeGroup `left' with 9 nodes.
+ ...Created NodeGroup `right' with 9 nodes.
+
+Created a new model named `model'.
+
+Data summary:
+
+  nodes ......................................... 398
+  node dofs ..................................... 796
+  node groups ................................... 4
+  elements ...................................... 708
+  element groups ................................ 3
+
+userModules.view : loaded configuration data from `neohookean.view'
+userModules.view.mesh : building graphics mesh ...
+userModules.view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 398
+  faces     ...... 708
+  triangles ...... 708
+  lines     ...... 0
+  edges     ...... 1106
+
+*** WARNING: module `userModules.view' : unsupported image type: `png'; supported type is `ppm'
+*** WARNING: module `userModules.view' : snapshot files will be saved in PPM format
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-neohookean.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  userModules	=
+  {
+    solver	=
+    {
+      type	= "AdaptiveStep";
+      writeStats	= false;
+      reduction	= 0.450000;
+      startIncr	= 1.00000;
+      maxIncr	= 1.00000;
+      minIncr	= 0.00100000;
+      optIter	= 5;
+      nonlin	=
+      {
+        maxIter	= 50;
+        tiny	= 1.00000e-300;
+        precision	= 1.00000e-06;
+        maxIncr	= 10.0000;
+        lineSearch	= false;
+        deltaCons	= false;
+        updateWhen	= none;
+        solver	=
+        {
+          type	= "SkylineLU";
+          lenient	= true;
+          precision	= 5.00000e-07;
+          zeroThreshold	= 1.49012e-08;
+          maxZeroPivots	= 0;
+          reorder	= true;
+          useThreads	= true;
+          printPivots	= false;
+        };
+      };
+    };
+    graph	=
+    {
+      sampleWhen	= "accepted";
+      dataSets	= [ "loadDisp" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "userModules.graph";
+        width	= 400;
+        height	= 200;
+      };
+      camera	=
+      {
+        range	= 1.00000;
+        position	= [ -0.00000, -0.00000 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      graph	=
+      {
+        hidden	= false;
+        width	= 1.00000;
+        height	= 1.00000;
+        showKey	= true;
+        keyPos	= [ 0.900000, 0.900000 ];
+        title	= "";
+        xLabel	= "";
+        yLabel	= "";
+        scaleStep	= 0.100000;
+        xRange	= "auto";
+        yRange	= "auto";
+      };
+      loadDisp	=
+      {
+        key	= "Load-displacement curve";
+        maxPoints	= -1;
+        pointStyle	= none;
+        lineWidth	= 1.20000;
+        lineColor	= "black";
+        xData	= "model.model.lodi.disp[0]";
+        yData	= "model.model.lodi.load[0]";
+      };
+    };
+    view	=
+    {
+      snapFile	= "neohookean%2i.png";
+      configFile	= "neohookean.view";
+      updateWhen	= true;
+      snapWhen	= false;
+      offScreen	= false;
+      camera	=
+      {
+        type	= "Perspective";
+        farClip	= 97.8513;
+        nearClip	= 17.8313;
+        viewAngle	= 40.0000;
+        position	= [ 0.0500002, -0.00475669, 57.8413 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      disp	=
+      {
+        type	= "Vector";
+        vector	= "state";
+        nullValue	= 0.00000;
+      };
+      stress	=
+      {
+        type	= "Table";
+        table	= "nodes/stress";
+        tableType	= "Dense";
+        nullValue	= 0.00000;
+      };
+      dataSets	= [ "disp", "stress" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "feel.userModules.view";
+        width	= 835;
+        height	= 759;
+      };
+      world	=
+      {
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+      };
+      lights	=
+      {
+        light0	=
+        {
+          color	= "white20";
+          direction	= [ -1.00000, -0.00000, -0.00000 ];
+          enable	= true;
+        };
+        light1	=
+        {
+          color	= "white20";
+          direction	= [ -0.00000, -1.00000, -0.00000 ];
+          enable	= true;
+        };
+        light2	=
+        {
+          color	= "white";
+          direction	= [ -0.00000, -0.00000, -1.00000 ];
+          enable	= true;
+        };
+        light3	=
+        {
+          color	= "white20";
+          direction	= [ 1.00000, 1.00000, -0.00000 ];
+          enable	= false;
+        };
+        specular	= false;
+        ambient	= "white20";
+      };
+      markerStyles	=
+      {
+        points	=
+        {
+          size	= 3.00000;
+          color	= "black";
+        };
+        orbs	=
+        {
+          size	= -0.0100000;
+          quality	= 1;
+          color	= "gold";
+        };
+        numbers	=
+        {
+          font	= "proportional medium";
+          color	= "black";
+        };
+        circles	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        diamonds	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        discs	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        squares	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        styles	= [];
+      };
+      palettes	=
+      {
+        linear	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+          minColor	= "blue";
+          maxColor	= "red";
+        };
+        rainbow	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+        };
+        custom	=
+        {
+          colors	= [ "blue", "green", "yellow", "orange", "red" ];
+          ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+          hideMinMax	= false;
+        };
+        palettes	= [];
+      };
+      mesh	=
+      {
+        elements	= "all";
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+        pointSize	= 1.00000;
+        lineWidth	= 1.00000;
+        shadeModel	= "Smooth";
+        color	= "gray";
+        material	=
+        {
+          specular	= "black";
+          shininess	= 0.00000;
+        };
+        edgeColor	= "black";
+        nodeColor	= "black";
+        showEdges	= true;
+        showLines	= true;
+        showFaces	= true;
+        hidden	= false;
+        deformation	=
+        {
+          scale	= 1.00000;
+          autoScale	= false;
+          scaleStep	= 0.100000;
+          dx	= "disp[dx]";
+          dy	= "disp[dy]";
+          dz	= "0.000";
+        };
+        colors	=
+        {
+          palette	= "custom";
+          title	= "";
+          data	= "stress[xx]";
+          autoScale	= true;
+          scaleStep	= 0.100000;
+        };
+      };
+    };
+  };
+  sample	=
+  {
+    file	= "lodi.dat";
+    header	= "";
+    separator	= " ";
+    append	= false;
+    precision	= 8;
+    dataSets	= [ "i", "model.model.lodi.disp[0]", "abs( model.model.lodi.load[0] )" ];
+    sampleWhen	= "accepted";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= true;
+    pause	= -1.00000;
+    runWhile	= "i<=1";
+  };
+  userInput	=
+  {
+    input	=
+    {
+      dim	= 2;
+      file	= "neohookean.msh";
+      doElemGroups	= false;
+      lowOrderCopy	= false;
+      nodeGroups	= [];
+      elemGroups	= [];
+    };
+    ngroups	=
+    {
+      nodeGroups	= [ "left", "right" ];
+      elemGroups	= [];
+      left	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+      };
+      right	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "max";
+      };
+    };
+  };
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 0;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Multi";
+      models	= [ "bulk", "diri", "diri2", "lodi" ];
+      bulk	=
+      {
+        type	= "NLSolid";
+        elements	= "all";
+        shape	=
+        {
+          type	= "Triangle3";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss1", "Gauss2", "Gauss2", "Gauss2" ];
+        };
+        material	=
+        {
+          type	= "NeoHooke";
+          dim	= 2;
+          lambda	= 5000.00;
+          mu	= 6000.00;
+          kappa0	= 0.150000;
+          kappau	= 0.150000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+      };
+      diri	=
+      {
+        type	= "Dirichlet";
+        dispIncr	= 0.0100000;
+        initDisp	= 0.00000;
+        maxDisp	= 20.0000;
+        nodeGroups	= [ "right" ];
+        dofs	= [ "dx" ];
+        factors	= [ 1.00000 ];
+      };
+      diri2	=
+      {
+        type	= "Dirichlet";
+        dispIncr	= 0.00000;
+        initDisp	= 0.00000;
+        maxDisp	= 1.79769e+308;
+        nodeGroups	= [ "left" ];
+        dofs	= [ "dx" ];
+        factors	= [ 1.00000 ];
+      };
+      lodi	=
+      {
+        type	= "LoadDisp";
+        nodes	= [ 1, 2, 27, 28, 29, 30, 31, 32, 33 ];
+      };
+    };
+    debug	= 0;
+    linear	= false;
+    matrix0	=
+    {
+      type	= "Sparse";
+      symmetric	= false;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [];
+  };
+  xoutput	=
+  {
+    write	= true;
+    table	= "stress | eqstrain | eqveps | loading";
+    interval	= 1;
+    dissipation	= true;
+    writeCracks	= true;
+    writeCohInfo	= false;
+  };
+
+*** WARNING: Unknown property: `model.model.bulk.largeDisp'
+
+*** WARNING: Initialization phase completed with warnings.
+
+  Elapsed CPU  time : 0.07000 seconds.
+  Elapsed real time : 0.1373 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.1376 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 1
+Elapsed runtime : 0.2457 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.01000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.7879e+01
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.6424e-04
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.9599e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 2
+Elapsed runtime : 9.268 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.02000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.5747e+01
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.2063e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.0113e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 3
+Elapsed runtime : 9.399 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.03000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 8.3606e+01
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.4670e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.3349e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 4
+Elapsed runtime : 9.496 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.04000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.1146e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.0973e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.4869e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 5
+Elapsed runtime : 9.594 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.05000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.3929e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.2755e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.9841e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 6
+Elapsed runtime : 9.691 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.06000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.6712e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.7276e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.6365e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 7
+Elapsed runtime : 9.789 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.07000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.9494e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.3363e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.3914e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 8
+Elapsed runtime : 9.889 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.08000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.2275e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.0428e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.2426e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 9
+Elapsed runtime : 9.988 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.09000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.5055e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.8145e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0803e-12
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 10
+Elapsed runtime : 10.09 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.7834e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.6319e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.7651e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 11
+Elapsed runtime : 10.18 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.0612e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4825e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.8597e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 12
+Elapsed runtime : 10.28 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.3389e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3579e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.0416e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 13
+Elapsed runtime : 10.38 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.6166e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2526e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.4213e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 14
+Elapsed runtime : 10.48 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.8941e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1623e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.8745e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 15
+Elapsed runtime : 10.58 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.1715e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0840e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.3624e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 16
+Elapsed runtime : 10.67 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.4488e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0155e-05
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.9752e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 17
+Elapsed runtime : 10.77 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.7260e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.5511e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.6750e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 18
+Elapsed runtime : 10.87 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.0031e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.0140e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.2169e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 19
+Elapsed runtime : 10.97 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.1900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.2801e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.5334e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.9803e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 20
+Elapsed runtime : 11.07 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.5571e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.1009e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.7301e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 21
+Elapsed runtime : 11.17 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.8339e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.7096e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.4876e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 22
+Elapsed runtime : 11.26 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 6.1106e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.3539e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.2264e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 23
+Elapsed runtime : 11.36 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 6.3873e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.0291e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.0815e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 24
+Elapsed runtime : 11.46 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 6.6638e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.7314e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.8916e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 25
+Elapsed runtime : 11.56 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 6.9402e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.4575e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.7134e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 26
+Elapsed runtime : 11.65 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 7.2166e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.2047e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.5853e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 27
+Elapsed runtime : 11.75 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 7.4928e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.9706e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.4243e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 28
+Elapsed runtime : 11.85 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 7.7690e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.7532e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.2822e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 29
+Elapsed runtime : 11.95 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.2900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 8.0450e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.5508e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.1510e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 30
+Elapsed runtime : 12.05 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 8.3210e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.3619e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 3.0336e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 31
+Elapsed runtime : 12.15 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 8.5968e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.1852e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.9393e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 32
+Elapsed runtime : 12.24 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 8.8726e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.0196e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.8346e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 33
+Elapsed runtime : 12.34 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 9.1483e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.8640e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.7279e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 34
+Elapsed runtime : 12.44 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 9.4238e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.7175e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.6525e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 35
+Elapsed runtime : 12.54 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 9.6993e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.5794e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.5607e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 36
+Elapsed runtime : 12.64 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 9.9747e+02
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.4490e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.4773e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 37
+Elapsed runtime : 12.73 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.0250e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.3257e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.4210e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 38
+Elapsed runtime : 12.83 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.0525e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.2088e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.3658e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 39
+Elapsed runtime : 12.93 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.3900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.0800e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.0980e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.3085e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 40
+Elapsed runtime : 13.03 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.1075e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.9926e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.2127e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 41
+Elapsed runtime : 13.12 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.1350e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.8924e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.1693e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 42
+Elapsed runtime : 13.22 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.1625e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.7970e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.0974e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 43
+Elapsed runtime : 13.32 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.1900e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.7061e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 2.0460e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 44
+Elapsed runtime : 13.42 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.2174e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.6192e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.9946e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 45
+Elapsed runtime : 13.51 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.2449e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.5363e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.9557e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 46
+Elapsed runtime : 13.61 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.2723e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.4569e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.9094e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 47
+Elapsed runtime : 13.71 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.2997e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.3809e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.8675e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 48
+Elapsed runtime : 13.81 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.3272e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.3081e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.8200e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 49
+Elapsed runtime : 13.91 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.4900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.3546e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.2383e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.7661e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 50
+Elapsed runtime : 14.00 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.3820e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.1712e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.7422e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 51
+Elapsed runtime : 14.10 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.4094e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.1068e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.6980e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 52
+Elapsed runtime : 14.20 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.4368e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 3.0448e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.6560e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 53
+Elapsed runtime : 14.30 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.4641e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.9852e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.6100e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 54
+Elapsed runtime : 14.40 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.4915e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.9279e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.5670e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 55
+Elapsed runtime : 14.50 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.5189e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.8726e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.5481e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 56
+Elapsed runtime : 14.60 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.5462e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.8192e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.5195e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 57
+Elapsed runtime : 14.70 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.5735e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.7678e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.4828e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 58
+Elapsed runtime : 14.79 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.6009e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.7181e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.4511e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 59
+Elapsed runtime : 14.89 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.5900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.6282e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.6701e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.4113e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 60
+Elapsed runtime : 14.99 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.6555e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.6237e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.3960e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 61
+Elapsed runtime : 15.09 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.6828e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.5788e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.3676e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 62
+Elapsed runtime : 15.18 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.7101e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.5354e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.3501e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 63
+Elapsed runtime : 15.28 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.7374e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.4934e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.3197e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 64
+Elapsed runtime : 15.38 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.7646e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.4527e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.2817e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 65
+Elapsed runtime : 15.48 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.7919e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.4132e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.2613e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 66
+Elapsed runtime : 15.57 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.8192e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.3749e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.2773e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 67
+Elapsed runtime : 15.67 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.8464e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.3378e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.2201e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 68
+Elapsed runtime : 15.77 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.8736e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.3017e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.2079e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 69
+Elapsed runtime : 15.87 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.6900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.9009e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.2668e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.2047e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 70
+Elapsed runtime : 15.97 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.9281e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.2328e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.1728e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 71
+Elapsed runtime : 16.06 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.9553e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.1997e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.1589e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 72
+Elapsed runtime : 16.16 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.9825e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.1676e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.1211e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 73
+Elapsed runtime : 16.26 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.0097e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.1364e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.1243e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 74
+Elapsed runtime : 16.36 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.0368e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.1060e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0897e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 75
+Elapsed runtime : 16.45 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.0640e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.0764e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0706e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 76
+Elapsed runtime : 16.55 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.0912e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.0476e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0546e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 77
+Elapsed runtime : 16.65 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.1183e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 2.0196e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0432e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 78
+Elapsed runtime : 16.75 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.1455e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.9923e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0327e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 79
+Elapsed runtime : 16.84 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.7900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.1726e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.9656e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.9798e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 80
+Elapsed runtime : 16.94 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.1997e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.9397e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0043e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 81
+Elapsed runtime : 17.04 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.2268e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.9143e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.0092e-13
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 82
+Elapsed runtime : 17.14 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.2539e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.8896e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.7225e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 83
+Elapsed runtime : 17.23 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.2810e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.8655e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.6003e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 84
+Elapsed runtime : 17.33 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.3081e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.8420e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.4000e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 85
+Elapsed runtime : 17.43 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.3352e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.8190e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.2711e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 86
+Elapsed runtime : 17.53 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.3622e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.7966e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 9.1152e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 87
+Elapsed runtime : 17.63 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.3893e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.7746e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.8687e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 88
+Elapsed runtime : 17.73 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.4164e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.7532e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.9080e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 89
+Elapsed runtime : 17.82 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.8900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.4434e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.7323e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.7758e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 90
+Elapsed runtime : 17.92 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.4704e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.7118e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.6887e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 91
+Elapsed runtime : 18.02 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.4974e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.6918e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.3681e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 92
+Elapsed runtime : 18.12 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.5244e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.6722e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.3795e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 93
+Elapsed runtime : 18.22 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.5514e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.6530e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.2434e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 94
+Elapsed runtime : 18.31 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.5784e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.6342e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.2479e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 95
+Elapsed runtime : 18.41 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.6054e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.6159e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 8.1558e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 96
+Elapsed runtime : 18.51 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.6324e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.5979e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.9368e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 97
+Elapsed runtime : 18.61 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.6594e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.5803e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.8976e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 98
+Elapsed runtime : 18.71 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.6863e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.5630e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.8504e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 99
+Elapsed runtime : 18.80 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 0.9900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.7133e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.5461e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.9090e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 100
+Elapsed runtime : 18.90 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.7402e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.5296e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.5310e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 101
+Elapsed runtime : 19.00 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.010
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.7671e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.5133e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.4981e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 102
+Elapsed runtime : 19.10 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.020
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.7940e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4974e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.4620e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 103
+Elapsed runtime : 19.20 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.030
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.8210e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4818e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.4183e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 104
+Elapsed runtime : 19.29 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.040
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.8479e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4665e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.2936e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 105
+Elapsed runtime : 19.39 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.050
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.8748e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4515e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.1592e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 106
+Elapsed runtime : 19.49 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.060
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.9016e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4368e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.1639e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 107
+Elapsed runtime : 19.58 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.070
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.9285e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4223e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 7.0050e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 108
+Elapsed runtime : 19.68 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.080
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.9554e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.4081e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.8702e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 109
+Elapsed runtime : 19.78 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.090
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 2.9822e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3942e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.9636e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 110
+Elapsed runtime : 19.88 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.0091e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3805e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.8687e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 111
+Elapsed runtime : 19.98 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.110
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.0359e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3671e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.7529e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 112
+Elapsed runtime : 20.07 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.120
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.0627e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3539e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.5330e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 113
+Elapsed runtime : 20.17 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.130
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.0896e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3410e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.4431e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 114
+Elapsed runtime : 20.27 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.140
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.1164e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3283e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.4567e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 115
+Elapsed runtime : 20.37 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.150
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.1432e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3158e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.3883e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 116
+Elapsed runtime : 20.47 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.160
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.1700e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.3035e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.2745e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 117
+Elapsed runtime : 20.57 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.170
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.1967e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2914e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.3072e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 118
+Elapsed runtime : 20.66 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.180
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.2235e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2796e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.1304e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 119
+Elapsed runtime : 20.76 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.190
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.2503e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2679e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.2115e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 120
+Elapsed runtime : 20.86 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.200
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.2770e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2564e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.1191e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 121
+Elapsed runtime : 20.96 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.210
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.3038e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2452e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 6.0214e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 122
+Elapsed runtime : 21.06 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.220
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.3305e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2341e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.9253e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 123
+Elapsed runtime : 21.16 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.230
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.3572e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2232e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.8507e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 124
+Elapsed runtime : 21.26 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.240
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.3840e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2124e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.8876e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 125
+Elapsed runtime : 21.36 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.250
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.4107e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.2019e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.7904e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 126
+Elapsed runtime : 21.46 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.260
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.4374e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1915e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.7209e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 127
+Elapsed runtime : 21.55 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.270
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.4641e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1812e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.7087e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 128
+Elapsed runtime : 21.65 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.280
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.4908e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1712e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.7059e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 129
+Elapsed runtime : 21.75 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.290
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.5174e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1613e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.6540e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 130
+Elapsed runtime : 21.85 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.300
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.5441e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1515e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.5812e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 131
+Elapsed runtime : 21.95 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.310
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.5707e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1419e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.5373e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 132
+Elapsed runtime : 22.05 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.320
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.5974e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1324e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.3808e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 133
+Elapsed runtime : 22.14 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.330
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.6240e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1231e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.2317e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 134
+Elapsed runtime : 22.24 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.340
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.6507e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1139e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.2643e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 135
+Elapsed runtime : 22.34 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.350
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.6773e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1049e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.2681e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 136
+Elapsed runtime : 22.44 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.360
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.7039e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0960e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.2275e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 137
+Elapsed runtime : 22.54 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.370
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.7305e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0872e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.0992e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 138
+Elapsed runtime : 22.63 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.380
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.7571e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0785e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.0843e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 139
+Elapsed runtime : 22.73 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.390
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.7837e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0700e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.0565e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 140
+Elapsed runtime : 22.83 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.400
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.8103e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0616e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.0393e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 141
+Elapsed runtime : 22.93 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.410
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.8368e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0533e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.0443e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 142
+Elapsed runtime : 23.03 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.420
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.8634e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0452e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.8293e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 143
+Elapsed runtime : 23.13 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.430
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.8899e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0371e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.9601e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 144
+Elapsed runtime : 23.23 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.440
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.9165e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0292e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.9621e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 145
+Elapsed runtime : 23.32 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.450
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.9430e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0213e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.7941e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 146
+Elapsed runtime : 23.42 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.460
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.9695e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0136e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.7535e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 147
+Elapsed runtime : 23.52 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.470
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 3.9960e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.0060e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 4.7566e-14
+The Newton-Raphson solver converged in 2 iterations
+
+Iteration       : 148
+Elapsed runtime : 23.62 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.480
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.0226e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.9849e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 149
+Elapsed runtime : 23.69 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.490
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.0490e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.9096e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 150
+Elapsed runtime : 23.77 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.500
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.0755e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.8364e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 151
+Elapsed runtime : 23.84 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.510
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.1020e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.7643e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 152
+Elapsed runtime : 23.92 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.520
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.1285e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.6931e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 153
+Elapsed runtime : 23.99 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.530
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.1549e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.6229e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 154
+Elapsed runtime : 24.07 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.540
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.1814e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.5536e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 155
+Elapsed runtime : 24.14 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.550
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.2078e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.4851e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 156
+Elapsed runtime : 24.22 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.560
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.2343e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.4176e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 157
+Elapsed runtime : 24.30 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.570
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.2607e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.3509e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 158
+Elapsed runtime : 24.37 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.580
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.2871e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.2851e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 159
+Elapsed runtime : 24.45 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.590
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.3135e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.2201e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 160
+Elapsed runtime : 24.52 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.600
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.3399e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.1559e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 161
+Elapsed runtime : 24.60 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.610
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.3663e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.0925e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 162
+Elapsed runtime : 24.67 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.620
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.3927e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 9.0300e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 163
+Elapsed runtime : 24.75 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.630
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.4191e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.9682e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 164
+Elapsed runtime : 24.82 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.640
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.4454e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.9071e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 165
+Elapsed runtime : 24.90 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.650
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.4718e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.8468e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 166
+Elapsed runtime : 24.98 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.660
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.4981e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.7872e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 167
+Elapsed runtime : 25.05 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.670
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.5245e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.7284e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 168
+Elapsed runtime : 25.13 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.680
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.5508e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.6702e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 169
+Elapsed runtime : 25.20 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.690
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.5771e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.6128e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 170
+Elapsed runtime : 25.28 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.700
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.6035e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.5560e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 171
+Elapsed runtime : 25.35 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.710
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.6298e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.4999e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 172
+Elapsed runtime : 25.43 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.720
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.6561e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.4444e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 173
+Elapsed runtime : 25.50 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.730
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.6823e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.3896e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 174
+Elapsed runtime : 25.58 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.740
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.7086e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.3355e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 175
+Elapsed runtime : 25.65 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.750
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.7349e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.2819e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 176
+Elapsed runtime : 25.73 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.760
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.7612e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.2290e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 177
+Elapsed runtime : 25.80 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.770
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.7874e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.1767e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 178
+Elapsed runtime : 25.88 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.780
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.8136e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.1249e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 179
+Elapsed runtime : 25.95 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.790
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.8399e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.0738e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 180
+Elapsed runtime : 26.03 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.800
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.8661e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 8.0232e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 181
+Elapsed runtime : 26.10 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.810
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.8923e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.9732e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 182
+Elapsed runtime : 26.18 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.820
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.9185e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.9238e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 183
+Elapsed runtime : 26.25 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.830
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.9447e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.8748e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 184
+Elapsed runtime : 26.33 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.840
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.9709e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.8265e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 185
+Elapsed runtime : 26.41 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.850
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 4.9971e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.7786e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 186
+Elapsed runtime : 26.48 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.860
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.0233e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.7313e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 187
+Elapsed runtime : 26.56 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.870
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.0495e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.6845e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 188
+Elapsed runtime : 26.64 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.880
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.0756e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.6382e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 189
+Elapsed runtime : 26.71 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.890
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.1018e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.5923e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 190
+Elapsed runtime : 26.79 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.900
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.1279e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.5470e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 191
+Elapsed runtime : 26.86 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.910
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.1540e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.5022e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 192
+Elapsed runtime : 26.94 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.920
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.1802e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.4578e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 193
+Elapsed runtime : 27.01 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.930
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.2063e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.4139e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 194
+Elapsed runtime : 27.09 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.940
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.2324e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.3704e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 195
+Elapsed runtime : 27.16 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.950
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.2585e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.3274e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 196
+Elapsed runtime : 27.24 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.960
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.2846e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.2848e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 197
+Elapsed runtime : 27.32 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.970
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.3106e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.2427e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 198
+Elapsed runtime : 27.39 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.980
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.3367e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.2010e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 199
+Elapsed runtime : 27.47 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 1.990
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.3628e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.1597e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 200
+Elapsed runtime : 27.54 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.000
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.3888e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.1189e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 201
+Elapsed runtime : 27.62 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.010
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.4149e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.0784e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 202
+Elapsed runtime : 27.69 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.020
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.4409e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 7.0384e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 203
+Elapsed runtime : 27.77 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.030
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.4670e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.9988e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 204
+Elapsed runtime : 27.84 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.040
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.4930e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.9595e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 205
+Elapsed runtime : 27.92 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.050
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.5190e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.9207e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 206
+Elapsed runtime : 27.99 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.060
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.5450e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.8822e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 207
+Elapsed runtime : 28.07 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.070
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.5710e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.8441e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 208
+Elapsed runtime : 28.14 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.080
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.5970e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.8063e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 209
+Elapsed runtime : 28.22 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.090
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.6230e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.7690e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 210
+Elapsed runtime : 28.29 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.100
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.6489e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.7320e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 211
+Elapsed runtime : 28.37 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.110
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.6749e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.6953e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 212
+Elapsed runtime : 28.45 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.120
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.7008e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.6590e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 213
+Elapsed runtime : 28.52 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.130
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.7268e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.6231e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 214
+Elapsed runtime : 28.59 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.140
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.7527e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.5875e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 215
+Elapsed runtime : 28.67 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.150
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.7787e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.5522e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 216
+Elapsed runtime : 28.74 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.160
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.8046e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.5172e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 217
+Elapsed runtime : 28.82 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.170
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.8305e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 6.4826e-07
+The Newton-Raphson solver converged in 1 iterations
+
+Iteration       : 218
+Elapsed runtime : 28.90 seconds
+
+Setting step size to 1.000 (100.0% of initial step size)
+New displacement factor 2.180
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 5.8954e+03
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 1.1477e-01
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 1.6500e-01
+module `userModules.solver.nonlin' : iter = 3, scaled residual = 2.0170e-01
+module `userModules.solver.nonlin' : iter = 4, scaled residual = 2.8797e-01
+module `userModules.solver.nonlin' : iter = 5, scaled residual = 3.8297e-01
+module `userModules.solver.nonlin' : iter = 6, scaled residual = 4.4018e-01
+module `userModules.solver.nonlin' : iter = 7, scaled residual = 3.7886e-01
+module `userModules.solver.nonlin' : iter = 8, scaled residual = 5.8624e-01
+module `userModules.solver.nonlin' : iter = 9, scaled residual = 6.0167e-01
+module `userModules.solver.nonlin' : iter = 10, scaled residual = 7.7418e-01
+module `userModules.solver.nonlin' : iter = 11, scaled residual = 1.5131e+00
+module `userModules.solver.nonlin' : iter = 12, scaled residual = 5.4463e-01
+module `userModules.solver.nonlin' : iter = 13, scaled residual = 2.4952e-02
+module `userModules.solver.nonlin' : iter = 14, scaled residual = 1.3883e-04
+module `userModules.solver.nonlin' : iter = 15, scaled residual = 2.0780e-09
+The Newton-Raphson solver converged in 15 iterations
+
+Iteration       : 219
+Elapsed runtime : 29.29 seconds
+
+Setting step size to 0.1768 (17.68% of initial step size)
+New displacement factor 2.182
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.2379e-05
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.9448e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.6466e-06
+module `userModules.solver.nonlin' : iter = 3, scaled residual = 5.7245e-06
+module `userModules.solver.nonlin' : iter = 4, scaled residual = 5.7889e-06
+module `userModules.solver.nonlin' : iter = 5, scaled residual = 5.3407e-06
+module `userModules.solver.nonlin' : iter = 6, scaled residual = 5.3905e-06
+module `userModules.solver.nonlin' : iter = 7, scaled residual = 6.2927e-06
+module `userModules.solver.nonlin' : iter = 8, scaled residual = 6.1061e-06
+module `userModules.solver.nonlin' : iter = 9, scaled residual = 6.0616e-06
+module `userModules.solver.nonlin' : iter = 10, scaled residual = 5.8628e-06
+module `userModules.solver.nonlin' : iter = 11, scaled residual = 5.2888e-06
+module `userModules.solver.nonlin' : iter = 12, scaled residual = 6.2559e-06
+module `userModules.solver.nonlin' : iter = 13, scaled residual = 5.6187e-06
+module `userModules.solver.nonlin' : iter = 14, scaled residual = 5.6308e-06
+module `userModules.solver.nonlin' : iter = 15, scaled residual = 5.6138e-06
+module `userModules.solver.nonlin' : iter = 16, scaled residual = 5.7142e-06
+module `userModules.solver.nonlin' : iter = 17, scaled residual = 6.0989e-06
+module `userModules.solver.nonlin' : iter = 18, scaled residual = 5.2351e-06
+module `userModules.solver.nonlin' : iter = 19, scaled residual = 5.9354e-06
+module `userModules.solver.nonlin' : iter = 20, scaled residual = 5.9595e-06
+module `userModules.solver.nonlin' : iter = 21, scaled residual = 5.8613e-06
+module `userModules.solver.nonlin' : iter = 22, scaled residual = 6.2340e-06
+module `userModules.solver.nonlin' : iter = 23, scaled residual = 5.9273e-06
+module `userModules.solver.nonlin' : iter = 24, scaled residual = 6.1602e-06
+module `userModules.solver.nonlin' : iter = 25, scaled residual = 5.2381e-06
+module `userModules.solver.nonlin' : iter = 26, scaled residual = 4.9861e-06
+module `userModules.solver.nonlin' : iter = 27, scaled residual = 5.4636e-06
+module `userModules.solver.nonlin' : iter = 28, scaled residual = 5.9096e-06
+module `userModules.solver.nonlin' : iter = 29, scaled residual = 5.6398e-06
+module `userModules.solver.nonlin' : iter = 30, scaled residual = 6.2922e-06
+module `userModules.solver.nonlin' : iter = 31, scaled residual = 5.4710e-06
+module `userModules.solver.nonlin' : iter = 32, scaled residual = 5.6677e-06
+module `userModules.solver.nonlin' : iter = 33, scaled residual = 6.6743e-06
+module `userModules.solver.nonlin' : iter = 34, scaled residual = 5.2739e-06
+module `userModules.solver.nonlin' : iter = 35, scaled residual = 5.7767e-06
+module `userModules.solver.nonlin' : iter = 36, scaled residual = 5.2971e-06
+module `userModules.solver.nonlin' : iter = 37, scaled residual = 6.1071e-06
+module `userModules.solver.nonlin' : iter = 38, scaled residual = 5.8786e-06
+module `userModules.solver.nonlin' : iter = 39, scaled residual = 5.2668e-06
+module `userModules.solver.nonlin' : iter = 40, scaled residual = 5.7816e-06
+module `userModules.solver.nonlin' : iter = 41, scaled residual = 6.2022e-06
+module `userModules.solver.nonlin' : iter = 42, scaled residual = 6.3997e-06
+module `userModules.solver.nonlin' : iter = 43, scaled residual = 5.6754e-06
+module `userModules.solver.nonlin' : iter = 44, scaled residual = 5.8027e-06
+module `userModules.solver.nonlin' : iter = 45, scaled residual = 5.5161e-06
+module `userModules.solver.nonlin' : iter = 46, scaled residual = 5.7458e-06
+module `userModules.solver.nonlin' : iter = 47, scaled residual = 5.2176e-06
+module `userModules.solver.nonlin' : iter = 48, scaled residual = 5.7167e-06
+module `userModules.solver.nonlin' : iter = 49, scaled residual = 4.8943e-06
+module `userModules.solver.nonlin' : iter = 50, scaled residual = 6.4020e-06
+module `userModules.solver.nonlin' : iter = 51, scaled residual = 6.3691e-06
+
+AdaptiveStepModule caught a solver exception: 
+   module `userModules.solver.nonlin'
+   no convergence achieved in 51 iterations; final residual: 6.369127e-06
+
+Returning to the same load step with reduced step
+Iteration       : 219
+Elapsed runtime : 30.49 seconds
+
+Setting step size to 0.07955 (7.955% of initial step size)
+New displacement factor 2.181
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.2379e-05
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 4.8921e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.7734e-06
+module `userModules.solver.nonlin' : iter = 3, scaled residual = 4.6851e-06
+module `userModules.solver.nonlin' : iter = 4, scaled residual = 5.2695e-06
+module `userModules.solver.nonlin' : iter = 5, scaled residual = 4.2129e-06
+module `userModules.solver.nonlin' : iter = 6, scaled residual = 5.4729e-06
+module `userModules.solver.nonlin' : iter = 7, scaled residual = 4.1173e-06
+module `userModules.solver.nonlin' : iter = 8, scaled residual = 5.5423e-06
+module `userModules.solver.nonlin' : iter = 9, scaled residual = 4.6828e-06
+module `userModules.solver.nonlin' : iter = 10, scaled residual = 5.8264e-06
+module `userModules.solver.nonlin' : iter = 11, scaled residual = 4.8005e-06
+module `userModules.solver.nonlin' : iter = 12, scaled residual = 5.4078e-06
+module `userModules.solver.nonlin' : iter = 13, scaled residual = 4.1496e-06
+module `userModules.solver.nonlin' : iter = 14, scaled residual = 5.2366e-06
+module `userModules.solver.nonlin' : iter = 15, scaled residual = 5.4425e-06
+module `userModules.solver.nonlin' : iter = 16, scaled residual = 4.4476e-06
+module `userModules.solver.nonlin' : iter = 17, scaled residual = 4.8844e-06
+module `userModules.solver.nonlin' : iter = 18, scaled residual = 4.6827e-06
+module `userModules.solver.nonlin' : iter = 19, scaled residual = 5.3263e-06
+module `userModules.solver.nonlin' : iter = 20, scaled residual = 4.5870e-06
+module `userModules.solver.nonlin' : iter = 21, scaled residual = 5.3163e-06
+module `userModules.solver.nonlin' : iter = 22, scaled residual = 4.1982e-06
+module `userModules.solver.nonlin' : iter = 23, scaled residual = 5.1662e-06
+module `userModules.solver.nonlin' : iter = 24, scaled residual = 4.8836e-06
+module `userModules.solver.nonlin' : iter = 25, scaled residual = 5.3947e-06
+module `userModules.solver.nonlin' : iter = 26, scaled residual = 4.9826e-06
+module `userModules.solver.nonlin' : iter = 27, scaled residual = 4.5365e-06
+module `userModules.solver.nonlin' : iter = 28, scaled residual = 5.2229e-06
+module `userModules.solver.nonlin' : iter = 29, scaled residual = 4.9375e-06
+module `userModules.solver.nonlin' : iter = 30, scaled residual = 5.6139e-06
+module `userModules.solver.nonlin' : iter = 31, scaled residual = 3.9956e-06
+module `userModules.solver.nonlin' : iter = 32, scaled residual = 5.3390e-06
+module `userModules.solver.nonlin' : iter = 33, scaled residual = 4.5802e-06
+module `userModules.solver.nonlin' : iter = 34, scaled residual = 5.0282e-06
+module `userModules.solver.nonlin' : iter = 35, scaled residual = 4.5212e-06
+module `userModules.solver.nonlin' : iter = 36, scaled residual = 5.5218e-06
+module `userModules.solver.nonlin' : iter = 37, scaled residual = 4.3937e-06
+module `userModules.solver.nonlin' : iter = 38, scaled residual = 5.1543e-06
+module `userModules.solver.nonlin' : iter = 39, scaled residual = 4.6559e-06
+module `userModules.solver.nonlin' : iter = 40, scaled residual = 4.9835e-06
+module `userModules.solver.nonlin' : iter = 41, scaled residual = 4.3837e-06
+module `userModules.solver.nonlin' : iter = 42, scaled residual = 5.0471e-06
+module `userModules.solver.nonlin' : iter = 43, scaled residual = 4.4248e-06
+module `userModules.solver.nonlin' : iter = 44, scaled residual = 5.3842e-06
+module `userModules.solver.nonlin' : iter = 45, scaled residual = 4.6859e-06
+module `userModules.solver.nonlin' : iter = 46, scaled residual = 5.5600e-06
+module `userModules.solver.nonlin' : iter = 47, scaled residual = 5.5200e-06
+module `userModules.solver.nonlin' : iter = 48, scaled residual = 5.0977e-06
+module `userModules.solver.nonlin' : iter = 49, scaled residual = 5.2922e-06
+module `userModules.solver.nonlin' : iter = 50, scaled residual = 5.1044e-06
+module `userModules.solver.nonlin' : iter = 51, scaled residual = 4.4496e-06
+
+AdaptiveStepModule caught a solver exception: 
+   module `userModules.solver.nonlin'
+   no convergence achieved in 51 iterations; final residual: 4.449638e-06
+
+Returning to the same load step with reduced step
+
+Iteration       : 219
+Elapsed runtime : 31.68 seconds
+
+Setting step size to 0.03580 (3.580% of initial step size)
+New displacement factor 2.180
+New displacement factor 0.000
+
+Starting the Newton-Raphson solver `userModules.solver.nonlin' ...
+module `userModules.solver.nonlin' : residual scale factor = 1.2379e-05
+module `userModules.solver.nonlin' : iter = 1, scaled residual = 5.2107e-06
+module `userModules.solver.nonlin' : iter = 2, scaled residual = 5.4353e-06
+module `userModules.solver.nonlin' : iter = 3, scaled residual = 5.2064e-06
+module `userModules.solver.nonlin' : iter = 4, scaled residual = 5.2775e-06
+module `userModules.solver.nonlin' : iter = 5, scaled residual = 5.1313e-06
+module `userModules.solver.nonlin' : iter = 6, scaled residual = 5.9040e-06
+module `userModules.solver.nonlin' : iter = 7, scaled residual = 6.1439e-06
+module `userModules.solver.nonlin' : iter = 8, scaled residual = 5.8948e-06
+module `userModules.solver.nonlin' : iter = 9, scaled residual = 5.1689e-06
+module `userModules.solver.nonlin' : iter = 10, scaled residual = 5.1034e-06
+module `userModules.solver.nonlin' : iter = 11, scaled residual = 4.9715e-06
+module `userModules.solver.nonlin' : iter = 12, scaled residual = 5.5578e-06
+module `userModules.solver.nonlin' : iter = 13, scaled residual = 4.9292e-06
+module `userModules.solver.nonlin' : iter = 14, scaled residual = 5.3420e-06
+module `userModules.solver.nonlin' : iter = 15, scaled residual = 4.9059e-06
+module `userModules.solver.nonlin' : iter = 16, scaled residual = 5.0784e-06
+module `userModules.solver.nonlin' : iter = 17, scaled residual = 4.4552e-06
+module `userModules.solver.nonlin' : iter = 18, scaled residual = 5.3207e-06
+module `userModules.solver.nonlin' : iter = 19, scaled residual = 5.2453e-06
+module `userModules.solver.nonlin' : iter = 20, scaled residual = 5.8044e-06
+module `userModules.solver.nonlin' : iter = 21, scaled residual = 4.4776e-06
+module `userModules.solver.nonlin' : iter = 22, scaled residual = 5.0805e-06
+module `userModules.solver.nonlin' : iter = 23, scaled residual = 4.9595e-06
+module `userModules.solver.nonlin' : iter = 24, scaled residual = 5.4360e-06
+module `userModules.solver.nonlin' : iter = 25, scaled residual = 5.1088e-06
+module `userModules.solver.nonlin' : iter = 26, scaled residual = 5.1317e-06
+module `userModules.solver.nonlin' : iter = 27, scaled residual = 5.3106e-06
+module `userModules.solver.nonlin' : iter = 28, scaled residual = 5.3435e-06
+module `userModules.solver.nonlin' : iter = 29, scaled residual = 4.8734e-06
+module `userModules.solver.nonlin' : iter = 30, scaled residual = 5.1071e-06
+module `userModules.solver.nonlin' : iter = 31, scaled residual = 4.4695e-06
+module `userModules.solver.nonlin' : iter = 32, scaled residual = 5.9111e-06
+module `userModules.solver.nonlin' : iter = 33, scaled residual = 4.8835e-06
+module `userModules.solver.nonlin' : iter = 34, scaled residual = 5.6187e-06
+module `userModules.solver.nonlin' : iter = 35, scaled residual = 4.4910e-06
+module `userModules.solver.nonlin' : iter = 36, scaled residual = 5.4990e-06
+module `userModules.solver.nonlin' : iter = 37, scaled residual = 4.5298e-06
+module `userModules.solver.nonlin' : iter = 38, scaled residual = 5.4140e-06
+module `userModules.solver.nonlin' : iter = 39, scaled residual = 4.7965e-06
+module `userModules.solver.nonlin' : iter = 40, scaled residual = 5.3800e-06
+module `userModules.solver.nonlin' : iter = 41, scaled residual = 4.7475e-06
+module `userModules.solver.nonlin' : iter = 42, scaled residual = 4.9300e-06
+module `userModules.solver.nonlin' : iter = 43, scaled residual = 4.7718e-06
+module `userModules.solver.nonlin' : iter = 44, scaled residual = 5.0157e-06
+module `userModules.solver.nonlin' : iter = 45, scaled residual = 5.1569e-06
+module `userModules.solver.nonlin' : iter = 46, scaled residual = 5.4769e-06
+module `userModules.solver.nonlin' : iter = 47, scaled residual = 5.3419e-06
+module `userModules.solver.nonlin' : iter = 48, scaled residual = 6.0075e-06
+module `userModules.solver.nonlin' : iter = 49, scaled residual = 5.3043e-06
+module `userModules.solver.nonlin' : iter = 50, scaled residual = 5.1817e-06
+module `userModules.solver.nonlin' : iter = 51, scaled residual = 5.4344e-06
+
+AdaptiveStepModule caught a solver exception: 
+   module `userModules.solver.nonlin'
+   no convergence achieved in 51 iterations; final residual: 5.434436e-06
+
+Returning to the same load step with reduced step

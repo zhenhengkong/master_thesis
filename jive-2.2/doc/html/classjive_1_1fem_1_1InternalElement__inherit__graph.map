@@ -1,0 +1,7 @@
+<map id="jive::fem::InternalElement" name="jive::fem::InternalElement">
+<area shape="rect" id="node2" href="$classjive_1_1fem_1_1Element.html" title="jive::fem::Element" alt="" coords="79,155,216,181"/>
+<area shape="rect" id="node3" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="20,80,115,107"/>
+<area shape="rect" id="node4" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node5" href="$classjive_1_1fem_1_1VirtualElement.html" title="jive::fem::VirtualElement" alt="" coords="139,80,318,107"/>
+<area shape="rect" id="node6" href="$classjem_1_1Interface.html" title="Provides support for creating Java&#45;like interfaces. " alt="" coords="173,5,284,32"/>
+</map>

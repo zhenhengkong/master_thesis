@@ -1,0 +1,1818 @@
+newXOutput 1
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 2
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 77.7294 0.00000 -2.76317e-16
+  2 77.7294 0.00000 -2.76317e-16
+  3 77.7294 0.00000 -1.03123e-15
+  4 77.7294 0.00000 -1.03123e-15
+</Section>
+
+newXOutput 3
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 155.576 0.00000 1.07356e-15
+  2 155.576 0.00000 1.07356e-15
+  3 155.576 0.00000 2.21157e-15
+  4 155.576 0.00000 2.21157e-15
+</Section>
+
+newXOutput 4
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 233.542 0.00000 0.00000
+  2 233.542 0.00000 0.00000
+  3 233.542 0.00000 0.00000
+  4 233.542 0.00000 0.00000
+</Section>
+
+newXOutput 5
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 311.626 0.00000 0.00000
+  2 311.626 0.00000 0.00000
+  3 311.626 0.00000 0.00000
+  4 311.626 0.00000 0.00000
+</Section>
+
+newXOutput 6
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 389.830 0.00000 2.17902e-15
+  2 389.830 0.00000 2.17902e-15
+  3 389.830 0.00000 4.48883e-15
+  4 389.830 0.00000 4.48883e-15
+</Section>
+
+newXOutput 7
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 468.155 0.00000 0.00000
+  2 468.155 0.00000 0.00000
+  3 468.155 0.00000 0.00000
+  4 468.155 0.00000 0.00000
+</Section>
+
+newXOutput 8
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 546.601 0.00000 0.00000
+  2 546.601 0.00000 0.00000
+  3 546.601 0.00000 0.00000
+  4 546.601 0.00000 0.00000
+</Section>
+
+newXOutput 9
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 625.169 0.00000 -4.42181e-15
+  2 625.169 0.00000 -4.42181e-15
+  3 625.169 0.00000 -9.10903e-15
+  4 625.169 0.00000 -9.10903e-15
+</Section>
+
+newXOutput 10
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 703.859 0.00000 0.00000
+  2 703.859 0.00000 0.00000
+  3 703.859 0.00000 0.00000
+  4 703.859 0.00000 0.00000
+</Section>
+
+newXOutput 11
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 782.672 0.00000 0.00000
+  2 782.672 0.00000 0.00000
+  3 782.672 0.00000 0.00000
+  4 782.672 0.00000 0.00000
+</Section>
+
+newXOutput 12
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 861.609 0.00000 0.00000
+  2 861.609 0.00000 0.00000
+  3 861.609 0.00000 0.00000
+  4 861.609 0.00000 0.00000
+</Section>
+
+newXOutput 13
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 940.670 0.00000 0.00000
+  2 940.670 0.00000 0.00000
+  3 940.670 0.00000 0.00000
+  4 940.670 0.00000 0.00000
+</Section>
+
+newXOutput 14
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1019.86 0.00000 0.00000
+  2 1019.86 0.00000 0.00000
+  3 1019.86 0.00000 0.00000
+  4 1019.86 0.00000 0.00000
+</Section>
+
+newXOutput 15
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1099.17 0.00000 0.00000
+  2 1099.17 0.00000 0.00000
+  3 1099.17 0.00000 0.00000
+  4 1099.17 0.00000 0.00000
+</Section>
+
+newXOutput 16
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1178.60 0.00000 0.00000
+  2 1178.60 0.00000 0.00000
+  3 1178.60 0.00000 0.00000
+  4 1178.60 0.00000 0.00000
+</Section>
+
+newXOutput 17
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1258.17 0.00000 0.00000
+  2 1258.17 0.00000 0.00000
+  3 1258.17 0.00000 0.00000
+  4 1258.17 0.00000 0.00000
+</Section>
+
+newXOutput 18
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1337.86 0.00000 -9.22628e-15
+  2 1337.86 0.00000 -9.22628e-15
+  3 1337.86 0.00000 -1.90063e-14
+  4 1337.86 0.00000 -1.90063e-14
+</Section>
+
+newXOutput 19
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1417.67 0.00000 0.00000
+  2 1417.67 0.00000 0.00000
+  3 1417.67 0.00000 0.00000
+  4 1417.67 0.00000 0.00000
+</Section>
+
+newXOutput 20
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1497.62 0.00000 0.00000
+  2 1497.62 0.00000 0.00000
+  3 1497.62 0.00000 0.00000
+  4 1497.62 0.00000 0.00000
+</Section>
+
+newXOutput 21
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1577.69 0.00000 0.00000
+  2 1577.69 0.00000 0.00000
+  3 1577.69 0.00000 0.00000
+  4 1577.69 0.00000 0.00000
+</Section>
+
+newXOutput 22
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1657.89 0.00000 0.00000
+  2 1657.89 0.00000 0.00000
+  3 1657.89 0.00000 0.00000
+  4 1657.89 0.00000 0.00000
+</Section>
+
+newXOutput 23
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1738.21 0.00000 0.00000
+  2 1738.21 0.00000 0.00000
+  3 1738.21 0.00000 0.00000
+  4 1738.21 0.00000 0.00000
+</Section>
+
+newXOutput 24
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1818.67 0.00000 1.43864e-14
+  2 1818.67 0.00000 1.43864e-14
+  3 1818.67 0.00000 3.78375e-14
+  4 1818.67 0.00000 3.78375e-14
+</Section>
+
+newXOutput 25
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1899.26 0.00000 0.00000
+  2 1899.26 0.00000 0.00000
+  3 1899.26 0.00000 0.00000
+  4 1899.26 0.00000 0.00000
+</Section>
+
+newXOutput 26
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1979.97 0.00000 0.00000
+  2 1979.97 0.00000 0.00000
+  3 1979.97 0.00000 0.00000
+  4 1979.97 0.00000 0.00000
+</Section>
+
+newXOutput 27
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2060.82 0.00000 0.00000
+  2 2060.82 0.00000 0.00000
+  3 2060.82 0.00000 0.00000
+  4 2060.82 0.00000 0.00000
+</Section>
+
+newXOutput 28
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2141.79 0.00000 0.00000
+  2 2141.79 0.00000 0.00000
+  3 2141.79 0.00000 0.00000
+  4 2141.79 0.00000 0.00000
+</Section>
+
+newXOutput 29
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2222.89 0.00000 0.00000
+  2 2222.89 0.00000 0.00000
+  3 2222.89 0.00000 0.00000
+  4 2222.89 0.00000 0.00000
+</Section>
+
+newXOutput 30
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2304.13 0.00000 0.00000
+  2 2304.13 0.00000 0.00000
+  3 2304.13 0.00000 0.00000
+  4 2304.13 0.00000 0.00000
+</Section>
+
+newXOutput 31
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2385.49 0.00000 0.00000
+  2 2385.49 0.00000 0.00000
+  3 2385.49 0.00000 0.00000
+  4 2385.49 0.00000 0.00000
+</Section>
+
+newXOutput 32
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2466.99 0.00000 0.00000
+  2 2466.99 0.00000 0.00000
+  3 2466.99 0.00000 0.00000
+  4 2466.99 0.00000 0.00000
+</Section>
+
+newXOutput 33
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2548.61 0.00000 0.00000
+  2 2548.61 0.00000 0.00000
+  3 2548.61 0.00000 0.00000
+  4 2548.61 0.00000 0.00000
+</Section>
+
+newXOutput 34
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2630.37 0.00000 0.00000
+  2 2630.37 0.00000 0.00000
+  3 2630.37 0.00000 0.00000
+  4 2630.37 0.00000 0.00000
+</Section>
+
+newXOutput 35
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2712.25 0.00000 0.00000
+  2 2712.25 0.00000 0.00000
+  3 2712.25 0.00000 0.00000
+  4 2712.25 0.00000 0.00000
+</Section>
+
+newXOutput 36
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2794.27 0.00000 0.00000
+  2 2794.27 0.00000 0.00000
+  3 2794.27 0.00000 0.00000
+  4 2794.27 0.00000 0.00000
+</Section>
+
+newXOutput 37
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2876.41 0.00000 0.00000
+  2 2876.41 0.00000 0.00000
+  3 2876.41 0.00000 0.00000
+  4 2876.41 0.00000 0.00000
+</Section>
+
+newXOutput 38
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2958.69 0.00000 0.00000
+  2 2958.69 0.00000 0.00000
+  3 2958.69 0.00000 0.00000
+  4 2958.69 0.00000 0.00000
+</Section>
+
+newXOutput 39
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3041.10 0.00000 0.00000
+  2 3041.10 0.00000 0.00000
+  3 3041.10 0.00000 0.00000
+  4 3041.10 0.00000 0.00000
+</Section>
+
+newXOutput 40
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3123.64 0.00000 0.00000
+  2 3123.64 0.00000 0.00000
+  3 3123.64 0.00000 0.00000
+  4 3123.64 0.00000 0.00000
+</Section>
+
+newXOutput 41
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3206.31 0.00000 0.00000
+  2 3206.31 0.00000 0.00000
+  3 3206.31 0.00000 0.00000
+  4 3206.31 0.00000 0.00000
+</Section>
+
+newXOutput 42
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3289.11 0.00000 0.00000
+  2 3289.11 0.00000 0.00000
+  3 3289.11 0.00000 0.00000
+  4 3289.11 0.00000 0.00000
+</Section>
+
+newXOutput 43
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3372.04 0.00000 -3.05111e-14
+  2 3372.04 0.00000 -3.05111e-14
+  3 3372.04 0.00000 -4.50535e-14
+  4 3372.04 0.00000 -4.50535e-14
+</Section>
+
+newXOutput 44
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3455.10 0.00000 -4.13269e-14
+  2 3455.10 0.00000 -4.13269e-14
+  3 3455.10 0.00000 -8.51344e-14
+  4 3455.10 0.00000 -8.51344e-14
+</Section>
+
+newXOutput 45
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3538.29 0.00000 0.00000
+  2 3538.29 0.00000 0.00000
+  3 3538.29 0.00000 0.00000
+  4 3538.29 0.00000 0.00000
+</Section>
+
+newXOutput 46
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3621.61 0.00000 -3.08893e-14
+  2 3621.61 0.00000 -3.08893e-14
+  3 3621.61 0.00000 -4.56120e-14
+  4 3621.61 0.00000 -4.56120e-14
+</Section>
+
+newXOutput 47
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3705.05 0.00000 0.00000
+  2 3705.05 0.00000 0.00000
+  3 3705.05 0.00000 0.00000
+  4 3705.05 0.00000 0.00000
+</Section>
+
+newXOutput 48
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3788.63 0.00000 0.00000
+  2 3788.63 0.00000 0.00000
+  3 3788.63 0.00000 0.00000
+  4 3788.63 0.00000 0.00000
+</Section>
+
+newXOutput 49
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3872.34 0.00000 0.00000
+  2 3872.34 0.00000 0.00000
+  3 3872.34 0.00000 0.00000
+  4 3872.34 0.00000 0.00000
+</Section>
+
+newXOutput 50
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3956.17 0.00000 0.00000
+  2 3956.17 0.00000 0.00000
+  3 3956.17 0.00000 0.00000
+  4 3956.17 0.00000 0.00000
+</Section>
+
+newXOutput 51
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4040.14 0.00000 0.00000
+  2 4040.14 0.00000 0.00000
+  3 4040.14 0.00000 0.00000
+  4 4040.14 0.00000 0.00000
+</Section>
+
+newXOutput 52
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4124.23 0.00000 0.00000
+  2 4124.23 0.00000 0.00000
+  3 4124.23 0.00000 0.00000
+  4 4124.23 0.00000 0.00000
+</Section>
+
+newXOutput 53
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4208.45 0.00000 0.00000
+  2 4208.45 0.00000 0.00000
+  3 4208.45 0.00000 0.00000
+  4 4208.45 0.00000 0.00000
+</Section>
+
+newXOutput 54
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4292.79 0.00000 -2.22594e-14
+  2 4292.79 0.00000 -2.22594e-14
+  3 4292.79 0.00000 -8.30731e-14
+  4 4292.79 0.00000 -8.30731e-14
+</Section>
+
+newXOutput 55
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4377.27 0.00000 0.00000
+  2 4377.27 0.00000 0.00000
+  3 4377.27 0.00000 0.00000
+  4 4377.27 0.00000 0.00000
+</Section>
+
+newXOutput 56
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4461.87 0.00000 0.00000
+  2 4461.87 0.00000 0.00000
+  3 4461.87 0.00000 0.00000
+  4 4461.87 0.00000 0.00000
+</Section>
+
+newXOutput 57
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4546.59 0.00000 0.00000
+  2 4546.59 0.00000 0.00000
+  3 4546.59 0.00000 0.00000
+  4 4546.59 0.00000 0.00000
+</Section>
+
+newXOutput 58
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4631.44 0.00000 0.00000
+  2 4631.44 0.00000 0.00000
+  3 4631.44 0.00000 0.00000
+  4 4631.44 0.00000 0.00000
+</Section>
+
+newXOutput 59
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4716.42 0.00000 0.00000
+  2 4716.42 0.00000 0.00000
+  3 4716.42 0.00000 0.00000
+  4 4716.42 0.00000 0.00000
+</Section>
+
+newXOutput 60
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4801.52 0.00000 0.00000
+  2 4801.52 0.00000 0.00000
+  3 4801.52 0.00000 0.00000
+  4 4801.52 0.00000 0.00000
+</Section>
+
+newXOutput 61
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4886.74 0.00000 0.00000
+  2 4886.74 0.00000 0.00000
+  3 4886.74 0.00000 0.00000
+  4 4886.74 0.00000 0.00000
+</Section>
+
+newXOutput 62
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4972.09 0.00000 0.00000
+  2 4972.09 0.00000 0.00000
+  3 4972.09 0.00000 0.00000
+  4 4972.09 0.00000 0.00000
+</Section>
+
+newXOutput 63
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5057.56 0.00000 0.00000
+  2 5057.56 0.00000 0.00000
+  3 5057.56 0.00000 0.00000
+  4 5057.56 0.00000 0.00000
+</Section>
+
+newXOutput 64
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5143.15 0.00000 0.00000
+  2 5143.15 0.00000 0.00000
+  3 5143.15 0.00000 0.00000
+  4 5143.15 0.00000 0.00000
+</Section>
+
+newXOutput 65
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5228.86 0.00000 0.00000
+  2 5228.86 0.00000 0.00000
+  3 5228.86 0.00000 0.00000
+  4 5228.86 0.00000 0.00000
+</Section>
+
+newXOutput 66
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5314.69 0.00000 0.00000
+  2 5314.69 0.00000 0.00000
+  3 5314.69 0.00000 0.00000
+  4 5314.69 0.00000 0.00000
+</Section>
+
+newXOutput 67
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5400.64 0.00000 0.00000
+  2 5400.64 0.00000 0.00000
+  3 5400.64 0.00000 0.00000
+  4 5400.64 0.00000 0.00000
+</Section>
+
+newXOutput 68
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5486.71 0.00000 0.00000
+  2 5486.71 0.00000 0.00000
+  3 5486.71 0.00000 0.00000
+  4 5486.71 0.00000 0.00000
+</Section>
+
+newXOutput 69
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5572.90 0.00000 0.00000
+  2 5572.90 0.00000 0.00000
+  3 5572.90 0.00000 0.00000
+  4 5572.90 0.00000 0.00000
+</Section>
+
+newXOutput 70
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5659.20 0.00000 0.00000
+  2 5659.20 0.00000 0.00000
+  3 5659.20 0.00000 0.00000
+  4 5659.20 0.00000 0.00000
+</Section>
+
+newXOutput 71
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5745.63 0.00000 0.00000
+  2 5745.63 0.00000 0.00000
+  3 5745.63 0.00000 0.00000
+  4 5745.63 0.00000 0.00000
+</Section>
+
+newXOutput 72
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5832.16 0.00000 0.00000
+  2 5832.16 0.00000 0.00000
+  3 5832.16 0.00000 0.00000
+  4 5832.16 0.00000 0.00000
+</Section>
+
+newXOutput 73
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5918.81 0.00000 0.00000
+  2 5918.81 0.00000 0.00000
+  3 5918.81 0.00000 0.00000
+  4 5918.81 0.00000 0.00000
+</Section>
+
+newXOutput 74
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6005.58 0.00000 0.00000
+  2 6005.58 0.00000 0.00000
+  3 6005.58 0.00000 0.00000
+  4 6005.58 0.00000 0.00000
+</Section>
+
+newXOutput 75
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6092.45 0.00000 0.00000
+  2 6092.45 0.00000 0.00000
+  3 6092.45 0.00000 0.00000
+  4 6092.45 0.00000 0.00000
+</Section>
+
+newXOutput 76
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6179.44 0.00000 0.00000
+  2 6179.44 0.00000 0.00000
+  3 6179.44 0.00000 0.00000
+  4 6179.44 0.00000 0.00000
+</Section>
+
+newXOutput 77
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6266.53 0.00000 0.00000
+  2 6266.53 0.00000 0.00000
+  3 6266.53 0.00000 0.00000
+  4 6266.53 0.00000 0.00000
+</Section>
+
+newXOutput 78
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6353.74 0.00000 0.00000
+  2 6353.74 0.00000 0.00000
+  3 6353.74 0.00000 0.00000
+  4 6353.74 0.00000 0.00000
+</Section>
+
+newXOutput 79
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6441.05 0.00000 0.00000
+  2 6441.05 0.00000 0.00000
+  3 6441.05 0.00000 0.00000
+  4 6441.05 0.00000 0.00000
+</Section>
+
+newXOutput 80
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6528.47 0.00000 0.00000
+  2 6528.47 0.00000 0.00000
+  3 6528.47 0.00000 0.00000
+  4 6528.47 0.00000 0.00000
+</Section>
+
+newXOutput 81
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6616.00 0.00000 0.00000
+  2 6616.00 0.00000 0.00000
+  3 6616.00 0.00000 0.00000
+  4 6616.00 0.00000 0.00000
+</Section>
+
+newXOutput 82
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6703.62 0.00000 0.00000
+  2 6703.62 0.00000 0.00000
+  3 6703.62 0.00000 0.00000
+  4 6703.62 0.00000 0.00000
+</Section>
+
+newXOutput 83
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6791.36 0.00000 0.00000
+  2 6791.36 0.00000 0.00000
+  3 6791.36 0.00000 0.00000
+  4 6791.36 0.00000 0.00000
+</Section>
+
+newXOutput 84
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6844.82 0.00000 0.00000
+  2 6844.82 0.00000 0.00000
+  3 6844.82 0.00000 0.00000
+  4 6844.82 0.00000 0.00000
+</Section>
+
+newXOutput 85
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6714.18 0.00000 0.00000
+  2 6714.18 0.00000 0.00000
+  3 6714.18 0.00000 0.00000
+  4 6714.18 0.00000 0.00000
+</Section>
+
+newXOutput 86
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6583.45 0.00000 0.00000
+  2 6583.45 0.00000 0.00000
+  3 6583.45 0.00000 0.00000
+  4 6583.45 0.00000 0.00000
+</Section>
+
+newXOutput 87
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6452.63 0.00000 0.00000
+  2 6452.63 0.00000 0.00000
+  3 6452.63 0.00000 0.00000
+  4 6452.63 0.00000 0.00000
+</Section>
+
+newXOutput 88
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6321.73 0.00000 0.00000
+  2 6321.73 0.00000 0.00000
+  3 6321.73 0.00000 0.00000
+  4 6321.73 0.00000 0.00000
+</Section>
+
+newXOutput 89
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6190.74 0.00000 0.00000
+  2 6190.74 0.00000 0.00000
+  3 6190.74 0.00000 0.00000
+  4 6190.74 0.00000 0.00000
+</Section>
+
+newXOutput 90
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 6059.67 0.00000 0.00000
+  2 6059.67 0.00000 0.00000
+  3 6059.67 0.00000 0.00000
+  4 6059.67 0.00000 0.00000
+</Section>
+
+newXOutput 91
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5928.52 0.00000 0.00000
+  2 5928.52 0.00000 0.00000
+  3 5928.52 0.00000 0.00000
+  4 5928.52 0.00000 0.00000
+</Section>
+
+newXOutput 92
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5797.28 0.00000 0.00000
+  2 5797.28 0.00000 0.00000
+  3 5797.28 0.00000 0.00000
+  4 5797.28 0.00000 0.00000
+</Section>
+
+newXOutput 93
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5665.95 0.00000 0.00000
+  2 5665.95 0.00000 0.00000
+  3 5665.95 0.00000 0.00000
+  4 5665.95 0.00000 0.00000
+</Section>
+
+newXOutput 94
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5534.54 0.00000 0.00000
+  2 5534.54 0.00000 0.00000
+  3 5534.54 0.00000 0.00000
+  4 5534.54 0.00000 0.00000
+</Section>
+
+newXOutput 95
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5403.05 0.00000 0.00000
+  2 5403.05 0.00000 0.00000
+  3 5403.05 0.00000 0.00000
+  4 5403.05 0.00000 0.00000
+</Section>
+
+newXOutput 96
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5271.48 0.00000 0.00000
+  2 5271.48 0.00000 0.00000
+  3 5271.48 0.00000 0.00000
+  4 5271.48 0.00000 0.00000
+</Section>
+
+newXOutput 97
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5139.82 0.00000 0.00000
+  2 5139.82 0.00000 0.00000
+  3 5139.82 0.00000 0.00000
+  4 5139.82 0.00000 0.00000
+</Section>
+
+newXOutput 98
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 5008.08 0.00000 0.00000
+  2 5008.08 0.00000 0.00000
+  3 5008.08 0.00000 0.00000
+  4 5008.08 0.00000 0.00000
+</Section>
+
+newXOutput 99
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4876.26 0.00000 0.00000
+  2 4876.26 0.00000 0.00000
+  3 4876.26 0.00000 0.00000
+  4 4876.26 0.00000 0.00000
+</Section>
+
+newXOutput 100
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4744.37 0.00000 0.00000
+  2 4744.37 0.00000 0.00000
+  3 4744.37 0.00000 0.00000
+  4 4744.37 0.00000 0.00000
+</Section>
+
+newXOutput 101
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4612.39 0.00000 0.00000
+  2 4612.39 0.00000 0.00000
+  3 4612.39 0.00000 0.00000
+  4 4612.39 0.00000 0.00000
+</Section>
+
+newXOutput 102
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4480.33 0.00000 0.00000
+  2 4480.33 0.00000 0.00000
+  3 4480.33 0.00000 0.00000
+  4 4480.33 0.00000 0.00000
+</Section>
+
+newXOutput 103
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4348.20 0.00000 0.00000
+  2 4348.20 0.00000 0.00000
+  3 4348.20 0.00000 0.00000
+  4 4348.20 0.00000 0.00000
+</Section>
+
+newXOutput 104
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4215.99 0.00000 0.00000
+  2 4215.99 0.00000 0.00000
+  3 4215.99 0.00000 0.00000
+  4 4215.99 0.00000 0.00000
+</Section>
+
+newXOutput 105
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 4083.70 0.00000 0.00000
+  2 4083.70 0.00000 0.00000
+  3 4083.70 0.00000 0.00000
+  4 4083.70 0.00000 0.00000
+</Section>
+
+newXOutput 106
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3951.34 0.00000 0.00000
+  2 3951.34 0.00000 0.00000
+  3 3951.34 0.00000 0.00000
+  4 3951.34 0.00000 0.00000
+</Section>
+
+newXOutput 107
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3818.91 0.00000 0.00000
+  2 3818.91 0.00000 0.00000
+  3 3818.91 0.00000 0.00000
+  4 3818.91 0.00000 0.00000
+</Section>
+
+newXOutput 108
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3686.41 0.00000 0.00000
+  2 3686.41 0.00000 0.00000
+  3 3686.41 0.00000 0.00000
+  4 3686.41 0.00000 0.00000
+</Section>
+
+newXOutput 109
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3553.83 0.00000 0.00000
+  2 3553.83 0.00000 0.00000
+  3 3553.83 0.00000 0.00000
+  4 3553.83 0.00000 0.00000
+</Section>
+
+newXOutput 110
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3421.19 0.00000 0.00000
+  2 3421.19 0.00000 0.00000
+  3 3421.19 0.00000 0.00000
+  4 3421.19 0.00000 0.00000
+</Section>
+
+newXOutput 111
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3288.48 0.00000 0.00000
+  2 3288.48 0.00000 0.00000
+  3 3288.48 0.00000 0.00000
+  4 3288.48 0.00000 0.00000
+</Section>
+
+newXOutput 112
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3155.70 0.00000 0.00000
+  2 3155.70 0.00000 0.00000
+  3 3155.70 0.00000 0.00000
+  4 3155.70 0.00000 0.00000
+</Section>
+
+newXOutput 113
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 3022.86 0.00000 0.00000
+  2 3022.86 0.00000 0.00000
+  3 3022.86 0.00000 0.00000
+  4 3022.86 0.00000 0.00000
+</Section>
+
+newXOutput 114
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2889.96 0.00000 0.00000
+  2 2889.96 0.00000 0.00000
+  3 2889.96 0.00000 0.00000
+  4 2889.96 0.00000 0.00000
+</Section>
+
+newXOutput 115
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2756.99 0.00000 0.00000
+  2 2756.99 0.00000 0.00000
+  3 2756.99 0.00000 0.00000
+  4 2756.99 0.00000 0.00000
+</Section>
+
+newXOutput 116
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2623.97 0.00000 0.00000
+  2 2623.97 0.00000 0.00000
+  3 2623.97 0.00000 0.00000
+  4 2623.97 0.00000 0.00000
+</Section>
+
+newXOutput 117
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2490.89 0.00000 0.00000
+  2 2490.89 0.00000 0.00000
+  3 2490.89 0.00000 0.00000
+  4 2490.89 0.00000 0.00000
+</Section>
+
+newXOutput 118
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2357.76 0.00000 0.00000
+  2 2357.76 0.00000 0.00000
+  3 2357.76 0.00000 0.00000
+  4 2357.76 0.00000 0.00000
+</Section>
+
+newXOutput 119
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2224.57 0.00000 0.00000
+  2 2224.57 0.00000 0.00000
+  3 2224.57 0.00000 0.00000
+  4 2224.57 0.00000 0.00000
+</Section>
+
+newXOutput 120
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 2091.33 0.00000 0.00000
+  2 2091.33 0.00000 0.00000
+  3 2091.33 0.00000 0.00000
+  4 2091.33 0.00000 0.00000
+</Section>
+
+newXOutput 121
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1958.05 0.00000 0.00000
+  2 1958.05 0.00000 0.00000
+  3 1958.05 0.00000 0.00000
+  4 1958.05 0.00000 0.00000
+</Section>
+
+newXOutput 122
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1824.72 0.00000 0.00000
+  2 1824.72 0.00000 0.00000
+  3 1824.72 0.00000 0.00000
+  4 1824.72 0.00000 0.00000
+</Section>
+
+newXOutput 123
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1691.35 0.00000 0.00000
+  2 1691.35 0.00000 0.00000
+  3 1691.35 0.00000 0.00000
+  4 1691.35 0.00000 0.00000
+</Section>
+
+newXOutput 124
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1557.94 0.00000 0.00000
+  2 1557.94 0.00000 0.00000
+  3 1557.94 0.00000 0.00000
+  4 1557.94 0.00000 0.00000
+</Section>
+
+newXOutput 125
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1424.49 0.00000 0.00000
+  2 1424.49 0.00000 0.00000
+  3 1424.49 0.00000 0.00000
+  4 1424.49 0.00000 0.00000
+</Section>
+
+newXOutput 126
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1291.01 0.00000 0.00000
+  2 1291.01 0.00000 0.00000
+  3 1291.01 0.00000 0.00000
+  4 1291.01 0.00000 0.00000
+</Section>
+
+newXOutput 127
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1157.50 0.00000 0.00000
+  2 1157.50 0.00000 0.00000
+  3 1157.50 0.00000 0.00000
+  4 1157.50 0.00000 0.00000
+</Section>
+
+newXOutput 128
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 1023.96 0.00000 0.00000
+  2 1023.96 0.00000 0.00000
+  3 1023.96 0.00000 0.00000
+  4 1023.96 0.00000 0.00000
+</Section>
+
+newXOutput 129
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 890.398 0.00000 0.00000
+  2 890.398 0.00000 0.00000
+  3 890.398 0.00000 0.00000
+  4 890.398 0.00000 0.00000
+</Section>
+
+newXOutput 130
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 756.814 0.00000 0.00000
+  2 756.814 0.00000 0.00000
+  3 756.814 0.00000 0.00000
+  4 756.814 0.00000 0.00000
+</Section>
+
+newXOutput 131
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 623.214 0.00000 0.00000
+  2 623.214 0.00000 0.00000
+  3 623.214 0.00000 0.00000
+  4 623.214 0.00000 0.00000
+</Section>
+
+newXOutput 132
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 489.602 0.00000 0.00000
+  2 489.602 0.00000 0.00000
+  3 489.602 0.00000 0.00000
+  4 489.602 0.00000 0.00000
+</Section>
+
+newXOutput 133
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 355.980 0.00000 0.00000
+  2 355.980 0.00000 0.00000
+  3 355.980 0.00000 0.00000
+  4 355.980 0.00000 0.00000
+</Section>
+
+newXOutput 134
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 222.354 0.00000 0.00000
+  2 222.354 0.00000 0.00000
+  3 222.354 0.00000 0.00000
+  4 222.354 0.00000 0.00000
+</Section>
+
+newXOutput 135
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 88.7273 0.00000 0.00000
+  2 88.7273 0.00000 0.00000
+  3 88.7273 0.00000 0.00000
+  4 88.7273 0.00000 0.00000
+</Section>
+
+newXOutput 136
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 137
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 138
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 139
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 140
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 141
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 142
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 143
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 144
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 145
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 146
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 147
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 148
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 149
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 150
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 151
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 152
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 153
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 154
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 155
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 156
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 157
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 158
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 159
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 160
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 161
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 162
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 163
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 164
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 165
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 166
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 167
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 168
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 169
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 170
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 171
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 172
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 173
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 174
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 175
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 176
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 177
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 178
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 179
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 180
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 181
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 182
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 183
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 184
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 185
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 186
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 187
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 188
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 189
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 190
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 191
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 192
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 193
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 194
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 195
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 196
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 197
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 198
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 199
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 200
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 201
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+
+newXOutput 202
+
+<Section columns = "stress_xx | stress_yy | stress_xy">
+  1 0.00000 0.00000 0.00000
+  2 0.00000 0.00000 0.00000
+  3 0.00000 0.00000 0.00000
+  4 0.00000 0.00000 0.00000
+</Section>
+

@@ -1,0 +1,10 @@
+<map id="jive::util::ItemGroup" name="jive::util::ItemGroup">
+<area shape="rect" id="node4" href="$classjive_1_1fem_1_1AutoBndGroup.html" title="jive::fem::AutoBndGroup" alt="" coords="523,5,701,32"/>
+<area shape="rect" id="node5" href="$classjive_1_1util_1_1AllItemGroup.html" title="jive::util::AllItemGroup" alt="" coords="531,56,693,83"/>
+<area shape="rect" id="node6" href="$classjive_1_1util_1_1ColoredItemGroup.html" title="jive::util::ColoredItemGroup" alt="" coords="515,107,709,133"/>
+<area shape="rect" id="node7" href="$classjive_1_1util_1_1EmptyItemGroup.html" title="jive::util::EmptyItemGroup" alt="" coords="519,157,705,184"/>
+<area shape="rect" id="node8" href="$classjive_1_1util_1_1XItemGroup.html" title="jive::util::XItemGroup" alt="" coords="535,208,689,235"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="177,107,272,133"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="5,107,129,133"/>
+<area shape="rect" id="node9" href="$classjive_1_1util_1_1ArrayItemGroup.html" title="jive::util::ArrayItemGroup" alt="" coords="757,208,937,235"/>
+</map>

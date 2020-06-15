@@ -1,0 +1,3752 @@
+Log file created on Fri Oct 18 22:25:46 CEST 2019.
+
+Reading data from `solid.mesh' ...
+
+  solid.mesh, line 1: reading tag `Nodes' ...
+  solid.mesh, line 4178: done reading tag `Nodes'
+  solid.mesh, line 4180: reading tag `Elements' ...
+  solid.mesh, line 12217: done reading tag `Elements'
+  solid.mesh, line 12218: reading tag `ElementGroup' ...
+  solid.mesh, line 12220: done reading tag `ElementGroup'
+  solid.mesh, line 12222: reading tag `ElementGroup' ...
+  solid.mesh, line 12224: done reading tag `ElementGroup'
+
+Reading data from `interface.mesh' ...
+
+  ...face.mesh, line 1: reading tag `Elements' ...
+  ...face.mesh, line 52: done reading tag `Elements'
+  ...face.mesh, line 54: reading tag `ElementGroup' ...
+  ...face.mesh, line 56: done reading tag `ElementGroup'
+
+ ...Created NodeGroup `left' with 9 nodes.
+ ...Created NodeGroup `right' with 9 nodes.
+ ...Created NodeGroup `lb' with 1 nodes.
+
+Created a new model named `model'.
+
+Data summary:
+
+  nodes ......................................... 4176
+  node dofs ..................................... 8352
+  node constraints .............................. 10
+  node groups ................................... 5
+  node tables ................................... 0
+  node data bases ............................... 0
+  elements ...................................... 8086
+  element groups ................................ 5
+  element tables ................................ 0
+  element data bases ............................ 0
+  boundaries .................................... 0
+  boundary groups ............................... 2
+  boundary tables ............................... 0
+  boundary data bases ........................... 0
+  functions ..................................... 0
+
+userModules.view.mesh : building graphics mesh ...
+userModules.view.mesh : ready; graphics mesh contains:
+
+  vertices  ...... 4226
+  faces     ...... 8086
+  triangles ...... 8236
+  lines     ...... 0
+  edges     ...... 12311
+
+*** WARNING: module `userModules.view' : unsupported image type: `png'; supported type is `ppm'
+*** WARNING: module `userModules.view' : snapshot files will be saved in PPM format
+
+Application configuration data:
+
+  log	=
+  {
+    file	= "-inclusion.log";
+    rank	= 0;
+    pattern	= "*.info";
+    logPrefix	= "";
+    outPrefix	= "";
+    warnPrefix	= "*** WARNING: ";
+    errPrefix	= "*** ERROR: ";
+  };
+  userModules	=
+  {
+    solver	=
+    {
+      type	= "FlexArclen";
+      doTmpNonlin	= false;
+      writeStats	= false;
+      nonLin	=
+      {
+        maxIter	= 10;
+        tiny	= 1.00000e-300;
+        precision	= 1.00000e-06;
+        maxIncr	= 10.0000;
+        lineSearch	= false;
+        deltaCons	= false;
+        updateWhen	= none;
+        solver	=
+        {
+          type	= "SkylineLU";
+          lenient	= true;
+          precision	= 5.00000e-07;
+          zeroThreshold	= 1.49012e-08;
+          maxZeroPivots	= 0;
+          reorder	= true;
+          useThreads	= true;
+          printPivots	= false;
+        };
+      };
+      arcLen	=
+      {
+        deltaCons	= false;
+        maxIter	= 10;
+        precision	= 1.00000e-06;
+        allowDespair	= true;
+        nHope	= 10;
+        maxIter2	= 100;
+        swtResidual	= 10.0000;
+        solver	=
+        {
+          type	= "SkylineLU";
+          lenient	= true;
+          precision	= 5.00000e-07;
+          zeroThreshold	= 1.49012e-08;
+          maxZeroPivots	= 0;
+          reorder	= true;
+          useThreads	= true;
+          printPivots	= false;
+        };
+        model	= none;
+      };
+    };
+    graph	=
+    {
+      sampleWhen	= "accepted";
+      dataSets	= [ "loadDisp" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "userModules.graph";
+        width	= 400;
+        height	= 200;
+      };
+      camera	=
+      {
+        range	= 1.00000;
+        position	= [ -0.00000, -0.00000 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      graph	=
+      {
+        hidden	= false;
+        width	= 1.00000;
+        height	= 1.00000;
+        showKey	= true;
+        keyPos	= [ 0.900000, 0.200000 ];
+        title	= "";
+        xLabel	= "";
+        yLabel	= "";
+        scaleStep	= 0.100000;
+        xRange	= "auto";
+        yRange	= "auto";
+      };
+      loadDisp	=
+      {
+        key	= "userModules.graph.loadDisp";
+        maxPoints	= -1;
+        pointStyle	= none;
+        lineWidth	= 1.20000;
+        lineColor	= "black";
+        xData	= "model.model.lodi.disp[0]";
+        yData	= "abs(model.model.lodi.load[0])";
+      };
+    };
+    view	=
+    {
+      snapFile	= "inclusion%2i.png";
+      configFile	= "inclusion.view";
+      updateWhen	= "accepted";
+      snapWhen	= false;
+      offScreen	= false;
+      camera	=
+      {
+        type	= "Perspective";
+        farClip	= 10.0000;
+        nearClip	= 0.500000;
+        viewAngle	= 40.0000;
+        position	= [ -0.00000, -0.00000, 3.00000 ];
+        zoom	= 0.00000;
+        quality	= 1;
+        autoQuality	= false;
+      };
+      disp	=
+      {
+        type	= "Vector";
+        vector	= "state";
+        nullValue	= 0.00000;
+      };
+      stress	=
+      {
+        type	= "Table";
+        table	= "nodes/stress";
+        tableType	= "Dense";
+        nullValue	= 0.00000;
+      };
+      dataSets	= [ "disp", "stress" ];
+      window	=
+      {
+        bgColor	= "white";
+        title	= "feel.userModules.view";
+        width	= -1;
+        height	= -1;
+      };
+      world	=
+      {
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+      };
+      lights	=
+      {
+        light0	=
+        {
+          color	= "white20";
+          direction	= [ -1.00000, -0.00000, -0.00000 ];
+          enable	= true;
+        };
+        light1	=
+        {
+          color	= "white20";
+          direction	= [ -0.00000, -1.00000, -0.00000 ];
+          enable	= true;
+        };
+        light2	=
+        {
+          color	= "white";
+          direction	= [ -0.00000, -0.00000, -1.00000 ];
+          enable	= true;
+        };
+        light3	=
+        {
+          color	= "white20";
+          direction	= [ 1.00000, 1.00000, -0.00000 ];
+          enable	= false;
+        };
+        specular	= false;
+        ambient	= "white20";
+      };
+      markerStyles	=
+      {
+        points	=
+        {
+          size	= 3.00000;
+          color	= "black";
+        };
+        orbs	=
+        {
+          size	= -0.0100000;
+          quality	= 1;
+          color	= "gold";
+        };
+        numbers	=
+        {
+          font	= "proportional medium";
+          color	= "black";
+        };
+        circles	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        diamonds	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        discs	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        squares	=
+        {
+          size	= "medium";
+          color	= "black";
+        };
+        styles	= [];
+      };
+      palettes	=
+      {
+        linear	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+          minColor	= "blue";
+          maxColor	= "red";
+        };
+        rainbow	=
+        {
+          minValue	= 0.00000;
+          maxValue	= 1.00000;
+        };
+        custom	=
+        {
+          colors	= [ "blue", "green", "yellow", "orange", "red" ];
+          ranges	= [ 0.00000, 0.200000, 0.400000, 0.600000, 0.800000, 1.00000 ];
+          hideMinMax	= false;
+        };
+        palettes	= [];
+      };
+      mesh	=
+      {
+        elements	= "all";
+        scale	= 1.00000;
+        rotmat	= [ 1.00000, 0.00000, 0.00000, 0.00000, 1.00000, 0.00000, 0.00000, 0.00000, 1.00000 ];
+        translation	= [ 0.00000, 0.00000, 0.00000 ];
+        pointSize	= 1.00000;
+        lineWidth	= 1.00000;
+        shadeModel	= "Smooth";
+        color	= "gray";
+        material	=
+        {
+          specular	= "black";
+          shininess	= 0.00000;
+        };
+        edgeColor	= "black";
+        nodeColor	= "black";
+        showEdges	= true;
+        showLines	= true;
+        showFaces	= true;
+        hidden	= false;
+        deformation	=
+        {
+          scale	= 2.00000;
+          autoScale	= false;
+          scaleStep	= 0.100000;
+          dx	= "disp[dx]";
+          dy	= "disp[dy]";
+          dz	= "0.000";
+        };
+        colors	=
+        {
+          palette	= "custom";
+          title	= "";
+          data	= "stress[xx]";
+          autoScale	= true;
+          scaleStep	= 0.100000;
+        };
+      };
+    };
+  };
+  sample	=
+  {
+    file	= "lodi.dat";
+    header	= "";
+    separator	= " ";
+    append	= false;
+    precision	= 8;
+    dataSets	= [ "i", " model.model.lodi.disp[0]", " abs(model.model.lodi.load[0])" ];
+    sampleWhen	= "accepted";
+  };
+  control	=
+  {
+    prompt	= ">";
+    cmdFile	= "";
+    fgMode	= true;
+    pause	= -1.00000;
+    runWhile	= "i < 250";
+  };
+  userInput	=
+  {
+    inputSolid	=
+    {
+      storageMode	= "Default";
+      file	= "solid.mesh";
+      maxParts	= 0;
+      tableFilter	= "*";
+      dbaseFilter	= "*";
+      funcFilter	= "*";
+    };
+    inputInterf	=
+    {
+      storageMode	= "Default";
+      file	= "interface.mesh";
+      maxParts	= 0;
+      tableFilter	= "*";
+      dbaseFilter	= "*";
+      funcFilter	= "*";
+    };
+    ngroups	=
+    {
+      nodeGroups	= [ "left", "right", "lb" ];
+      elemGroups	= [];
+      left	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+      };
+      right	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "max";
+      };
+      lb	=
+      {
+        all	= false;
+        restrictToGroups	= [];
+        eps	= 1.00000e-05;
+        xtype	= "min";
+        ytype	= "min";
+      };
+    };
+  };
+  storageMode	= "Default";
+  shapeTable	=
+  {
+    type	= "Auto";
+    boundaryElems	= "";
+    interfaceElems	= "";
+    maxPrecision	= 0;
+  };
+  model	=
+  {
+    type	= "Matrix";
+    model	=
+    {
+      type	= "Multi";
+      models	= [ "bulk", "inclusion", "interface", "arclen", "lodi" ];
+      bulk	=
+      {
+        type	= "Solid";
+        elements	= "solid0";
+        shape	=
+        {
+          type	= "Triangle3";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss1", "Gauss2", "Gauss2", "Gauss2" ];
+        };
+        material	=
+        {
+          type	= "Damage";
+          dim	= 2;
+          young	= 32000.0;
+          poisson	= 0.300000;
+          state	= "PLANE_STRAIN";
+          softening	= "linear";
+          equistrain	= "Mazars";
+          kappaI	= 0.0100000;
+          kappaC	= 0.00000;
+          gf	= 10.0000;
+          rateFactor	= 0.00000;
+        };
+        thickness	= 1.00000;
+        largeDisp	= false;
+        localOutput	=
+        {
+          doAll	= true;
+        };
+      };
+      inclusion	=
+      {
+        type	= "Solid";
+        elements	= "solid1";
+        shape	=
+        {
+          type	= "Triangle3";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= [ "Gauss1", "Gauss2", "Gauss2", "Gauss2" ];
+        };
+        material	=
+        {
+          type	= "Hooke";
+          dim	= 2;
+          young	= 1000.00;
+          poisson	= 0.300000;
+          state	= "PLANE_STRAIN";
+        };
+        thickness	= 1.00000;
+        largeDisp	= false;
+        localOutput	=
+        {
+          ielems	= [];
+          ipnumbers	= [];
+        };
+      };
+      interface	=
+      {
+        type	= "Interface";
+        elements	= "interface";
+        shape	=
+        {
+          type	= "BLine2";
+          shapeFuncs	=
+          {
+            type	= "Linear";
+          };
+          intScheme	= "NewtonCotes2";
+        };
+        axisymmetric	= false;
+        coheMat	=
+        {
+          type	= "Turon";
+          dim	= 2;
+          f2t	= 20.0000;
+          f6	= 20.0000;
+          gI	= 3.00000;
+          gII	= 3.00000;
+          eta	= 1.00000;
+          dummy	= 1.00000e+06;
+        };
+      };
+      arclen	=
+      {
+        type	= "DispArclen";
+        optIter	= 4;
+        swtIter	= 4;
+        swtEnergy	= 1.00000;
+        minIncr	= 0.000100000;
+        maxIncr	= 10.0000;
+        reduction	= 0.550000;
+        dispIncr	= 0.0100000;
+        initDisp	= 0.00000;
+        minDispIncr	= 1.00000e-05;
+        maxDisp	= 2.00000;
+        preferDisp	= false;
+        constraints	=
+        {
+          nodeGroups	= [ "left", "lb", "right" ];
+          dofs	= [ "dx", "dy", "dx" ];
+          loaded	= 2;
+          imaster	= "";
+        };
+      };
+      lodi	=
+      {
+        type	= "LoadDisp";
+        nodes	= [ 1, 2, 13, 140, 141, 142, 143, 144, 145 ];
+      };
+    };
+    debug	= 0;
+    linear	= false;
+    matrix0	=
+    {
+      type	= "Sparse";
+      symmetric	= false;
+      optimize	= "Runtime";
+    };
+  };
+  init	=
+  {
+    reorder	= false;
+    vectors	= [];
+  };
+  xoutput	=
+  {
+    write	= true;
+    table	= "stress | kappa";
+    interval	= 1;
+    dissipation	= true;
+    writeCracks	= true;
+    writeCohInfo	= false;
+  };
+
+*** WARNING: Initialization phase completed with warnings.
+
+  Elapsed CPU  time : 0.07000 seconds.
+  Elapsed real time : 0.1764 seconds.
+
+Iteration       : 0
+Elapsed runtime : 0.1768 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 0.0000e+00
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 0.000, loadScale 0.000, dispVal 0.000
+
+*** WARNING: element 8085 has zero normal vectors
+
+Iteration       : 1
+Elapsed runtime : 0.6662 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 5.9523e+01
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 1.6644e-13
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 0.000, loadScale 122.4, dispVal 0.01000
+
+*** WARNING: element 8085 has zero normal vectors
+
+Iteration       : 2
+Elapsed runtime : 1.051 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.6131e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 7.7100e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.638e-13, loadScale 244.9, dispVal 0.02000
+Iteration       : 3
+Elapsed runtime : 1.284 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 2.8711e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 4.8116e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.461e-13, loadScale 367.3, dispVal 0.03000
+Iteration       : 4
+Elapsed runtime : 1.523 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 4.1565e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 3.7057e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.530e-13, loadScale 489.8, dispVal 0.04000
+Iteration       : 5
+Elapsed runtime : 1.747 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 5.4500e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 3.4414e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.612e-13, loadScale 612.2, dispVal 0.05000
+Iteration       : 6
+Elapsed runtime : 1.972 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 6.7470e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.9698e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.412e-13, loadScale 734.6, dispVal 0.06000
+
+Iteration       : 7
+Elapsed runtime : 2.192 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 8.0458e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7249e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.790e-13, loadScale 857.1, dispVal 0.07000
+Iteration       : 8
+Elapsed runtime : 2.462 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 9.3455e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8154e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.017e-14, loadScale 979.5, dispVal 0.08000
+Iteration       : 9
+Elapsed runtime : 2.713 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.0646e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7621e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -3.340e-13, loadScale 1102., dispVal 0.09000
+Iteration       : 10
+Elapsed runtime : 2.938 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.1947e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8379e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 6.040e-14, loadScale 1224., dispVal 0.1000
+Iteration       : 11
+Elapsed runtime : 3.162 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.3248e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7158e-14
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -3.153e-13, loadScale 1347., dispVal 0.1100
+Iteration       : 12
+Elapsed runtime : 3.385 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.4549e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 1.2946e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 3.1629e-05
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 1.3893e-09
+The Newton-Raphson solver converged in 3 iterations
+
+DispControl: dEnergy 0.007009, loadScale 1469., dispVal 0.1200
+Iteration       : 13
+Elapsed runtime : 3.824 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.5850e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 8.0895e-04
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 1.6528e-05
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 1.1106e-09
+The Newton-Raphson solver converged in 3 iterations
+
+DispControl: dEnergy 0.01702, loadScale 1591., dispVal 0.1300
+
+Iteration       : 14
+Elapsed runtime : 4.233 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.7149e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 1.9001e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 1.3074e-03
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 7.0054e-06
+module `userModules.solver.nonLin' : iter = 4, scaled residual = 7.9125e-10
+The Newton-Raphson solver converged in 4 iterations
+
+DispControl: dEnergy 0.04986, loadScale 1713., dispVal 0.1400
+Iteration       : 15
+Elapsed runtime : 4.766 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.8443e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 3.4977e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 1.6603e-04
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 8.6533e-08
+The Newton-Raphson solver converged in 3 iterations
+
+DispControl: dEnergy 0.1209, loadScale 1834., dispVal 0.1500
+Iteration       : 16
+Elapsed runtime : 5.195 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.9726e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5603e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 4.4165e-04
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 4.6257e-07
+The Newton-Raphson solver converged in 3 iterations
+
+DispControl: dEnergy 0.2232, loadScale 1953., dispVal 0.1600
+Iteration       : 17
+Elapsed runtime : 5.594 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 2.0997e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4859e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 2.1343e-04
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 4.7113e-07
+The Newton-Raphson solver converged in 3 iterations
+
+DispControl: dEnergy 0.2958, loadScale 2071., dispVal 0.1700
+Iteration       : 18
+Elapsed runtime : 5.992 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 2.2259e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4019e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 2.5531e-04
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 2.7880e-06
+module `userModules.solver.nonLin' : iter = 4, scaled residual = 2.7257e-10
+The Newton-Raphson solver converged in 4 iterations
+
+DispControl: dEnergy 0.3994, loadScale 2188., dispVal 0.1800
+
+Iteration       : 19
+Elapsed runtime : 6.479 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 2.3510e+03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 4.6111e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 8.6620e-03
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 1.8925e-04
+module `userModules.solver.nonLin' : iter = 4, scaled residual = 1.5670e-06
+module `userModules.solver.nonLin' : iter = 5, scaled residual = 9.4443e-12
+The Newton-Raphson solver converged in 5 iterations
+
+DispControl: dEnergy 0.6597, loadScale 2303., dispVal 0.1900
+Switching to arclength control with dEnergy: 0.6597
+Iteration       : 20
+Elapsed runtime : 7.058 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.5373e+03
+module `xarclen' : iter = 1  scaled residual = 6.8970e-04 load 2.3821e+03
+module `xarclen' : iter = 2  scaled residual = 1.9877e-04 load 2.3802e+03
+module `xarclen' : iter = 3  scaled residual = 2.2305e-07 load 2.3801e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.5547, loadScale 2380., dispVal 0.1969
+Iteration       : 21
+Elapsed runtime : 7.467 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.6270e+03
+module `xarclen' : iter = 1  scaled residual = 2.8129e-03 load 2.4657e+03
+module `xarclen' : iter = 2  scaled residual = 1.7676e-03 load 2.4541e+03
+module `xarclen' : iter = 3  scaled residual = 2.1166e-05 load 2.4533e+03
+module `xarclen' : iter = 4  scaled residual = 1.8084e-08 load 2.4533e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.6597, loadScale 2453., dispVal 0.2035
+Iteration       : 22
+Elapsed runtime : 7.965 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.6791e+03
+module `xarclen' : iter = 1  scaled residual = 2.6468e-03 load 2.5139e+03
+module `xarclen' : iter = 2  scaled residual = 1.2667e-02 load 2.5097e+03
+module `xarclen' : iter = 3  scaled residual = 5.1493e-04 load 2.5090e+03
+module `xarclen' : iter = 4  scaled residual = 1.2818e-03 load 2.5082e+03
+module `xarclen' : iter = 5  scaled residual = 2.7948e-02 load 2.5088e+03
+module `xarclen' : iter = 6  scaled residual = 1.3536e-03 load 2.5112e+03
+module `xarclen' : iter = 7  scaled residual = 1.0365e-03 load 2.5085e+03
+module `xarclen' : iter = 8  scaled residual = 4.1804e-02 load 2.5094e+03
+module `xarclen' : iter = 9  scaled residual = 6.2752e-03 load 2.5152e+03
+module `xarclen' : iter = 10  scaled residual = 2.3751e-02 load 2.5095e+03
+module `xarclen' : iter = 11  scaled residual = 1.0088e-03 load 2.5069e+03
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 11 iterations; final residual: 1.008844e-03
+
+Path following parameter reduced to 0.3628
+
+Returning to the same load step with reduced step
+Iteration       : 22
+Elapsed runtime : 9.031 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.6497e+03
+module `xarclen' : iter = 1  scaled residual = 1.2573e-03 load 2.4866e+03
+module `xarclen' : iter = 2  scaled residual = 3.5773e-03 load 2.4845e+03
+module `xarclen' : iter = 3  scaled residual = 1.4858e-04 load 2.4855e+03
+module `xarclen' : iter = 4  scaled residual = 5.9060e-05 load 2.4851e+03
+module `xarclen' : iter = 5  scaled residual = 4.0442e-07 load 2.4851e+03
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 0.3628, loadScale 2485., dispVal 0.2064
+Iteration       : 23
+Elapsed runtime : 9.622 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.6744e+03
+module `xarclen' : iter = 1  scaled residual = 1.4777e-03 load 2.5095e+03
+module `xarclen' : iter = 2  scaled residual = 1.5389e-04 load 2.5051e+03
+module `xarclen' : iter = 3  scaled residual = 3.5947e-05 load 2.5050e+03
+module `xarclen' : iter = 4  scaled residual = 1.1515e-07 load 2.5050e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.3051, loadScale 2505., dispVal 0.2083
+Iteration       : 24
+Elapsed runtime : 10.12 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.6874e+03
+module `xarclen' : iter = 1  scaled residual = 5.5239e-04 load 2.5215e+03
+module `xarclen' : iter = 2  scaled residual = 7.6790e-05 load 2.5200e+03
+module `xarclen' : iter = 3  scaled residual = 3.8741e-08 load 2.5200e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.3051, loadScale 2520., dispVal 0.2098
+Iteration       : 25
+Elapsed runtime : 10.55 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.7033e+03
+module `xarclen' : iter = 1  scaled residual = 3.7596e-04 load 2.5360e+03
+module `xarclen' : iter = 2  scaled residual = 1.6176e-05 load 2.5343e+03
+module `xarclen' : iter = 3  scaled residual = 1.0784e-08 load 2.5342e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.3628, loadScale 2534., dispVal 0.2113
+Iteration       : 26
+Elapsed runtime : 10.96 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.7179e+03
+module `xarclen' : iter = 1  scaled residual = 1.1202e-03 load 2.5493e+03
+module `xarclen' : iter = 2  scaled residual = 7.0778e-06 load 2.5465e+03
+module `xarclen' : iter = 3  scaled residual = 3.7358e-10 load 2.5465e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.4315, loadScale 2546., dispVal 0.2126
+
+Iteration       : 27
+Elapsed runtime : 11.36 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.7285e+03
+module `xarclen' : iter = 1  scaled residual = 5.5554e-04 load 2.5587e+03
+module `xarclen' : iter = 2  scaled residual = 4.4115e-05 load 2.5562e+03
+module `xarclen' : iter = 3  scaled residual = 8.9552e-09 load 2.5562e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.5131, loadScale 2556., dispVal 0.2139
+Iteration       : 28
+Elapsed runtime : 11.77 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.7349e+03
+module `xarclen' : iter = 1  scaled residual = 1.8788e-03 load 2.5641e+03
+module `xarclen' : iter = 2  scaled residual = 2.5050e-03 load 2.5584e+03
+module `xarclen' : iter = 3  scaled residual = 1.2567e-04 load 2.5581e+03
+module `xarclen' : iter = 4  scaled residual = 3.1474e-07 load 2.5581e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.6102, loadScale 2558., dispVal 0.2145
+Iteration       : 29
+Elapsed runtime : 12.26 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.7286e+03
+module `xarclen' : iter = 1  scaled residual = 3.6209e-04 load 2.5567e+03
+module `xarclen' : iter = 2  scaled residual = 3.4646e-05 load 2.5536e+03
+module `xarclen' : iter = 3  scaled residual = 3.2598e-09 load 2.5536e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.6102, loadScale 2554., dispVal 0.2146
+Iteration       : 30
+Elapsed runtime : 12.66 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.7246e+03
+module `xarclen' : iter = 1  scaled residual = 1.0304e-03 load 2.5447e+03
+module `xarclen' : iter = 2  scaled residual = 9.5912e-04 load 2.5381e+03
+module `xarclen' : iter = 3  scaled residual = 4.6243e-07 load 2.5382e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.7257, loadScale 2538., dispVal 0.2139
+Iteration       : 31
+Elapsed runtime : 13.07 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.7092e+03
+module `xarclen' : iter = 1  scaled residual = 9.3010e-04 load 2.5145e+03
+module `xarclen' : iter = 2  scaled residual = 1.1188e-04 load 2.5090e+03
+module `xarclen' : iter = 3  scaled residual = 2.8753e-08 load 2.5089e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.8630, loadScale 2509., dispVal 0.2121
+
+Iteration       : 32
+Elapsed runtime : 13.47 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.6792e+03
+module `xarclen' : iter = 1  scaled residual = 7.1414e-04 load 2.4671e+03
+module `xarclen' : iter = 2  scaled residual = 4.8653e-05 load 2.4625e+03
+module `xarclen' : iter = 3  scaled residual = 5.0101e-07 load 2.4625e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.026, loadScale 2463., dispVal 0.2090
+Iteration       : 33
+Elapsed runtime : 13.88 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.6311e+03
+module `xarclen' : iter = 1  scaled residual = 1.5008e-03 load 2.3989e+03
+module `xarclen' : iter = 2  scaled residual = 3.8049e-04 load 2.3940e+03
+module `xarclen' : iter = 3  scaled residual = 1.4869e-06 load 2.3939e+03
+module `xarclen' : iter = 4  scaled residual = 4.4052e-10 load 2.3939e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.220, loadScale 2394., dispVal 0.2041
+Iteration       : 34
+Elapsed runtime : 14.39 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.5596e+03
+module `xarclen' : iter = 1  scaled residual = 1.7417e-03 load 2.3211e+03
+module `xarclen' : iter = 2  scaled residual = 3.3285e-04 load 2.3163e+03
+module `xarclen' : iter = 3  scaled residual = 4.3560e-07 load 2.3162e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.220, loadScale 2316., dispVal 0.1985
+Iteration       : 35
+Elapsed runtime : 14.79 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.4785e+03
+module `xarclen' : iter = 1  scaled residual = 1.0336e-03 load 2.2185e+03
+module `xarclen' : iter = 2  scaled residual = 1.3723e-03 load 2.2123e+03
+module `xarclen' : iter = 3  scaled residual = 2.2468e-05 load 2.2115e+03
+module `xarclen' : iter = 4  scaled residual = 3.3252e-08 load 2.2115e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.451, loadScale 2212., dispVal 0.1908
+Iteration       : 36
+Elapsed runtime : 15.29 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.3688e+03
+module `xarclen' : iter = 1  scaled residual = 4.5274e-02 load 2.0987e+03
+module `xarclen' : iter = 2  scaled residual = 1.2803e-02 load 2.0985e+03
+module `xarclen' : iter = 3  scaled residual = 2.1832e-02 load 2.0947e+03
+module `xarclen' : iter = 4  scaled residual = 3.3223e-02 load 2.0934e+03
+module `xarclen' : iter = 5  scaled residual = 3.1470e-01 load 2.0955e+03
+module `xarclen' : iter = 6  scaled residual = 2.9086e-01 load 2.0954e+03
+module `xarclen' : iter = 7  scaled residual = 8.5563e-01 load 2.0974e+03
+module `xarclen' : iter = 8  scaled residual = 1.3247e+00 load 2.0974e+03
+module `xarclen' : iter = 9  scaled residual = 2.2026e+00 load 2.1021e+03
+module `xarclen' : iter = 10  scaled residual = 1.2134e+00 load 2.1161e+03
+module `xarclen' : iter = 11  scaled residual = 5.1680e+00 load 2.1009e+03
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 11 iterations; final residual: 5.167973e+00
+
+Path following parameter reduced to 0.7982
+
+Returning to the same load step with reduced step
+Iteration       : 36
+Elapsed runtime : 16.35 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.3688e+03
+module `xarclen' : iter = 1  scaled residual = 6.0311e-03 load 2.1495e+03
+module `xarclen' : iter = 2  scaled residual = 7.3472e-04 load 2.1467e+03
+module `xarclen' : iter = 3  scaled residual = 1.0778e-05 load 2.1466e+03
+module `xarclen' : iter = 4  scaled residual = 2.8160e-09 load 2.1466e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.7982, loadScale 2147., dispVal 0.1859
+Iteration       : 37
+Elapsed runtime : 16.85 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.3007e+03
+module `xarclen' : iter = 1  scaled residual = 1.0908e-03 load 2.0796e+03
+module `xarclen' : iter = 2  scaled residual = 6.8441e-06 load 2.0857e+03
+module `xarclen' : iter = 3  scaled residual = 5.5231e-10 load 2.0857e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.7982, loadScale 2086., dispVal 0.1814
+Iteration       : 38
+Elapsed runtime : 17.25 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.2368e+03
+module `xarclen' : iter = 1  scaled residual = 1.5933e-03 load 2.0292e+03
+module `xarclen' : iter = 2  scaled residual = 4.0377e-04 load 2.0255e+03
+module `xarclen' : iter = 3  scaled residual = 3.8021e-07 load 2.0254e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.9493, loadScale 2025., dispVal 0.1771
+Iteration       : 39
+Elapsed runtime : 17.65 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.1740e+03
+module `xarclen' : iter = 1  scaled residual = 2.3583e-03 load 1.9480e+03
+module `xarclen' : iter = 2  scaled residual = 1.1362e-03 load 1.9495e+03
+module `xarclen' : iter = 3  scaled residual = 1.1263e-06 load 1.9492e+03
+module `xarclen' : iter = 4  scaled residual = 2.3236e-11 load 1.9492e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.129, loadScale 1949., dispVal 0.1715
+Iteration       : 40
+Elapsed runtime : 18.14 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.0945e+03
+module `xarclen' : iter = 1  scaled residual = 1.1866e-03 load 1.8745e+03
+module `xarclen' : iter = 2  scaled residual = 4.2617e-03 load 1.8712e+03
+module `xarclen' : iter = 3  scaled residual = 8.3903e-04 load 1.8708e+03
+module `xarclen' : iter = 4  scaled residual = 1.6653e-05 load 1.8709e+03
+module `xarclen' : iter = 5  scaled residual = 6.3794e-09 load 1.8709e+03
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 1.129, loadScale 1871., dispVal 0.1658
+
+Iteration       : 41
+Elapsed runtime : 18.73 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.0127e+03
+module `xarclen' : iter = 1  scaled residual = 1.0914e-02 load 1.7937e+03
+module `xarclen' : iter = 2  scaled residual = 3.8810e-03 load 1.7924e+03
+module `xarclen' : iter = 3  scaled residual = 2.0933e-04 load 1.7928e+03
+module `xarclen' : iter = 4  scaled residual = 4.2343e-07 load 1.7928e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.9493, loadScale 1793., dispVal 0.1599
+Iteration       : 42
+Elapsed runtime : 19.23 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9309e+03
+module `xarclen' : iter = 1  scaled residual = 1.7848e-03 load 1.7118e+03
+module `xarclen' : iter = 2  scaled residual = 5.6480e-04 load 1.7074e+03
+module `xarclen' : iter = 3  scaled residual = 3.7066e-08 load 1.7074e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.9493, loadScale 1707., dispVal 0.1533
+Iteration       : 43
+Elapsed runtime : 19.64 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.8413e+03
+module `xarclen' : iter = 1  scaled residual = 1.3018e-03 load 1.6003e+03
+module `xarclen' : iter = 2  scaled residual = 1.4664e-05 load 1.5956e+03
+module `xarclen' : iter = 3  scaled residual = 2.5612e-09 load 1.5956e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.129, loadScale 1596., dispVal 0.1446
+Iteration       : 44
+Elapsed runtime : 20.04 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.7237e+03
+module `xarclen' : iter = 1  scaled residual = 1.6594e-03 load 1.4582e+03
+module `xarclen' : iter = 2  scaled residual = 2.5217e-05 load 1.4561e+03
+module `xarclen' : iter = 3  scaled residual = 5.7978e-09 load 1.4560e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.342, loadScale 1456., dispVal 0.1336
+Iteration       : 45
+Elapsed runtime : 20.44 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5768e+03
+module `xarclen' : iter = 1  scaled residual = 1.6484e-03 load 1.2884e+03
+module `xarclen' : iter = 2  scaled residual = 1.8950e-05 load 1.2842e+03
+module `xarclen' : iter = 3  scaled residual = 3.6547e-09 load 1.2842e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.596, loadScale 1284., dispVal 0.1201
+
+Iteration       : 46
+Elapsed runtime : 20.84 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.3960e+03
+module `xarclen' : iter = 1  scaled residual = 4.8932e-03 load 1.0757e+03
+module `xarclen' : iter = 2  scaled residual = 8.4615e-05 load 1.0849e+03
+module `xarclen' : iter = 3  scaled residual = 6.6390e-08 load 1.0847e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.899, loadScale 1085., dispVal 0.1044
+Iteration       : 47
+Elapsed runtime : 21.25 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.1866e+03
+module `xarclen' : iter = 1  scaled residual = 1.1451e-02 load 8.6132e+02
+module `xarclen' : iter = 2  scaled residual = 1.0931e-03 load 8.8801e+02
+module `xarclen' : iter = 3  scaled residual = 6.4976e-05 load 8.8042e+02
+module `xarclen' : iter = 4  scaled residual = 8.3819e-10 load 8.8028e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 2.258, loadScale 880.3, dispVal 0.08887
+Iteration       : 48
+Elapsed runtime : 21.74 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.7432e+02
+module `xarclen' : iter = 1  scaled residual = 2.9584e-02 load 6.5315e+02
+module `xarclen' : iter = 2  scaled residual = 1.3508e-02 load 1.2173e+03
+module `xarclen' : iter = 3  scaled residual = 2.3820e-03 load 1.1697e+03
+module `xarclen' : iter = 4  scaled residual = 5.2631e-04 load 1.1634e+03
+module `xarclen' : iter = 5  scaled residual = 2.4365e-05 load 1.1617e+03
+module `xarclen' : iter = 6  scaled residual = 8.3312e-08 load 1.1616e+03
+The generalized arc-length solver converged in 6 iterations
+
+EnergyArclen: dEnergy 2.258, loadScale 1162., dispVal 0.1224
+Iteration       : 49
+Elapsed runtime : 22.42 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9626e+03
+module `xarclen' : iter = 1  scaled residual = 1.1551e-02 load 1.7458e+03
+module `xarclen' : iter = 2  scaled residual = 6.9222e+01 load 1.6137e+03
+module `xarclen' : iter = 3  scaled residual = 3.0342e+00 load 1.6047e+03
+module `xarclen' : iter = 4  scaled residual = 1.8689e+01 load 1.1375e+03
+module `xarclen' : iter = 5  scaled residual = 1.1479e+01 load 1.4422e+03
+module `xarclen' : iter = 6  scaled residual = 1.8767e+01 load 3.9440e+03
+module `xarclen' : iter = 7  scaled residual = 1.7509e+02 load 1.5745e+03
+module `xarclen' : iter = 8  scaled residual = 4.9009e+02 load -3.7950e+01
+  -- stop trying after load switch 
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 8 iterations; final residual: 4.900871e+02
+
+Path following parameter reduced to 0.8781
+
+Returning to the same load step with reduced step
+Iteration       : 49
+Elapsed runtime : 23.25 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.6646e+03
+module `xarclen' : iter = 1  scaled residual = 6.3034e-03 load 1.4829e+03
+module `xarclen' : iter = 2  scaled residual = 6.8885e-01 load 1.3706e+03
+module `xarclen' : iter = 3  scaled residual = 8.9328e-02 load 1.3702e+03
+module `xarclen' : iter = 4  scaled residual = 2.0667e+00 load 1.3674e+03
+module `xarclen' : iter = 5  scaled residual = 7.7687e-01 load 1.3786e+03
+module `xarclen' : iter = 6  scaled residual = 8.3446e+00 load 1.3492e+03
+module `xarclen' : iter = 7  scaled residual = 2.2971e+00 load 1.4220e+03
+module `xarclen' : iter = 8  scaled residual = 7.0622e+00 load 1.8789e+03
+module `xarclen' : iter = 9  scaled residual = 6.1600e+00 load 1.6295e+03
+module `xarclen' : iter = 10  scaled residual = 1.3414e+01 load 2.4456e+03
+module `xarclen' : iter = 11  scaled residual = 6.8457e+01 load 1.9889e+03
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 11 iterations; final residual: 6.845661e+01
+
+Path following parameter reduced to 0.4829
+
+Returning to the same load step with reduced step
+
+Iteration       : 49
+Elapsed runtime : 24.35 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5008e+03
+module `xarclen' : iter = 1  scaled residual = 3.3730e-03 load 1.3383e+03
+module `xarclen' : iter = 2  scaled residual = 4.7972e-04 load 1.2935e+03
+module `xarclen' : iter = 3  scaled residual = 4.5221e-05 load 1.2923e+03
+module `xarclen' : iter = 4  scaled residual = 2.2193e-07 load 1.2923e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.4829, loadScale 1292., dispVal 0.1370
+Iteration       : 50
+Elapsed runtime : 24.85 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5595e+03
+module `xarclen' : iter = 1  scaled residual = 1.1523e-03 load 1.3888e+03
+module `xarclen' : iter = 2  scaled residual = 9.9592e-05 load 1.3825e+03
+module `xarclen' : iter = 3  scaled residual = 6.1396e-07 load 1.3825e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 0.4829, loadScale 1382., dispVal 0.1473
+
+Iteration       : 51
+Elapsed runtime : 25.25 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.6686e+03
+module `xarclen' : iter = 1  scaled residual = 1.8134e-03 load 1.4840e+03
+module `xarclen' : iter = 2  scaled residual = 8.6115e-04 load 1.4749e+03
+module `xarclen' : iter = 3  scaled residual = 9.9519e-05 load 1.4738e+03
+module `xarclen' : iter = 4  scaled residual = 1.1213e-06 load 1.4738e+03
+module `xarclen' : iter = 5  scaled residual = 2.2537e-09 load 1.4738e+03
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 0.5743, loadScale 1474., dispVal 0.1579
+Iteration       : 52
+Elapsed runtime : 25.85 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.7387e+03
+module `xarclen' : iter = 1  scaled residual = 1.2581e-04 load 1.5448e+03
+module `xarclen' : iter = 2  scaled residual = 4.8388e-07 load 1.5442e+03
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 0.4829, loadScale 1544., dispVal 0.1661
+Iteration       : 53
+Elapsed runtime : 26.16 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.8517e+03
+module `xarclen' : iter = 1  scaled residual = 1.6241e-03 load 1.6431e+03
+module `xarclen' : iter = 2  scaled residual = 3.4952e-04 load 1.6357e+03
+module `xarclen' : iter = 3  scaled residual = 5.9564e-06 load 1.6357e+03
+module `xarclen' : iter = 4  scaled residual = 1.3010e-08 load 1.6357e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.6830, loadScale 1636., dispVal 0.1768
+Iteration       : 54
+Elapsed runtime : 26.66 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9414e+03
+module `xarclen' : iter = 1  scaled residual = 4.8503e-03 load 1.7208e+03
+module `xarclen' : iter = 2  scaled residual = 1.0348e-02 load 1.6912e+03
+module `xarclen' : iter = 3  scaled residual = 6.5662e-05 load 1.6919e+03
+module `xarclen' : iter = 4  scaled residual = 4.0733e-07 load 1.6919e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.6830, loadScale 1692., dispVal 0.1837
+Iteration       : 55
+Elapsed runtime : 27.15 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9362e+03
+module `xarclen' : iter = 1  scaled residual = 1.7822e-03 load 1.7150e+03
+module `xarclen' : iter = 2  scaled residual = 4.2270e-07 load 1.7145e+03
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 0.6830, loadScale 1715., dispVal 0.1870
+
+Iteration       : 56
+Elapsed runtime : 27.46 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9733e+03
+module `xarclen' : iter = 1  scaled residual = 6.2068e-03 load 1.7459e+03
+module `xarclen' : iter = 2  scaled residual = 1.8015e-03 load 1.7397e+03
+module `xarclen' : iter = 3  scaled residual = 4.6913e-05 load 1.7392e+03
+module `xarclen' : iter = 4  scaled residual = 1.7461e-09 load 1.7391e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 0.9659, loadScale 1739., dispVal 0.1908
+Iteration       : 57
+Elapsed runtime : 27.95 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9936e+03
+module `xarclen' : iter = 1  scaled residual = 7.6060e-03 load 1.7621e+03
+module `xarclen' : iter = 2  scaled residual = 2.9049e-03 load 1.7473e+03
+module `xarclen' : iter = 3  scaled residual = 9.3244e-06 load 1.7472e+03
+module `xarclen' : iter = 4  scaled residual = 2.9143e-06 load 1.7472e+03
+module `xarclen' : iter = 5  scaled residual = 6.6235e-10 load 1.7472e+03
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 0.9659, loadScale 1747., dispVal 0.1928
+Iteration       : 58
+Elapsed runtime : 28.54 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9818e+03
+module `xarclen' : iter = 1  scaled residual = 9.3465e-04 load 1.7505e+03
+module `xarclen' : iter = 2  scaled residual = 5.2485e-07 load 1.7494e+03
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 0.8122, loadScale 1749., dispVal 0.1939
+Iteration       : 59
+Elapsed runtime : 28.85 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9846e+03
+module `xarclen' : iter = 1  scaled residual = 8.8240e-04 load 1.7511e+03
+module `xarclen' : iter = 2  scaled residual = 1.0480e-04 load 1.7488e+03
+module `xarclen' : iter = 3  scaled residual = 8.2811e-07 load 1.7488e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.149, loadScale 1749., dispVal 0.1952
+Iteration       : 60
+Elapsed runtime : 29.25 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9821e+03
+module `xarclen' : iter = 1  scaled residual = 5.3881e-03 load 1.7460e+03
+module `xarclen' : iter = 2  scaled residual = 2.6611e-03 load 1.7375e+03
+module `xarclen' : iter = 3  scaled residual = 4.2025e-05 load 1.7346e+03
+module `xarclen' : iter = 4  scaled residual = 1.0296e-08 load 1.7346e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.366, loadScale 1735., dispVal 0.1952
+
+Iteration       : 61
+Elapsed runtime : 29.78 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9684e+03
+module `xarclen' : iter = 1  scaled residual = 1.0856e-03 load 1.7102e+03
+module `xarclen' : iter = 2  scaled residual = 1.1757e-05 load 1.7077e+03
+module `xarclen' : iter = 3  scaled residual = 7.7328e-10 load 1.7077e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.366, loadScale 1708., dispVal 0.1937
+Iteration       : 62
+Elapsed runtime : 30.18 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.9403e+03
+module `xarclen' : iter = 1  scaled residual = 1.4237e-03 load 1.6728e+03
+module `xarclen' : iter = 2  scaled residual = 2.8775e-05 load 1.6690e+03
+module `xarclen' : iter = 3  scaled residual = 2.2893e-09 load 1.6689e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.624, loadScale 1669., dispVal 0.1912
+Iteration       : 63
+Elapsed runtime : 30.59 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.8991e+03
+module `xarclen' : iter = 1  scaled residual = 2.2595e-03 load 1.6178e+03
+module `xarclen' : iter = 2  scaled residual = 1.1987e-04 load 1.6093e+03
+module `xarclen' : iter = 3  scaled residual = 2.5895e-07 load 1.6088e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.932, loadScale 1609., dispVal 0.1866
+Iteration       : 64
+Elapsed runtime : 30.99 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.8343e+03
+module `xarclen' : iter = 1  scaled residual = 6.0413e-03 load 1.5231e+03
+module `xarclen' : iter = 2  scaled residual = 1.8747e-02 load 1.5164e+03
+module `xarclen' : iter = 3  scaled residual = 6.3550e-05 load 1.5148e+03
+module `xarclen' : iter = 4  scaled residual = 4.2456e-10 load 1.5148e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 2.297, loadScale 1515., dispVal 0.1786
+Iteration       : 65
+Elapsed runtime : 31.48 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.7316e+03
+module `xarclen' : iter = 1  scaled residual = 1.5117e-02 load 1.5000e+03
+module `xarclen' : iter = 2  scaled residual = 1.4209e-01 load 1.4883e+03
+module `xarclen' : iter = 3  scaled residual = 3.1376e-03 load 1.4818e+03
+module `xarclen' : iter = 4  scaled residual = 6.0489e-06 load 1.4796e+03
+module `xarclen' : iter = 5  scaled residual = 1.8502e-10 load 1.4795e+03
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 2.297, loadScale 1480., dispVal 0.1775
+
+Iteration       : 66
+Elapsed runtime : 32.07 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.6958e+03
+module `xarclen' : iter = 1  scaled residual = 3.8862e-03 load 1.4453e+03
+module `xarclen' : iter = 2  scaled residual = 5.3958e-05 load 1.4495e+03
+module `xarclen' : iter = 3  scaled residual = 9.2539e-09 load 1.4494e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.932, loadScale 1449., dispVal 0.1765
+Iteration       : 67
+Elapsed runtime : 32.47 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.6651e+03
+module `xarclen' : iter = 1  scaled residual = 4.9398e-03 load 1.4197e+03
+module `xarclen' : iter = 2  scaled residual = 3.2727e-05 load 1.4150e+03
+module `xarclen' : iter = 3  scaled residual = 3.7165e-09 load 1.4150e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.297, loadScale 1415., dispVal 0.1754
+Iteration       : 68
+Elapsed runtime : 32.87 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.6302e+03
+module `xarclen' : iter = 1  scaled residual = 1.3127e-02 load 1.3648e+03
+module `xarclen' : iter = 2  scaled residual = 5.1834e-04 load 1.3761e+03
+module `xarclen' : iter = 3  scaled residual = 3.6761e-07 load 1.3759e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.732, loadScale 1376., dispVal 0.1745
+Iteration       : 69
+Elapsed runtime : 33.27 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5908e+03
+module `xarclen' : iter = 1  scaled residual = 9.3211e-03 load 1.3503e+03
+module `xarclen' : iter = 2  scaled residual = 6.4797e-04 load 1.3449e+03
+module `xarclen' : iter = 3  scaled residual = 5.1416e-07 load 1.3449e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 3.249, loadScale 1345., dispVal 0.1752
+Iteration       : 70
+Elapsed runtime : 33.67 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5616e+03
+module `xarclen' : iter = 1  scaled residual = 1.2834e-02 load 1.3114e+03
+module `xarclen' : iter = 2  scaled residual = 4.6561e-02 load 1.3190e+03
+module `xarclen' : iter = 3  scaled residual = 1.4178e-02 load 1.3198e+03
+module `xarclen' : iter = 4  scaled residual = 7.0267e-03 load 1.3228e+03
+module `xarclen' : iter = 5  scaled residual = 9.5927e-02 load 1.3188e+03
+module `xarclen' : iter = 6  scaled residual = 1.3407e-02 load 1.3204e+03
+module `xarclen' : iter = 7  scaled residual = 6.9910e-03 load 1.3228e+03
+module `xarclen' : iter = 8  scaled residual = 9.5480e-02 load 1.3188e+03
+module `xarclen' : iter = 9  scaled residual = 1.3405e-02 load 1.3204e+03
+module `xarclen' : iter = 10  scaled residual = 6.9918e-03 load 1.3228e+03
+module `xarclen' : iter = 11  scaled residual = 9.5493e-02 load 1.3188e+03
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 11 iterations; final residual: 9.549338e-02
+
+Path following parameter reduced to 2.125
+
+Returning to the same load step with reduced step
+Iteration       : 70
+Elapsed runtime : 34.74 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5616e+03
+module `xarclen' : iter = 1  scaled residual = 4.7074e-03 load 1.3265e+03
+module `xarclen' : iter = 2  scaled residual = 6.1739e-06 load 1.3264e+03
+module `xarclen' : iter = 3  scaled residual = 1.2458e-10 load 1.3264e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.125, loadScale 1326., dispVal 0.1760
+Iteration       : 71
+Elapsed runtime : 35.15 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5459e+03
+module `xarclen' : iter = 1  scaled residual = 1.3325e-02 load 1.3227e+03
+module `xarclen' : iter = 2  scaled residual = 1.0825e-01 load 1.3120e+03
+module `xarclen' : iter = 3  scaled residual = 6.4268e-03 load 1.3154e+03
+module `xarclen' : iter = 4  scaled residual = 6.3493e-03 load 1.3147e+03
+module `xarclen' : iter = 5  scaled residual = 7.2524e-02 load 1.3110e+03
+module `xarclen' : iter = 6  scaled residual = 6.6150e-03 load 1.3147e+03
+module `xarclen' : iter = 7  scaled residual = 6.3695e-03 load 1.3148e+03
+module `xarclen' : iter = 8  scaled residual = 7.2710e-02 load 1.3110e+03
+module `xarclen' : iter = 9  scaled residual = 6.6162e-03 load 1.3147e+03
+module `xarclen' : iter = 10  scaled residual = 6.3693e-03 load 1.3148e+03
+module `xarclen' : iter = 11  scaled residual = 7.2709e-02 load 1.3110e+03
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 11 iterations; final residual: 7.270872e-02
+
+Path following parameter reduced to 1.390
+
+Returning to the same load step with reduced step
+
+Iteration       : 71
+Elapsed runtime : 36.22 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5453e+03
+module `xarclen' : iter = 1  scaled residual = 5.6279e-03 load 1.3244e+03
+module `xarclen' : iter = 2  scaled residual = 9.5734e-02 load 1.3216e+03
+module `xarclen' : iter = 3  scaled residual = 6.2536e-03 load 1.3258e+03
+module `xarclen' : iter = 4  scaled residual = 5.8412e-03 load 1.3239e+03
+module `xarclen' : iter = 5  scaled residual = 7.7880e-04 load 1.3178e+03
+module `xarclen' : iter = 6  scaled residual = 7.2892e-04 load 1.3167e+03
+module `xarclen' : iter = 7  scaled residual = 9.2745e-07 load 1.3167e+03
+The generalized arc-length solver converged in 7 iterations
+
+EnergyArclen: dEnergy 1.390, loadScale 1317., dispVal 0.1768
+
+Iteration       : 72
+Elapsed runtime : 36.99 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5363e+03
+module `xarclen' : iter = 1  scaled residual = 1.2278e-03 load 1.3078e+03
+module `xarclen' : iter = 2  scaled residual = 8.2914e-07 load 1.3077e+03
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 0.8264, loadScale 1308., dispVal 0.1769
+Iteration       : 73
+Elapsed runtime : 37.30 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5274e+03
+module `xarclen' : iter = 1  scaled residual = 4.2880e-04 load 1.2947e+03
+module `xarclen' : iter = 2  scaled residual = 1.2146e-07 load 1.2944e+03
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 1.169, loadScale 1294., dispVal 0.1768
+Iteration       : 74
+Elapsed runtime : 37.61 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5143e+03
+module `xarclen' : iter = 1  scaled residual = 8.9067e-03 load 1.2753e+03
+module `xarclen' : iter = 2  scaled residual = 6.9714e-04 load 1.2774e+03
+module `xarclen' : iter = 3  scaled residual = 2.3715e-08 load 1.2773e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.653, loadScale 1277., dispVal 0.1771
+Iteration       : 75
+Elapsed runtime : 38.01 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.4978e+03
+module `xarclen' : iter = 1  scaled residual = 1.4587e-02 load 1.2590e+03
+module `xarclen' : iter = 2  scaled residual = 7.1743e-03 load 1.2568e+03
+module `xarclen' : iter = 3  scaled residual = 1.1576e-05 load 1.2568e+03
+module `xarclen' : iter = 4  scaled residual = 1.7941e-10 load 1.2568e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.966, loadScale 1257., dispVal 0.1773
+Iteration       : 76
+Elapsed runtime : 38.51 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.4777e+03
+module `xarclen' : iter = 1  scaled residual = 1.1324e-03 load 1.2337e+03
+module `xarclen' : iter = 2  scaled residual = 2.9794e-06 load 1.2330e+03
+module `xarclen' : iter = 3  scaled residual = 2.0502e-11 load 1.2330e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.966, loadScale 1233., dispVal 0.1771
+Iteration       : 77
+Elapsed runtime : 38.92 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.4537e+03
+module `xarclen' : iter = 1  scaled residual = 1.2252e-02 load 1.2042e+03
+module `xarclen' : iter = 2  scaled residual = 2.8677e-03 load 1.2058e+03
+module `xarclen' : iter = 3  scaled residual = 1.3288e-06 load 1.2051e+03
+module `xarclen' : iter = 4  scaled residual = 6.8493e-12 load 1.2051e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 2.337, loadScale 1205., dispVal 0.1769
+
+Iteration       : 78
+Elapsed runtime : 39.46 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.4256e+03
+module `xarclen' : iter = 1  scaled residual = 4.1741e-03 load 1.1777e+03
+module `xarclen' : iter = 2  scaled residual = 7.1643e-05 load 1.1743e+03
+module `xarclen' : iter = 3  scaled residual = 1.8408e-08 load 1.1742e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.337, loadScale 1174., dispVal 0.1762
+Iteration       : 79
+Elapsed runtime : 39.87 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.3935e+03
+module `xarclen' : iter = 1  scaled residual = 3.2902e-03 load 1.1340e+03
+module `xarclen' : iter = 2  scaled residual = 5.4612e-05 load 1.1311e+03
+module `xarclen' : iter = 3  scaled residual = 1.1088e-06 load 1.1311e+03
+module `xarclen' : iter = 4  scaled residual = 2.6331e-12 load 1.1311e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 2.780, loadScale 1131., dispVal 0.1745
+Iteration       : 80
+Elapsed runtime : 40.36 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.3476e+03
+module `xarclen' : iter = 1  scaled residual = 1.0904e-02 load 1.0857e+03
+module `xarclen' : iter = 2  scaled residual = 2.7455e-03 load 1.0838e+03
+module `xarclen' : iter = 3  scaled residual = 6.9066e-07 load 1.0835e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.780, loadScale 1083., dispVal 0.1720
+Iteration       : 81
+Elapsed runtime : 40.76 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.2963e+03
+module `xarclen' : iter = 1  scaled residual = 2.6728e-02 load 1.0471e+03
+module `xarclen' : iter = 2  scaled residual = 2.9212e-03 load 1.0556e+03
+module `xarclen' : iter = 3  scaled residual = 5.2182e-05 load 1.0541e+03
+module `xarclen' : iter = 4  scaled residual = 3.3632e-09 load 1.0541e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 3.306, loadScale 1054., dispVal 0.1735
+Iteration       : 82
+Elapsed runtime : 41.26 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.2679e+03
+module `xarclen' : iter = 1  scaled residual = 2.0936e-02 load 1.0450e+03
+module `xarclen' : iter = 2  scaled residual = 7.3990e+00 load 7.6157e+02
+module `xarclen' : iter = 3  scaled residual = 1.2375e+01 load 1.0409e+03
+module `xarclen' : iter = 4  scaled residual = 1.2023e+02 load 1.1448e+03
+module `xarclen' : iter = 5  scaled residual = 2.4121e+02 load -2.2173e+03
+  -- stop trying after load switch 
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 5 iterations; final residual: 2.412085e+02
+
+Path following parameter reduced to 1.818
+
+Returning to the same load step with reduced step
+Iteration       : 82
+Elapsed runtime : 41.78 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.2679e+03
+module `xarclen' : iter = 1  scaled residual = 8.5352e-03 load 1.0491e+03
+module `xarclen' : iter = 2  scaled residual = 1.4804e-01 load 1.0377e+03
+module `xarclen' : iter = 3  scaled residual = 5.3120e-03 load 1.0475e+03
+module `xarclen' : iter = 4  scaled residual = 1.2508e-03 load 1.0449e+03
+module `xarclen' : iter = 5  scaled residual = 1.0865e-06 load 1.0448e+03
+module `xarclen' : iter = 6  scaled residual = 3.1444e-12 load 1.0448e+03
+The generalized arc-length solver converged in 6 iterations
+
+EnergyArclen: dEnergy 1.818, loadScale 1045., dispVal 0.1754
+Iteration       : 83
+Elapsed runtime : 42.46 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.2609e+03
+module `xarclen' : iter = 1  scaled residual = 8.2757e-03 load 1.0351e+03
+module `xarclen' : iter = 2  scaled residual = 1.3211e-04 load 1.0317e+03
+module `xarclen' : iter = 3  scaled residual = 3.6879e-08 load 1.0317e+03
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.286, loadScale 1032., dispVal 0.1756
+Iteration       : 84
+Elapsed runtime : 42.86 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.2476e+03
+module `xarclen' : iter = 1  scaled residual = 1.1212e-03 load 1.0146e+03
+module `xarclen' : iter = 2  scaled residual = 2.9056e-04 load 1.0144e+03
+module `xarclen' : iter = 3  scaled residual = 9.5235e-06 load 1.0144e+03
+module `xarclen' : iter = 4  scaled residual = 1.3943e-11 load 1.0144e+03
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.529, loadScale 1014., dispVal 0.1757
+Iteration       : 85
+Elapsed runtime : 43.36 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.2296e+03
+module `xarclen' : iter = 1  scaled residual = 1.7817e-02 load 9.9685e+02
+module `xarclen' : iter = 2  scaled residual = 4.4070e-03 load 9.9723e+02
+module `xarclen' : iter = 3  scaled residual = 8.0744e-06 load 9.9706e+02
+module `xarclen' : iter = 4  scaled residual = 3.1689e-10 load 9.9706e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.529, loadScale 997.1, dispVal 0.1757
+
+Iteration       : 86
+Elapsed runtime : 43.85 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.2115e+03
+module `xarclen' : iter = 1  scaled residual = 1.7455e-03 load 9.8077e+02
+module `xarclen' : iter = 2  scaled residual = 1.0740e-05 load 9.8037e+02
+module `xarclen' : iter = 3  scaled residual = 1.4850e-10 load 9.8036e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.529, loadScale 980.4, dispVal 0.1758
+Iteration       : 87
+Elapsed runtime : 44.25 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.1941e+03
+module `xarclen' : iter = 1  scaled residual = 1.0505e-02 load 9.5951e+02
+module `xarclen' : iter = 2  scaled residual = 2.7895e-04 load 9.6654e+02
+module `xarclen' : iter = 3  scaled residual = 1.1423e-06 load 9.6643e+02
+module `xarclen' : iter = 4  scaled residual = 1.9442e-11 load 9.6643e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.818, loadScale 966.4, dispVal 0.1770
+Iteration       : 88
+Elapsed runtime : 44.75 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.1847e+03
+module `xarclen' : iter = 1  scaled residual = 1.1139e-02 load 9.6576e+02
+module `xarclen' : iter = 2  scaled residual = 1.4218e-02 load 9.5827e+02
+module `xarclen' : iter = 3  scaled residual = 1.1652e-04 load 9.5923e+02
+module `xarclen' : iter = 4  scaled residual = 4.2090e-08 load 9.5916e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.818, loadScale 959.2, dispVal 0.1794
+Iteration       : 89
+Elapsed runtime : 45.26 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.1760e+03
+module `xarclen' : iter = 1  scaled residual = 2.1312e-03 load 9.4645e+02
+module `xarclen' : iter = 2  scaled residual = 1.6121e-05 load 9.4529e+02
+module `xarclen' : iter = 3  scaled residual = 8.5659e-10 load 9.4528e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.818, loadScale 945.3, dispVal 0.1806
+Iteration       : 90
+Elapsed runtime : 45.67 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.1625e+03
+module `xarclen' : iter = 1  scaled residual = 1.4314e-02 load 9.2765e+02
+module `xarclen' : iter = 2  scaled residual = 3.6853e-04 load 9.2574e+02
+module `xarclen' : iter = 3  scaled residual = 3.6333e-07 load 9.2564e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.162, loadScale 925.6, dispVal 0.1815
+
+Iteration       : 91
+Elapsed runtime : 46.09 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.1421e+03
+module `xarclen' : iter = 1  scaled residual = 2.4368e-02 load 9.0045e+02
+module `xarclen' : iter = 2  scaled residual = 7.0196e-03 load 8.8921e+02
+module `xarclen' : iter = 3  scaled residual = 1.5116e-05 load 8.8868e+02
+module `xarclen' : iter = 4  scaled residual = 9.2003e-11 load 8.8868e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 2.571, loadScale 888.7, dispVal 0.1798
+Iteration       : 92
+Elapsed runtime : 46.59 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.1001e+03
+module `xarclen' : iter = 1  scaled residual = 2.2278e-02 load 8.4997e+02
+module `xarclen' : iter = 2  scaled residual = 1.1990e-02 load 8.4123e+02
+module `xarclen' : iter = 3  scaled residual = 1.5236e-05 load 8.4276e+02
+module `xarclen' : iter = 4  scaled residual = 6.0903e-10 load 8.4276e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 2.571, loadScale 842.8, dispVal 0.1763
+Iteration       : 93
+Elapsed runtime : 47.09 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.0467e+03
+module `xarclen' : iter = 1  scaled residual = 1.3785e-02 load 7.9293e+02
+module `xarclen' : iter = 2  scaled residual = 1.1927e-04 load 8.0214e+02
+module `xarclen' : iter = 3  scaled residual = 2.1627e-08 load 8.0209e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.571, loadScale 802.1, dispVal 0.1739
+Iteration       : 94
+Elapsed runtime : 47.49 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.9960e+02
+module `xarclen' : iter = 1  scaled residual = 2.1299e-02 load 7.5430e+02
+module `xarclen' : iter = 2  scaled residual = 1.3515e-03 load 7.5807e+02
+module `xarclen' : iter = 3  scaled residual = 5.9797e-06 load 7.5775e+02
+module `xarclen' : iter = 4  scaled residual = 1.0863e-10 load 7.5775e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 3.058, loadScale 757.7, dispVal 0.1719
+Iteration       : 95
+Elapsed runtime : 47.99 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.4827e+02
+module `xarclen' : iter = 1  scaled residual = 3.8255e-02 load 7.4377e+02
+module `xarclen' : iter = 2  scaled residual = 1.2692e-01 load 7.2531e+02
+module `xarclen' : iter = 3  scaled residual = 5.1192e-02 load 7.2565e+02
+module `xarclen' : iter = 4  scaled residual = 3.2522e-03 load 7.2265e+02
+module `xarclen' : iter = 5  scaled residual = 8.1717e-07 load 7.2259e+02
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 3.058, loadScale 722.6, dispVal 0.1720
+
+Iteration       : 96
+Elapsed runtime : 48.58 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.0723e+02
+module `xarclen' : iter = 1  scaled residual = 1.2492e-02 load 6.8591e+02
+module `xarclen' : iter = 2  scaled residual = 3.3242e-04 load 6.8076e+02
+module `xarclen' : iter = 3  scaled residual = 8.2970e-08 load 6.8075e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.571, loadScale 680.7, dispVal 0.1691
+Iteration       : 97
+Elapsed runtime : 48.98 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 8.5668e+02
+module `xarclen' : iter = 1  scaled residual = 1.7237e-02 load 6.2176e+02
+module `xarclen' : iter = 2  scaled residual = 1.1853e-02 load 6.2377e+02
+module `xarclen' : iter = 3  scaled residual = 1.8963e-05 load 6.2385e+02
+module `xarclen' : iter = 4  scaled residual = 3.0489e-10 load 6.2385e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 3.058, loadScale 623.8, dispVal 0.1640
+Iteration       : 98
+Elapsed runtime : 49.47 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 7.8692e+02
+module `xarclen' : iter = 1  scaled residual = 1.5632e-02 load 5.6552e+02
+module `xarclen' : iter = 2  scaled residual = 3.3403e-04 load 5.6189e+02
+module `xarclen' : iter = 3  scaled residual = 1.2763e-07 load 5.6178e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 3.058, loadScale 561.8, dispVal 0.1575
+Iteration       : 99
+Elapsed runtime : 49.88 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 7.0981e+02
+module `xarclen' : iter = 1  scaled residual = 7.4168e-02 load 4.8444e+02
+module `xarclen' : iter = 2  scaled residual = 6.0081e-02 load 5.0349e+02
+module `xarclen' : iter = 3  scaled residual = 3.3955e-02 load 4.8972e+02
+module `xarclen' : iter = 4  scaled residual = 5.3150e-05 load 4.8919e+02
+module `xarclen' : iter = 5  scaled residual = 1.3410e-09 load 4.8917e+02
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 3.636, loadScale 489.2, dispVal 0.1501
+Iteration       : 100
+Elapsed runtime : 50.46 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 6.1788e+02
+module `xarclen' : iter = 1  scaled residual = 1.6859e-02 load 4.1972e+02
+module `xarclen' : iter = 2  scaled residual = 1.8395e-04 load 4.1451e+02
+module `xarclen' : iter = 3  scaled residual = 8.1901e-09 load 4.1444e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 3.058, loadScale 414.4, dispVal 0.1396
+
+Iteration       : 101
+Elapsed runtime : 50.87 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 5.2190e+02
+module `xarclen' : iter = 1  scaled residual = 8.0443e-02 load 3.2154e+02
+module `xarclen' : iter = 2  scaled residual = 2.2880e+00 load 2.1104e+02
+module `xarclen' : iter = 3  scaled residual = 3.9897e+01 load 7.5943e+01
+module `xarclen' : iter = 4  scaled residual = 1.3255e+00 load 1.7188e+02
+module `xarclen' : iter = 5  scaled residual = 3.2999e+00 load 1.2388e+02
+module `xarclen' : iter = 6  scaled residual = 6.3025e+01 load -9.6176e+01
+  -- stop trying after load switch 
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 6 iterations; final residual: 6.302463e+01
+
+Path following parameter reduced to 2.000
+
+Returning to the same load step with reduced step
+
+Iteration       : 101
+Elapsed runtime : 51.50 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 5.2190e+02
+module `xarclen' : iter = 1  scaled residual = 4.2601e-02 load 3.6334e+02
+module `xarclen' : iter = 2  scaled residual = 9.7659e-01 load 3.3168e+02
+module `xarclen' : iter = 3  scaled residual = 3.4968e-02 load 3.6116e+02
+module `xarclen' : iter = 4  scaled residual = 4.7354e-04 load 3.5205e+02
+module `xarclen' : iter = 5  scaled residual = 9.2122e-06 load 3.5193e+02
+module `xarclen' : iter = 6  scaled residual = 7.6922e-10 load 3.5193e+02
+The generalized arc-length solver converged in 6 iterations
+
+EnergyArclen: dEnergy 2.000, loadScale 351.9, dispVal 0.1282
+Iteration       : 102
+Elapsed runtime : 52.18 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 4.4071e+02
+module `xarclen' : iter = 1  scaled residual = 1.9082e-01 load 3.0443e+02
+module `xarclen' : iter = 2  scaled residual = 1.9920e-01 load 3.0540e+02
+module `xarclen' : iter = 3  scaled residual = 1.1144e-04 load 3.0268e+02
+module `xarclen' : iter = 4  scaled residual = 1.2271e-08 load 3.0267e+02
+The generalized arc-length solver converged in 4 iterations
+
+EnergyArclen: dEnergy 1.414, loadScale 302.7, dispVal 0.1183
+Iteration       : 103
+Elapsed runtime : 52.70 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 3.7667e+02
+module `xarclen' : iter = 1  scaled residual = 3.6447e-03 load 2.5306e+02
+module `xarclen' : iter = 2  scaled residual = 1.7107e-05 load 2.5286e+02
+module `xarclen' : iter = 3  scaled residual = 3.0983e-10 load 2.5286e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.414, loadScale 252.9, dispVal 0.1082
+
+Iteration       : 104
+Elapsed runtime : 53.12 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 3.1194e+02
+module `xarclen' : iter = 1  scaled residual = 4.1389e-03 load 1.9558e+02
+module `xarclen' : iter = 2  scaled residual = 1.5058e-05 load 1.9530e+02
+module `xarclen' : iter = 3  scaled residual = 3.4948e-10 load 1.9530e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.682, loadScale 195.3, dispVal 0.09686
+Iteration       : 105
+Elapsed runtime : 53.52 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 2.3690e+02
+module `xarclen' : iter = 1  scaled residual = 2.4319e-02 load 1.2665e+02
+module `xarclen' : iter = 2  scaled residual = 8.0672e-05 load 1.2884e+02
+module `xarclen' : iter = 3  scaled residual = 6.0378e-09 load 1.2883e+02
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.000, loadScale 128.8, dispVal 0.08438
+Iteration       : 106
+Elapsed runtime : 53.92 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.5039e+02
+module `xarclen' : iter = 1  scaled residual = 2.0124e-01 load 5.4780e+01
+module `xarclen' : iter = 2  scaled residual = 3.8134e-03 load 9.2932e+01
+module `xarclen' : iter = 3  scaled residual = 3.5101e-07 load 9.2930e+01
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 2.378, loadScale 92.93, dispVal 0.09778
+Iteration       : 107
+Elapsed runtime : 54.32 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.9460e+01
+module `xarclen' : iter = 1  scaled residual = 1.5050e-01 load 8.7536e+01
+module `xarclen' : iter = 2  scaled residual = 5.6436e-02 load 1.1719e+02
+module `xarclen' : iter = 3  scaled residual = 4.6643e+00 load 1.0617e+02
+module `xarclen' : iter = 4  scaled residual = 1.3045e+00 load 1.0519e+02
+module `xarclen' : iter = 5  scaled residual = 1.2617e+00 load 1.0447e+02
+module `xarclen' : iter = 6  scaled residual = 9.8508e+00 load 1.0552e+02
+module `xarclen' : iter = 7  scaled residual = 1.6616e+01 load 1.0353e+02
+module `xarclen' : iter = 8  scaled residual = 1.2070e+01 load 1.0585e+02
+module `xarclen' : iter = 9  scaled residual = 7.0626e+00 load 1.0340e+02
+module `xarclen' : iter = 10  scaled residual = 2.1773e+01 load 1.0677e+02
+module `xarclen' : iter = 11  scaled residual = 4.8840e+01 load 1.0132e+02
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 11 iterations; final residual: 4.884006e+01
+
+Path following parameter reduced to 1.556
+
+Returning to the same load step with reduced step
+Iteration       : 107
+Elapsed runtime : 55.38 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.9460e+01
+module `xarclen' : iter = 1  scaled residual = 6.9962e-03 load 8.9963e+01
+module `xarclen' : iter = 2  scaled residual = 1.2302e-05 load 8.9953e+01
+module `xarclen' : iter = 3  scaled residual = 8.3997e-10 load 8.9953e+01
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.556, loadScale 89.95, dispVal 0.1281
+Iteration       : 108
+Elapsed runtime : 55.79 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.5511e+01
+module `xarclen' : iter = 1  scaled residual = 2.7826e-01 load 8.6400e+01
+module `xarclen' : iter = 2  scaled residual = 1.1058e-01 load 1.1852e+02
+module `xarclen' : iter = 3  scaled residual = 1.0336e-02 load 1.0174e+02
+module `xarclen' : iter = 4  scaled residual = 1.1717e-04 load 1.0082e+02
+module `xarclen' : iter = 5  scaled residual = 5.8663e-10 load 1.0081e+02
+The generalized arc-length solver converged in 5 iterations
+
+EnergyArclen: dEnergy 1.850, loadScale 100.8, dispVal 0.1847
+Iteration       : 109
+Elapsed runtime : 56.39 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 1.0379e+02
+module `xarclen' : iter = 1  scaled residual = 1.4689e-02 load 9.2723e+01
+module `xarclen' : iter = 2  scaled residual = 5.3348e-05 load 9.1240e+01
+module `xarclen' : iter = 3  scaled residual = 1.2120e-09 load 9.1240e+01
+The generalized arc-length solver converged in 3 iterations
+
+EnergyArclen: dEnergy 1.556, loadScale 91.24, dispVal 0.1980
+Iteration       : 110
+Elapsed runtime : 56.80 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 9.3966e+01
+module `xarclen' : iter = 1  scaled residual = 8.4464e-04 load 7.8979e+01
+module `xarclen' : iter = 2  scaled residual = 6.3866e-08 load 7.8962e+01
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 1.850, loadScale 78.96, dispVal 0.2119
+Iteration       : 111
+Elapsed runtime : 57.10 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 8.1323e+01
+module `xarclen' : iter = 1  scaled residual = 1.3756e-03 load 6.1579e+01
+module `xarclen' : iter = 2  scaled residual = 1.1388e-07 load 6.1560e+01
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 2.616, loadScale 61.56, dispVal 0.2315
+
+Iteration       : 112
+Elapsed runtime : 57.41 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 6.3403e+01
+module `xarclen' : iter = 1  scaled residual = 2.2962e-03 load 3.6932e+01
+module `xarclen' : iter = 2  scaled residual = 1.8155e-07 load 3.6913e+01
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 3.700, loadScale 36.91, dispVal 0.2590
+Iteration       : 113
+Elapsed runtime : 57.72 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+module `xarclen' : residual scale factor = 3.8020e+01
+module `xarclen' : iter = 1  scaled residual = 4.5798e-03 load 2.0448e+00
+module `xarclen' : iter = 2  scaled residual = 2.9958e-07 load 2.0330e+00
+The generalized arc-length solver converged in 2 iterations
+
+EnergyArclen: dEnergy 5.232, loadScale 2.033, dispVal 0.2978
+Iteration       : 114
+Elapsed runtime : 58.03 seconds
+
+Starting the generalized arc-length solver `xarclen' ...
+arclen solver says: try to switch, secant system 698.3
+
+FlexArclenModule caught a solver exception: 
+   module `userModules.solver.arcLen'
+   no convergence achieved in 1 iterations; final residual: 0.000000e+00
+
+Switching back to disp control with disp incr: 0.01000
+
+resSwitch: Returning to the same load step with userModules.solver.nonLin
+
+Displacement increment reduced to 0.005500
+
+Returning to the same load step with reduced step
+
+Iteration       : 114
+Elapsed runtime : 58.18 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+module `userModules.solver.nonLin' : residual scale factor = 1.0202e+02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 8.8785e-01
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 3.0172e-06
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 5.7751e-07
+The Newton-Raphson solver converged in 3 iterations
+
+DispControl: dEnergy 0.3077, loadScale 0.004021, dispVal 0.3033
+Iteration       : 115
+Elapsed runtime : 58.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 4.2254e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 4.0052e-03
+module `userModules.solver.nonLin' : iter = 2, scaled residual = 1.0138e-03
+module `userModules.solver.nonLin' : iter = 3, scaled residual = 2.2621e-08
+The Newton-Raphson solver converged in 3 iterations
+
+DispControl: dEnergy 1.887e-12, loadScale 0.004108, dispVal 0.3098
+Iteration       : 116
+Elapsed runtime : 58.99 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 4.3188e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5768e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.486e-12, loadScale 0.004211, dispVal 0.3176
+Iteration       : 117
+Elapsed runtime : 59.23 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 4.4317e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4409e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.219e-12, loadScale 0.004344, dispVal 0.3276
+
+Iteration       : 118
+Elapsed runtime : 59.47 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 4.5705e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4245e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.601e-13, loadScale 0.004476, dispVal 0.3376
+Iteration       : 119
+Elapsed runtime : 59.71 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 4.7094e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4120e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.377e-13, loadScale 0.004609, dispVal 0.3476
+Iteration       : 120
+Elapsed runtime : 59.95 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 4.8483e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4000e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.554e-13, loadScale 0.004741, dispVal 0.3576
+Iteration       : 121
+Elapsed runtime : 60.19 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 4.9871e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2805e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 6.891e-13, loadScale 0.004874, dispVal 0.3676
+Iteration       : 122
+Elapsed runtime : 60.42 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 5.1260e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3034e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.619e-12, loadScale 0.005007, dispVal 0.3776
+Iteration       : 123
+Elapsed runtime : 60.66 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 5.2649e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3048e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.271e-12, loadScale 0.005139, dispVal 0.3876
+Iteration       : 124
+Elapsed runtime : 60.90 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 5.4037e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2785e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.041e-12, loadScale 0.005272, dispVal 0.3976
+Iteration       : 125
+Elapsed runtime : 61.13 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 5.5426e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2302e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.504e-13, loadScale 0.005404, dispVal 0.4076
+Iteration       : 126
+Elapsed runtime : 61.36 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 5.6815e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1437e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.713e-12, loadScale 0.005537, dispVal 0.4176
+
+Iteration       : 127
+Elapsed runtime : 61.60 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 5.8203e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2200e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.688e-12, loadScale 0.005670, dispVal 0.4276
+Iteration       : 128
+Elapsed runtime : 61.83 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 5.9592e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1784e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -5.087e-13, loadScale 0.005802, dispVal 0.4376
+Iteration       : 129
+Elapsed runtime : 62.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 6.0981e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1131e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.516e-12, loadScale 0.005935, dispVal 0.4476
+Iteration       : 130
+Elapsed runtime : 62.31 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 6.2369e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1102e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.820e-13, loadScale 0.006067, dispVal 0.4576
+Iteration       : 131
+Elapsed runtime : 62.54 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 6.3758e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1300e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 3.135e-12, loadScale 0.006200, dispVal 0.4676
+Iteration       : 132
+Elapsed runtime : 62.78 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 6.5147e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0855e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.499e-12, loadScale 0.006333, dispVal 0.4776
+Iteration       : 133
+Elapsed runtime : 63.01 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 6.6535e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0704e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.848e-12, loadScale 0.006465, dispVal 0.4876
+Iteration       : 134
+Elapsed runtime : 63.25 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 6.7924e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1099e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 7.015e-13, loadScale 0.006598, dispVal 0.4976
+Iteration       : 135
+Elapsed runtime : 63.48 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 6.9313e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8661e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.430e-13, loadScale 0.006730, dispVal 0.5076
+
+Iteration       : 136
+Elapsed runtime : 63.72 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 7.0701e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8069e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.309e-12, loadScale 0.006863, dispVal 0.5176
+Iteration       : 137
+Elapsed runtime : 63.96 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 7.2090e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7500e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.319e-12, loadScale 0.006996, dispVal 0.5276
+Iteration       : 138
+Elapsed runtime : 64.19 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 7.3479e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7921e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.141e-12, loadScale 0.007128, dispVal 0.5376
+Iteration       : 139
+Elapsed runtime : 64.44 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 7.4868e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7636e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.103e-12, loadScale 0.007261, dispVal 0.5476
+Iteration       : 140
+Elapsed runtime : 64.67 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 7.6256e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6994e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 4.063e-12, loadScale 0.007393, dispVal 0.5576
+Iteration       : 141
+Elapsed runtime : 64.91 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 7.7645e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6718e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.635e-13, loadScale 0.007526, dispVal 0.5676
+Iteration       : 142
+Elapsed runtime : 65.16 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 7.9034e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6115e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.062e-12, loadScale 0.007659, dispVal 0.5776
+Iteration       : 143
+Elapsed runtime : 65.40 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 8.0422e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5741e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.376e-12, loadScale 0.007791, dispVal 0.5876
+Iteration       : 144
+Elapsed runtime : 65.64 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 8.1811e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5044e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.722e-12, loadScale 0.007924, dispVal 0.5976
+
+Iteration       : 145
+Elapsed runtime : 65.88 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 8.3200e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5711e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 4.694e-12, loadScale 0.008056, dispVal 0.6076
+Iteration       : 146
+Elapsed runtime : 66.11 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 8.4588e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6156e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.893e-12, loadScale 0.008189, dispVal 0.6176
+Iteration       : 147
+Elapsed runtime : 66.35 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 8.5977e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5528e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.354e-12, loadScale 0.008322, dispVal 0.6276
+Iteration       : 148
+Elapsed runtime : 66.59 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 8.7366e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4729e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.586e-12, loadScale 0.008454, dispVal 0.6376
+Iteration       : 149
+Elapsed runtime : 66.83 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 8.8755e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5457e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 9.528e-12, loadScale 0.008587, dispVal 0.6476
+Iteration       : 150
+Elapsed runtime : 67.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.0143e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4325e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.026e-12, loadScale 0.008719, dispVal 0.6576
+Iteration       : 151
+Elapsed runtime : 67.31 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.1532e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5083e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.420e-12, loadScale 0.008852, dispVal 0.6676
+Iteration       : 152
+Elapsed runtime : 67.54 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.2921e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3776e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -5.976e-12, loadScale 0.008985, dispVal 0.6776
+Iteration       : 153
+Elapsed runtime : 67.78 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.4309e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3327e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.141e-12, loadScale 0.009117, dispVal 0.6876
+
+Iteration       : 154
+Elapsed runtime : 68.01 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.5698e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3257e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.990e-12, loadScale 0.009250, dispVal 0.6976
+Iteration       : 155
+Elapsed runtime : 68.25 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.7087e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3462e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 6.481e-12, loadScale 0.009382, dispVal 0.7076
+Iteration       : 156
+Elapsed runtime : 68.49 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.8476e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2833e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.867e-12, loadScale 0.009515, dispVal 0.7176
+Iteration       : 157
+Elapsed runtime : 68.72 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 9.9864e-03
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3330e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.987e-12, loadScale 0.009648, dispVal 0.7276
+Iteration       : 158
+Elapsed runtime : 68.96 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.0125e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2588e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.686e-12, loadScale 0.009780, dispVal 0.7376
+Iteration       : 159
+Elapsed runtime : 69.20 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.0264e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2481e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.693e-12, loadScale 0.009913, dispVal 0.7476
+Iteration       : 160
+Elapsed runtime : 69.45 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.0403e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2885e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.478e-12, loadScale 0.01005, dispVal 0.7576
+Iteration       : 161
+Elapsed runtime : 69.68 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.0542e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2787e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -3.653e-13, loadScale 0.01018, dispVal 0.7676
+Iteration       : 162
+Elapsed runtime : 69.92 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.0681e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2256e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.383e-12, loadScale 0.01031, dispVal 0.7776
+
+Iteration       : 163
+Elapsed runtime : 70.15 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.0820e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3066e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.695e-12, loadScale 0.01044, dispVal 0.7876
+Iteration       : 164
+Elapsed runtime : 70.39 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.0959e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2676e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.905e-11, loadScale 0.01058, dispVal 0.7976
+Iteration       : 165
+Elapsed runtime : 70.62 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.1097e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2358e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.548e-11, loadScale 0.01071, dispVal 0.8076
+Iteration       : 166
+Elapsed runtime : 70.86 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.1236e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1862e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.226e-12, loadScale 0.01084, dispVal 0.8176
+Iteration       : 167
+Elapsed runtime : 71.10 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.1375e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2045e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.040e-11, loadScale 0.01097, dispVal 0.8276
+Iteration       : 168
+Elapsed runtime : 71.33 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.1514e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2503e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.829e-11, loadScale 0.01111, dispVal 0.8376
+Iteration       : 169
+Elapsed runtime : 71.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.1653e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2649e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 7.055e-12, loadScale 0.01124, dispVal 0.8476
+Iteration       : 170
+Elapsed runtime : 71.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.1792e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1549e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.657e-12, loadScale 0.01137, dispVal 0.8576
+Iteration       : 171
+Elapsed runtime : 72.04 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.1931e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2232e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 3.595e-12, loadScale 0.01150, dispVal 0.8676
+
+Iteration       : 172
+Elapsed runtime : 72.28 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.2070e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1899e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -9.616e-12, loadScale 0.01164, dispVal 0.8776
+Iteration       : 173
+Elapsed runtime : 72.53 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.2208e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2292e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 6.124e-12, loadScale 0.01177, dispVal 0.8876
+Iteration       : 174
+Elapsed runtime : 72.79 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.2347e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1459e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -3.014e-12, loadScale 0.01190, dispVal 0.8976
+Iteration       : 175
+Elapsed runtime : 73.04 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.2486e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0808e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.190e-12, loadScale 0.01203, dispVal 0.9076
+Iteration       : 176
+Elapsed runtime : 73.29 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.2625e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1180e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 7.284e-13, loadScale 0.01217, dispVal 0.9176
+Iteration       : 177
+Elapsed runtime : 73.54 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.2764e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1037e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.554e-12, loadScale 0.01230, dispVal 0.9276
+Iteration       : 178
+Elapsed runtime : 73.79 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.2903e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0733e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.894e-12, loadScale 0.01243, dispVal 0.9376
+Iteration       : 179
+Elapsed runtime : 74.04 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.3042e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0919e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.335e-12, loadScale 0.01256, dispVal 0.9476
+
+Iteration       : 180
+Elapsed runtime : 74.30 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.3181e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0601e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.007e-12, loadScale 0.01270, dispVal 0.9576
+Iteration       : 181
+Elapsed runtime : 74.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.3319e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0637e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.621e-12, loadScale 0.01283, dispVal 0.9676
+Iteration       : 182
+Elapsed runtime : 74.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.3458e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0408e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.488e-12, loadScale 0.01296, dispVal 0.9776
+Iteration       : 183
+Elapsed runtime : 75.05 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.3597e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0774e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.542e-11, loadScale 0.01310, dispVal 0.9876
+Iteration       : 184
+Elapsed runtime : 75.30 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.3736e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.0502e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.746e-11, loadScale 0.01323, dispVal 0.9976
+Iteration       : 185
+Elapsed runtime : 75.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.3875e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8807e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -9.199e-12, loadScale 0.01336, dispVal 1.008
+Iteration       : 186
+Elapsed runtime : 75.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4014e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.9118e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.192e-11, loadScale 0.01349, dispVal 1.018
+Iteration       : 187
+Elapsed runtime : 76.05 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4153e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8524e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.208e-11, loadScale 0.01363, dispVal 1.028
+
+Iteration       : 188
+Elapsed runtime : 76.30 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4291e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8847e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.152e-12, loadScale 0.01376, dispVal 1.038
+Iteration       : 189
+Elapsed runtime : 76.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4430e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7581e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.238e-11, loadScale 0.01389, dispVal 1.048
+Iteration       : 190
+Elapsed runtime : 76.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4569e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.8262e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.115e-11, loadScale 0.01402, dispVal 1.058
+Iteration       : 191
+Elapsed runtime : 77.05 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4708e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6914e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 8.733e-12, loadScale 0.01416, dispVal 1.068
+Iteration       : 192
+Elapsed runtime : 77.30 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4847e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7887e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 4.567e-12, loadScale 0.01429, dispVal 1.078
+Iteration       : 193
+Elapsed runtime : 77.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.4986e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7167e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -6.917e-12, loadScale 0.01442, dispVal 1.088
+Iteration       : 194
+Elapsed runtime : 77.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.5125e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6534e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.513e-11, loadScale 0.01455, dispVal 1.098
+Iteration       : 195
+Elapsed runtime : 78.05 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.5264e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7182e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.161e-12, loadScale 0.01469, dispVal 1.108
+
+Iteration       : 196
+Elapsed runtime : 78.30 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.5402e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7069e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.191e-11, loadScale 0.01482, dispVal 1.118
+Iteration       : 197
+Elapsed runtime : 78.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.5541e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5503e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.207e-11, loadScale 0.01495, dispVal 1.128
+Iteration       : 198
+Elapsed runtime : 78.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.5680e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6621e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.140e-12, loadScale 0.01508, dispVal 1.138
+Iteration       : 199
+Elapsed runtime : 79.06 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.5819e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7303e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.685e-11, loadScale 0.01522, dispVal 1.148
+Iteration       : 200
+Elapsed runtime : 79.31 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.5958e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.7072e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.426e-11, loadScale 0.01535, dispVal 1.158
+Iteration       : 201
+Elapsed runtime : 79.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.6097e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6179e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 7.396e-12, loadScale 0.01548, dispVal 1.168
+Iteration       : 202
+Elapsed runtime : 79.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.6236e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6097e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.705e-12, loadScale 0.01561, dispVal 1.178
+Iteration       : 203
+Elapsed runtime : 80.05 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.6375e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6185e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.701e-11, loadScale 0.01575, dispVal 1.188
+Iteration       : 204
+Elapsed runtime : 80.30 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.6513e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5617e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.217e-11, loadScale 0.01588, dispVal 1.198
+
+Iteration       : 205
+Elapsed runtime : 80.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.6652e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5730e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.100e-11, loadScale 0.01601, dispVal 1.208
+Iteration       : 206
+Elapsed runtime : 80.80 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.6791e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5211e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.637e-11, loadScale 0.01615, dispVal 1.218
+Iteration       : 207
+Elapsed runtime : 81.05 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.6930e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4070e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -8.067e-12, loadScale 0.01628, dispVal 1.228
+Iteration       : 208
+Elapsed runtime : 81.30 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.7069e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.6459e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.651e-12, loadScale 0.01641, dispVal 1.238
+Iteration       : 209
+Elapsed runtime : 81.55 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.7208e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5346e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.248e-11, loadScale 0.01654, dispVal 1.248
+Iteration       : 210
+Elapsed runtime : 81.81 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.7347e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.5161e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.168e-11, loadScale 0.01668, dispVal 1.258
+Iteration       : 211
+Elapsed runtime : 82.06 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.7486e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4981e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 5.643e-12, loadScale 0.01681, dispVal 1.268
+Iteration       : 212
+Elapsed runtime : 82.31 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.7624e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4283e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.410e-11, loadScale 0.01694, dispVal 1.278
+
+Iteration       : 213
+Elapsed runtime : 82.56 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.7763e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4415e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.119e-11, loadScale 0.01707, dispVal 1.288
+Iteration       : 214
+Elapsed runtime : 82.81 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.7902e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4450e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 7.965e-12, loadScale 0.01721, dispVal 1.298
+Iteration       : 215
+Elapsed runtime : 83.06 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.8041e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4303e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -8.301e-13, loadScale 0.01734, dispVal 1.308
+Iteration       : 216
+Elapsed runtime : 83.31 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.8180e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3906e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.334e-11, loadScale 0.01747, dispVal 1.318
+Iteration       : 217
+Elapsed runtime : 83.56 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.8319e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3966e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.374e-11, loadScale 0.01760, dispVal 1.328
+Iteration       : 218
+Elapsed runtime : 83.81 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.8458e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4381e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.252e-11, loadScale 0.01774, dispVal 1.338
+Iteration       : 219
+Elapsed runtime : 84.06 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.8597e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3626e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 8.048e-12, loadScale 0.01787, dispVal 1.348
+Iteration       : 220
+Elapsed runtime : 84.31 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.8735e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3610e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.793e-12, loadScale 0.01800, dispVal 1.358
+
+Iteration       : 221
+Elapsed runtime : 84.56 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.8874e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4082e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.315e-11, loadScale 0.01813, dispVal 1.368
+Iteration       : 222
+Elapsed runtime : 84.81 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9013e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3321e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 4.763e-11, loadScale 0.01827, dispVal 1.378
+Iteration       : 223
+Elapsed runtime : 85.06 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9152e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3564e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -5.353e-11, loadScale 0.01840, dispVal 1.388
+Iteration       : 224
+Elapsed runtime : 85.31 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9291e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.4593e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 9.878e-11, loadScale 0.01853, dispVal 1.398
+Iteration       : 225
+Elapsed runtime : 85.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9430e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3873e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.906e-11, loadScale 0.01866, dispVal 1.408
+Iteration       : 226
+Elapsed runtime : 85.82 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9569e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3978e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.411e-11, loadScale 0.01880, dispVal 1.418
+Iteration       : 227
+Elapsed runtime : 86.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9708e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3414e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -9.302e-12, loadScale 0.01893, dispVal 1.428
+Iteration       : 228
+Elapsed runtime : 86.32 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9846e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3552e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.676e-11, loadScale 0.01906, dispVal 1.438
+
+Iteration       : 229
+Elapsed runtime : 86.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 1.9985e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2905e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -5.425e-12, loadScale 0.01919, dispVal 1.448
+Iteration       : 230
+Elapsed runtime : 86.82 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.0124e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3552e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.750e-12, loadScale 0.01933, dispVal 1.458
+Iteration       : 231
+Elapsed runtime : 87.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.0263e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3198e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.360e-11, loadScale 0.01946, dispVal 1.468
+Iteration       : 232
+Elapsed runtime : 87.33 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.0402e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3250e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.173e-11, loadScale 0.01959, dispVal 1.478
+Iteration       : 233
+Elapsed runtime : 87.58 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.0541e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2453e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.366e-11, loadScale 0.01973, dispVal 1.488
+Iteration       : 234
+Elapsed runtime : 87.83 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.0680e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2811e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -2.313e-11, loadScale 0.01986, dispVal 1.498
+Iteration       : 235
+Elapsed runtime : 88.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.0819e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3449e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 4.766e-11, loadScale 0.01999, dispVal 1.508
+Iteration       : 236
+Elapsed runtime : 88.32 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.0957e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.3567e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.354e-11, loadScale 0.02012, dispVal 1.518
+Iteration       : 237
+Elapsed runtime : 88.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.1096e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2596e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 8.676e-12, loadScale 0.02026, dispVal 1.528
+
+Iteration       : 238
+Elapsed runtime : 88.82 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.1235e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2692e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -1.540e-11, loadScale 0.02039, dispVal 1.538
+Iteration       : 239
+Elapsed runtime : 89.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.1374e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2332e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.892e-11, loadScale 0.02052, dispVal 1.548
+Iteration       : 240
+Elapsed runtime : 89.32 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.1513e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1737e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 2.099e-12, loadScale 0.02065, dispVal 1.558
+Iteration       : 241
+Elapsed runtime : 89.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.1652e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2449e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 4.547e-13, loadScale 0.02079, dispVal 1.568
+Iteration       : 242
+Elapsed runtime : 89.82 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.1791e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2480e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -5.106e-12, loadScale 0.02092, dispVal 1.578
+Iteration       : 243
+Elapsed runtime : 90.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.1930e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1927e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.125e-12, loadScale 0.02105, dispVal 1.588
+Iteration       : 244
+Elapsed runtime : 90.32 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.2068e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1181e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 9.765e-12, loadScale 0.02118, dispVal 1.598
+Iteration       : 245
+Elapsed runtime : 90.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.2207e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2043e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -4.298e-13, loadScale 0.02132, dispVal 1.608
+Iteration       : 246
+Elapsed runtime : 90.82 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.2346e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1936e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 1.313e-12, loadScale 0.02145, dispVal 1.618
+
+Iteration       : 247
+Elapsed runtime : 91.07 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.2485e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1895e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -3.984e-12, loadScale 0.02158, dispVal 1.628
+Iteration       : 248
+Elapsed runtime : 91.32 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.2624e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.1912e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy -7.049e-12, loadScale 0.02171, dispVal 1.638
+Iteration       : 249
+Elapsed runtime : 91.57 seconds
+
+Starting the Newton-Raphson solver `userModules.solver.nonLin' ...
+
+*** WARNING: element 8084 has zero normal vectors
+
+module `userModules.solver.nonLin' : residual scale factor = 2.2763e-02
+module `userModules.solver.nonLin' : iter = 1, scaled residual = 2.2358e-08
+The Newton-Raphson solver converged in 1 iterations
+
+DispControl: dEnergy 9.770e-12, loadScale 0.02185, dispVal 1.648
+
+*** WARNING: element 8084 has zero normal vectors
+

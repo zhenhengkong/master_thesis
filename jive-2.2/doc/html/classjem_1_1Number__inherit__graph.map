@@ -1,0 +1,7 @@
+<map id="jem::Number" name="jem::Number">
+<area shape="rect" id="node4" href="$classjem_1_1Float.html" title="jem::Float" alt="" coords="5,229,91,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1Integer.html" title="jem::Integer" alt="" coords="115,229,213,256"/>
+<area shape="rect" id="node6" href="$classjive_1_1util_1_1Runtime.html" title="jive::util::Runtime" alt="" coords="237,229,368,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="117,80,211,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="102,5,226,32"/>
+</map>

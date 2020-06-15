@@ -1,0 +1,4 @@
+<map id="jem::InstantiationException" name="jem::InstantiationException">
+<area shape="rect" id="node2" href="$classjem_1_1Exception.html" title="Provides a single superclass for all exceptions that a program should catch. " alt="" coords="45,80,161,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Throwable.html" title="Provides a single superclass for all exceptions in Jem. " alt="" coords="43,5,162,32"/>
+</map>

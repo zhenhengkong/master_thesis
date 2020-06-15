@@ -1,0 +1,5 @@
+<map id="jive::geom::StdTetrahedron" name="jive::geom::StdTetrahedron">
+<area shape="rect" id="node3" href="$classjive_1_1geom_1_1StdTetrahedron10.html" title="jive::geom::StdTetrahedron10" alt="" coords="5,155,216,181"/>
+<area shape="rect" id="node4" href="$classjive_1_1geom_1_1StdTetrahedron4.html" title="jive::geom::StdTetrahedron4" alt="" coords="240,155,443,181"/>
+<area shape="rect" id="node2" href="$classjive_1_1geom_1_1StdShape.html" title="Encapsulates the geometrical properties of a finite element in its local coordinate system..." alt="" coords="146,5,305,32"/>
+</map>

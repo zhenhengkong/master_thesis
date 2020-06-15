@@ -1,0 +1,6 @@
+<map id="jem::io::Logger" name="jem::io::Logger">
+<area shape="rect" id="node4" href="$classjem_1_1io_1_1PatternLogger.html" title="jem::io::PatternLogger" alt="" coords="5,229,168,256"/>
+<area shape="rect" id="node5" href="$classjem_1_1io_1_1SimpleLogger.html" title="jem::io::SimpleLogger" alt="" coords="193,229,354,256"/>
+<area shape="rect" id="node2" href="$classjem_1_1Object.html" title="Provides a single superclass for many classes in jem. " alt="" coords="133,80,227,107"/>
+<area shape="rect" id="node3" href="$classjem_1_1Collectable.html" title="Provides support for automatic garbage collection. " alt="" coords="118,5,242,32"/>
+</map>
